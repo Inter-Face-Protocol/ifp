@@ -6,6 +6,9 @@ tagline: "The knowledge vault needs searchable content, not file formats — ren
 formatted: "2026-03-14"
 ---
 
+← [Garden Patch Home](../) · [Principles](index.html)
+
+
 - is_a::[\[\[Principle Form\]\]](../forms/Principle%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -39,8 +42,8 @@ Extracted from the Content Over Container principle section of the compound node
 
 ## Relations
 
-- extracted_from::[\[\[Compound Nodes for Knowledge Management\]\]⊙](../UPSTREAM.html#:~:text=Compound%20Nodes%20for%20Knowledge%20Management)
+- extracted_from::[\[\[Compound Nodes for Knowledge Management\]\]↑](../NODES.html#:~:text=Compound%20Nodes%20for%20Knowledge%20Management)
   - The principle section, lines 144-168.
 
-- constrains::[\[\[Compound Node Anatomy\]\]⊙](../UPSTREAM.html#:~:text=Compound%20Node%20Anatomy)
+- constrains::[\[\[Compound Node Anatomy\]\]↑](../NODES.html#:~:text=Compound%20Node%20Anatomy)
   - This principle determines when archives/ subfolders contain actual binaries vs. just sidecars pointing to canonical sources.

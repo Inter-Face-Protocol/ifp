@@ -6,6 +6,9 @@ tagline: "Capture how someone reasons, not just what they know — so agents can
 formatted: "2026-03-14"
 ---
 
+← [Garden Patch Home](../) · [Values](index.html)
+
+
 - is_a::[\[\[Value Form\]\]](../forms/Value%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -43,11 +46,11 @@ The value does not demand completeness. A garden with three well-connected princ
 - generates::[\[\[Human Authority Over Augmentation Systems\]\]](../principles/Human%20Authority%20Over%20Augmentation%20Systems.html)
   - Fidelity to *human* reasoning requires that the human remains the authority — an agent that overrides the owner's reasoning has broken fidelity.
 
-- generates::[\[\[Progressive Summary Before Substance\]\]⊙](../UPSTREAM.html#:~:text=Progressive%20Summary%20Before%20Substance)
+- generates::[\[\[Progressive Summary Before Substance\]\]↑](../NODES.html#:~:text=Progressive%20Summary%20Before%20Substance)
   - Progressive disclosure serves reasoning fidelity by loading reasoning context on demand rather than requiring the full graph.
 
 - relates_to::[\[\[Knowledge Durability\]\]](Knowledge%20Durability.html)
   - Reasoning captured in a format that doesn't survive tool changes loses its fidelity over time.
 
-- contradicts::[\[\[Autonomy\]\]⊙](../UPSTREAM.html#:~:text=Autonomy)
+- contradicts::[\[\[Autonomy\]\]↑](../NODES.html#:~:text=Autonomy)
   - Mild tension: a fully autonomous agent might reason differently than its owner. Reasoning fidelity constrains agent autonomy to stay within the owner's reasoning patterns.

@@ -5,6 +5,9 @@ brief_summary: "Protocol evolution involves a tension between specifying details
 tagline: "When should a protocol commit to specification details vs leave space for implementation discovery?"
 ---
 
+← [Garden Patch Home](../) · [Inquiries](index.html)
+
+
 - is_a::[\[\[Inquiry Form\]\]](../forms/Inquiry%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)

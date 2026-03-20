@@ -5,6 +5,9 @@ brief_summary: "In agent-age protocols, errors are not failures to be coded and 
 tagline: "What resolves the tension between strict protocol semantics and graceful error handling?"
 ---
 
+← [Garden Patch Home](../) · [Patterns](index.html)
+
+
 - is_a::[\[\[Pattern Form\]\]](../forms/Pattern%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)

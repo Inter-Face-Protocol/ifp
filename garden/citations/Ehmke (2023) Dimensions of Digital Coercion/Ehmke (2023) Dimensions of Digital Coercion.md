@@ -10,10 +10,13 @@ migrated_from: "analysis/library/2023-ehmke-digital-coercion"
 source_updated: 2025-12-09
 ---
 
+← [Garden Patch Home](../../README.html) · [Citations](../index.html)
+
+
 - is_a::[\[\[Citation Form\]\]](../../forms/Citation%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../../forms/Seed%20Stage.html)
 - in_domain::[\[\[Self-Sovereign Identity\]\]](../../domains/Self-Sovereign%20Identity.html)
-- cites_work_by::[\[\[Coraline Ada Ehmke\]\]⊙](../../UPSTREAM.html#:~:text=Coraline%20Ada%20Ehmke)
+- cites_work_by::[\[\[Coraline Ada Ehmke\]\]↑](../../NODES.html#:~:text=Coraline%20Ada%20Ehmke)
 
 # Ehmke (2023) Dimensions of Digital Coercion
 
@@ -65,17 +68,17 @@ Ehmke's four-dimensional framework provides the most systematic vocabulary for i
 
 **Related vault citations**:
 - [\[\[Kolpondinos (2026) Technology Paternalism\]\]](../Kolpondinos%20%282026%29%20Technology%20Paternalism/Kolpondinos%20%282026%29%20Technology%20Paternalism.html) — Technology Paternalism taxonomy maps to Ehmke's four dimensions
-- [\[\[Brignull (2010) Deceptive Patterns Dark Patterns\]\]⊙](../../UPSTREAM.html#:~:text=Brignull%20%282010%29%20Deceptive%20Patterns%20Dark%20Patterns) — Dark patterns are the interface-level mechanisms of attention and ergonomic coercion
-- [\[\[Spiekermann and Pallas (2006) Technology Paternalism\]\]⊙](../../UPSTREAM.html#:~:text=Spiekermann%20and%20Pallas%20%282006%29%20Technology%20Paternalism) — "Right to the last word" addresses ergonomic and trust coercion
+- [\[\[Brignull (2010) Deceptive Patterns Dark Patterns\]\]↑](../../NODES.html#:~:text=Brignull%20%282010%29%20Deceptive%20Patterns%20Dark%20Patterns) — Dark patterns are the interface-level mechanisms of attention and ergonomic coercion
+- [\[\[Spiekermann and Pallas (2006) Technology Paternalism\]\]↑](../../NODES.html#:~:text=Spiekermann%20and%20Pallas%20%282006%29%20Technology%20Paternalism) — "Right to the last word" addresses ergonomic and trust coercion
 
-**Vault clipping**: [\[\[Dimensions of Digital Coercion\]\]⊙](../../UPSTREAM.html#:~:text=Dimensions%20of%20Digital%20Coercion) (Clippings/Identity/)
+**Vault clipping**: [\[\[Dimensions of Digital Coercion\]\]↑](../../NODES.html#:~:text=Dimensions%20of%20Digital%20Coercion) (Clippings/Identity/)
 
 ## Relations
 
 - relates_to::[\[\[Technology Paternalism Masks Coercion\]\]](../../patterns/Technology%20Paternalism%20Masks%20Coercion.html)
   Ehmke's four dimensions map systematically to Kolpondinos's four forms of technology paternalism. Design Paternalism corresponds to attention and ergonomic coercion; Algorithmic Paternalism to attention coercion through engagement maximization; Infrastructural Paternalism to ergonomic coercion through switching costs; Protective Paternalism to trust coercion through unaccountable safety framing.
 
-- relates_to::[\[\[Coercion Resistance as Replacement Framing\]\]⊙](../../UPSTREAM.html#:~:text=Coercion%20Resistance%20as%20Replacement%20Framing)
+- relates_to::[\[\[Coercion Resistance as Replacement Framing\]\]↑](../../NODES.html#:~:text=Coercion%20Resistance%20as%20Replacement%20Framing)
   The framework strengthens the case that "coercion resistance" is more precise than "privacy" for describing technology harms. Each dimension describes a mechanism of coercion, not a privacy violation.
 
 - relates_to::[\[\[Authentic Collaboration Requires Agency\]\]](../../convictions/Authentic%20Collaboration%20Requires%20Agency.html)

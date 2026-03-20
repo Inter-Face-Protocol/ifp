@@ -5,6 +5,9 @@ brief_summary: "A form type is a knowledge object category with a known internal
 tagline: "The structural contract that defines what shape a knowledge object takes"
 ---
 
+← [Garden Patch Home](../) · [Form Definitions](index.html)
+
+
 - is_a::[\[\[Form Type\]\]](Form%20Type.html)
 - has_status::[\[\[Seed Stage\]\]](Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -34,7 +37,7 @@ Form types belong to five categories:
 | Form Type | Core Question |
 |-----------|---------------|
 | [\[\[Model Form\]\]](Model%20Form.html) | How do these elements relate to each other? |
-| [\[\[Reference Form\]\]⊙](../UPSTREAM.html#:~:text=Reference%20Form) | What do I need to know about this domain to act effectively? |
+| [\[\[Reference Form\]\]↑](../NODES.html#:~:text=Reference%20Form) | What do I need to know about this domain to act effectively? |
 | [\[\[Gloss Form\]\]](Gloss%20Form.html) | What does this specific source or concept mean? |
 | [\[\[Citation Form\]\]](Citation%20Form.html) | What do I need to know about this source? |
 | [\[\[Opus Form\]\]](Opus%20Form.html) | What am I saying here, and how does it connect? |
@@ -47,10 +50,10 @@ Form types belong to five categories:
 | Form Type | Core Question |
 |-----------|---------------|
 | [\[\[Pattern Form\]\]](Pattern%20Form.html) | What resolves this recurring tension? |
-| [\[\[Case Form\]\]⊙](../UPSTREAM.html#:~:text=Case%20Form) | What happened when this was tried? |
+| [\[\[Case Form\]\]↑](../NODES.html#:~:text=Case%20Form) | What happened when this was tried? |
 | [\[\[Decision Form\]\]](Decision%20Form.html) | Why did we choose this over the alternatives? |
-| [\[\[Protocol Form\]\]⊙](../UPSTREAM.html#:~:text=Protocol%20Form) | How do independent parties coordinate reliably? |
-| [\[\[Skill Form\]\]⊙](../UPSTREAM.html#:~:text=Skill%20Form) | How does an agent execute this reliably? |
+| [\[\[Protocol Form\]\]↑](../NODES.html#:~:text=Protocol%20Form) | How do independent parties coordinate reliably? |
+| [\[\[Skill Form\]\]↑](../NODES.html#:~:text=Skill%20Form) | How does an agent execute this reliably? |
 
 ### Generative Forms
 
@@ -59,7 +62,7 @@ Form types belong to five categories:
 | Form Type | Core Question |
 |-----------|---------------|
 | [\[\[Inquiry Form\]\]](Inquiry%20Form.html) | What should we think about X, and how would we find out? |
-| [\[\[Scenario Form\]\]⊙](../UPSTREAM.html#:~:text=Scenario%20Form) | What might happen if these forces play out? |
+| [\[\[Scenario Form\]\]↑](../NODES.html#:~:text=Scenario%20Form) | What might happen if these forces play out? |
 
 ### Governance Forms
 

@@ -5,6 +5,9 @@ brief_summary: "Inquiry into how the deep context architecture handles decisions
 tagline: "When an agent hits a group-deliberative boundary, what happens next — practically?"
 ---
 
+← [Garden Patch Home](../) · [Inquiries](index.html)
+
+
 - is_a::[\[\[Inquiry Form\]\]](../forms/Inquiry%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -47,7 +50,7 @@ In practice within this vault, group-deliberative decisions have not yet arisen 
 - relates_to::[\[\[Delegated Decision Authority Spectrum\]\]](../boundaries/Delegated%20Decision%20Authority%20Spectrum.html)
   - This inquiry explores the practical implementation of the boundary's group-deliberative zone.
 
-- relates_to::[\[\[Protocol Form\]\]⊙](../UPSTREAM.html#:~:text=Protocol%20Form)
+- relates_to::[\[\[Protocol Form\]\]↑](../NODES.html#:~:text=Protocol%20Form)
   - The deliberation mechanism may itself be a protocol — a form type with zero DCA instances that could be instantiated here.
 
 - relates_to::[\[\[Authentic Collaboration Requires Agency\]\]](../convictions/Authentic%20Collaboration%20Requires%20Agency.html)

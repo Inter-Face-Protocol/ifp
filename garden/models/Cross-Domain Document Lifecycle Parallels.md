@@ -6,6 +6,9 @@ tagline: "Wiki, garden, and agent context — same lifecycle problems, different
 formatted: "2026-03-14"
 ---
 
+← [Garden Patch Home](../) · [Models](index.html)
+
+
 - is_a::[\[\[Model Form\]\]](../forms/Model%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -48,19 +51,19 @@ Three communities maintain living documents and face the same structural problem
 
 ## Sources
 
-- [\[\[The Gardening Problem Returns - Document Lifecycle in the Age of AI Agents\]\]⊙](../EXTERNAL.html#:~:text=The%20Gardening%20Problem%20Returns%20-%20Document%20Lifecycle%20in%20the%20Age%20of%20AI%20Agents), Sections 2.1-2.2 and Part 4 — the structural parallel table and synthesis
+- [\[\[The Gardening Problem Returns - Document Lifecycle in the Age of AI Agents\]\]↑](../EXTERNAL.html#:~:text=The%20Gardening%20Problem%20Returns%20-%20Document%20Lifecycle%20in%20the%20Age%20of%20AI%20Agents), Sections 2.1-2.2 and Part 4 — the structural parallel table and synthesis
 - Caulfield, Mike. "The Garden and the Stream: A Technopastoral." Keynote, dLRN 2015 — the distinction between accumulative/garden-mode and sequential/stream-mode knowledge
-- [\[\[Chatlatanagulchai (2025) Agent READMEs\]\]⊙](../EXTERNAL.html#:~:text=Chatlatanagulchai%20%282025%29%20Agent%20READMEs) — empirical evidence of lifecycle problems in agent context files
+- [\[\[Chatlatanagulchai (2025) Agent READMEs\]\]↑](../EXTERNAL.html#:~:text=Chatlatanagulchai%20%282025%29%20Agent%20READMEs) — empirical evidence of lifecycle problems in agent context files
 
 ## Relations
 
 - relates_to::[\[\[Document Lifecycle Governance Heuristics\]\]](Document%20Lifecycle%20Governance%20Heuristics.html)
   - The governance model describes the wiki-side operations; this model maps them across domains.
 
-- relates_to::[\[\[Digital Garden as Growth Ethos\]\]⊙](../EXTERNAL.html#:~:text=Digital%20Garden%20as%20Growth%20Ethos)
+- relates_to::[\[\[Digital Garden as Growth Ethos\]\]↑](../EXTERNAL.html#:~:text=Digital%20Garden%20as%20Growth%20Ethos)
   - The digital garden domain occupies the middle column of the parallel structure.
 
-- relates_to::[\[\[Context Conservation Hierarchy\]\]⊙](../EXTERNAL.html#:~:text=Context%20Conservation%20Hierarchy)
+- relates_to::[\[\[Context Conservation Hierarchy\]\]↑](../EXTERNAL.html#:~:text=Context%20Conservation%20Hierarchy)
   - Token economics (the breaking point in the analogy) is what makes context conservation load-bearing.
 
 - relates_to::[\[\[Progressive Disclosure Over Eager Loading\]\]](../principles/Progressive%20Disclosure%20Over%20Eager%20Loading.html)

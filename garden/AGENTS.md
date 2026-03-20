@@ -1,21 +1,23 @@
-# AGENTS.md — Garden Patch for IFP
+← [Garden Patch Home](./)
+
+# AGENTS.md — Garden Patch for [IFP](../)
 
 Orientation for AI agents working with this garden patch.
 
 ## What This Is
 
-A **garden patch** — a portable, self-contained subset of Christopher Allen's Deep Context Architecture garden, applied alongside the Inter-Face Protocol specifications. See [Garden Patch as Composable Knowledge Fragment](glosses/Garden%20Patch%20as%20Composable%20Knowledge%20Fragment.html) for the concept.
+A **garden patch** — a portable, self-contained subset of Christopher Allen's Deep Context Architecture garden, applied alongside the Inter-Face Protocol specifications. See [\[\[Garden Patch as Composable Knowledge Fragment\]\]](glosses/Garden%20Patch%20as%20Composable%20Knowledge%20Fragment.html) for the concept.
 
-This is not part of the IFP specifications. It is an alternative lens that reveals connections between IFP's design decisions and broader patterns in identity, trust, collaboration, and protocol design.
+This is not part of the [IFP](../) specifications. It is an alternative lens that reveals connections between [IFP](../)'s design decisions and broader patterns in identity, trust, collaboration, and protocol design.
 
 ## Before Working With This Garden
 
 Read these files to orient yourself:
 
-- **[README.md](README.html)** — What the garden patch is, how it connects to IFP, reading order
-- **[UPSTREAM.md](UPSTREAM.html)** — Index of upstream nodes (source garden nodes not grafted into this patch)
-- **[forms/Form Type.md](forms/Form%20Type.html)** — What form types are and how the type system works
-- **[glosses/Deep Context Graph Vocabulary.md](glosses/Deep%20Context%20Graph%20Vocabulary.html)** — Definitions: node, edge, predicate, form type
+- **[README.md](./)** — What the garden patch is, how it connects to [IFP](../), reading order
+- **[NODES.md](NODES.html)** — Complete node directory: grafted, patch-native⊙, and upstream↑ nodes
+- **[\[\[Form Type\]\]](forms/Form%20Type.html)** — What form types are and how the type system works
+- **[\[\[Deep Context Graph Vocabulary\]\]](glosses/Deep%20Context%20Graph%20Vocabulary.html)** — Definitions: node, edge, predicate, form type
 
 ## How to Read a Garden Node
 
@@ -55,17 +57,17 @@ tagline: "10-20 word tagline, often phrased as the core question"
 
 | Form Type | Core Question | Node Count |
 |-----------|--------------|------------|
-| [Model](forms/Model%20Form.html) | "How do these elements relate?" | 8 |
-| [Gloss](forms/Gloss%20Form.html) | "What does this concept mean?" | 10 |
-| [Inquiry](forms/Inquiry%20Form.html) | "What should we think about X?" | 9 |
-| [Pattern](forms/Pattern%20Form.html) | "What resolves this tension?" | 5 |
-| [Principle](forms/Principle%20Form.html) | "What must we always/never do?" | 7 |
-| [Conviction](forms/Conviction%20Form.html) | "What do we believe is true?" | 4 |
-| [Decision](forms/Decision%20Form.html) | "Why did we choose this?" | 1 |
-| [Boundary](forms/Boundary%20Form.html) | "Where does authority end?" | 1 |
-| [Citation](forms/Citation%20Form.html) | "What do I need to know about this source?" | 4 (2 compound) |
-| [Domain](forms/Domain%20Form.html) | "What knowledge area is this?" | 3 |
-| [Value](forms/Value%20Form.html) | "What do we care about?" | 2 |
+| [\[\[Model\]\]](forms/Model%20Form.html) | "How do these elements relate?" | 8 |
+| [\[\[Gloss\]\]](forms/Gloss%20Form.html) | "What does this concept mean?" | 10 |
+| [\[\[Inquiry\]\]](forms/Inquiry%20Form.html) | "What should we think about X?" | 9 |
+| [\[\[Pattern\]\]](forms/Pattern%20Form.html) | "What resolves this tension?" | 5 |
+| [\[\[Principle\]\]](forms/Principle%20Form.html) | "What must we always/never do?" | 7 |
+| [\[\[Conviction\]\]](forms/Conviction%20Form.html) | "What do we believe is true?" | 4 |
+| [\[\[Decision\]\]](forms/Decision%20Form.html) | "Why did we choose this?" | 1 |
+| [\[\[Boundary\]\]](forms/Boundary%20Form.html) | "Where does authority end?" | 1 |
+| [\[\[Citation\]\]](forms/Citation%20Form.html) | "What do I need to know about this source?" | 4 (2 compound) |
+| [\[\[Domain\]\]](forms/Domain%20Form.html) | "What knowledge area is this?" | 3 |
+| [\[\[Value\]\]](forms/Value%20Form.html) | "What do we care about?" | 2 |
 
 ## How to Create New Nodes
 
@@ -83,7 +85,7 @@ When adding a node to this garden patch:
    - **Inquiries**: Descriptive noun phrases about the question ("Trust Layer Activation Criteria")
    - All names: two-word minimum, no articles, no verbs, spell out terms fully
 
-3. **Place the file** in the form-type subfolder (e.g., `garden/models/`, `garden/glosses/`)
+3. **Place the file** in the form-type subfolder (e.g., [garden/models/](models/), [garden/glosses/](glosses/))
 
 4. **Include required metadata**:
    - Frontmatter: `created`, `author`, `brief_summary` (250-350 chars), `tagline` (10-20 words)
@@ -110,17 +112,19 @@ When adding a node to this garden patch:
 
 | What You See | Term | Meaning |
 |---|---|---|
-| Clickable link with brackets | **Grafted node** | Present in this patch — click to navigate |
-| Clickable link with brackets + ⊙ | **Upstream node** | Exists in source garden, not grafted here — click for summary |
-| Clickable link with brackets + ↗ | **Cross-garden node** | In another published garden with navigable URL |
-| Plain text with brackets | **Ghost link** | Node does not exist yet — a stake marking where one could grow |
+| \[\[Node Name\]\] | **Grafted node** | Copied from the source garden into this patch — click to navigate |
+| \[\[Node Name\]\]⊙ | **Patch-native node** | Born in this patch, not grafted from upstream — this patch is its garden home |
+| \[\[Node Name\]\]↑ | **Upstream node** | Exists in source garden, not grafted here — click for summary |
+| \[\[Node Name\]\] | **Ghost link** | Node does not exist yet — a stake marking where one could grow |
+| \[\[Node Name\]\]↗ | **Cross-garden node** | In another published garden with navigable URL |
+| [Link text](url) | **Regular link** | Standard web link to an external website or resource — no brackets |
 
-See [UPSTREAM.md](UPSTREAM.html) for the index of upstream nodes.
+See [NODES.md](NODES.html) for the complete node directory.
 
 ## Key Points for Agents
 
-- Garden files live in `garden/` with form-type subfolders. IFP specs live at the repository root. Do not mix them.
-- Reference IFP specs by relative path (`../../ifp-1-philosophy.md`), not wikilink.
+- Garden files live in [garden/](./) with form-type subfolders. [IFP](../) specs live at the [repository root](../). Do not mix them.
+- Reference [IFP](../) specs by relative path (`../../ifp-1-philosophy.md`), not wikilink.
 - Preserve the voice and intent of existing nodes. If something seems wrong, create an Inquiry node rather than silently correcting.
 - Attribution matters. Use `cites_work_by::` for others' works, note the origin of ideas.
 - This patch belongs to Christopher Allen. Changes should be discussed before committing.

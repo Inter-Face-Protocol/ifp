@@ -5,6 +5,9 @@ brief_summary: "A disclosure tier defines what information an agent may share wi
 tagline: "Disclosure tiers are boundaries agents respect, not permissions platforms grant"
 ---
 
+← [Garden Patch Home](../) · [Glosses](index.html)
+
+
 - is_a::[\[\[Gloss Form\]\]](../forms/Gloss%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)

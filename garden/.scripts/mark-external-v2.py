@@ -31,23 +31,23 @@ for root, dirs, files in os.walk(garden):
         # Find plain [[Target]] (not already linkified or marked)
         # Plain wikilinks look like [[Target]] NOT preceded by backslash-bracket
         # Already-linkified look like [\[\[Target\]\]](url)
-        # Already-marked look like [[Target]]⊙
+        # Already-marked look like [[Target]]↑
         
         def mark_plain(m):
             target = m.group(1)
             if target in in_patch:
                 return m.group(0)  # in-patch, leave as plain wikilink
-            return '[[' + target + ']]⊙'
+            return '[[' + target + ']]↑'
         
-        # Match plain [[Target]] not followed by ⊙ or ↗
+        # Match plain [[Target]] not followed by ↑ or ↗
         # But NOT the linkified ones (which have \[\[ pattern)
-        content = re.sub(r'(?<!\\)\[\[([^\]]+)\]\](?![⊙↗])', mark_plain, content)
+        content = re.sub(r'(?<!\\)\[\[([^\]]+)\]\](?![↑↗])', mark_plain, content)
         
         if content != original:
             with open(filepath, 'w') as fh:
                 fh.write(content)
             changed += 1
-            added = content.count('⊙') - original.count('⊙')
+            added = content.count('↑') - original.count('↑')
             if added > 0:
                 print(f"  {os.path.relpath(filepath, garden)}: +{added} markers")
 

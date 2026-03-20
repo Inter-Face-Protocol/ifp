@@ -6,6 +6,9 @@ tagline: "Operational knowledge capture, organization, and retrieval for daily w
 formatted: "2026-03-14"
 ---
 
+← [Garden Patch Home](../) · [Glosses](index.html)
+
+
 - is_a::[\[\[Gloss Form\]\]](../forms/Gloss%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -18,14 +21,14 @@ Vault content uses the same predicate infrastructure as garden nodes (`is_a::`, 
 
 ## What Lives Here
 
-- **Vault form types**: [\[\[Meeting Note\]\]⊙](../UPSTREAM.html#:~:text=Meeting%20Note), [\[\[Transcript\]\]⊙](../UPSTREAM.html#:~:text=Transcript), [\[\[Person Note\]\]⊙](../UPSTREAM.html#:~:text=Person%20Note), [\[\[Chat Log\]\]⊙](../UPSTREAM.html#:~:text=Chat%20Log), [\[\[Sidecar\]\]⊙](../UPSTREAM.html#:~:text=Sidecar)
+- **Vault form types**: [\[\[Meeting Note\]\]↑](../NODES.html#:~:text=Meeting%20Note), [\[\[Transcript\]\]↑](../NODES.html#:~:text=Transcript), [\[\[Person Note\]\]↑](../NODES.html#:~:text=Person%20Note), [\[\[Chat Log\]\]↑](../NODES.html#:~:text=Chat%20Log), [\[\[Sidecar\]\]↑](../NODES.html#:~:text=Sidecar)
 - **Growth stages** shared with the [\[\[Garden Precinct\]\]](Garden%20Precinct.html): Seed, Growing, Evergreen, Pruned
 - **Processing stages** specific to meetings: Captured, Transcribed, Cleaned, Summarized, Published
 - **Folder structure**: `Meetings/`, `People/`, `Daily/`, `Research/`, `Notes/`, `Clippings/`, `References/`
 
 ## Typed Edges in the Vault
 
-The vault precinct uses typed predicates now — `is_a::[\[\[Meeting Note\]\]⊙](../UPSTREAM.html#:~:text=Meeting%20Note)`, `attendee::[\[\[Person Name\]\]⊙](../UPSTREAM.html#:~:text=Person%20Name)`, `derived_from::[\[\[Parent Note\]\]⊙](../UPSTREAM.html#:~:text=Parent%20Note)`. The current lighter adoption is a tactical sequencing choice: learning the pattern in the garden first, then extending it vault-wide. Predicates are shared infrastructure, not a garden-only feature. The [\[\[Classification via Predicates Not Tags\]\]⊙](../UPSTREAM.html#:~:text=Classification%20via%20Predicates%20Not%20Tags) decision applies across both precincts.
+The vault precinct uses typed predicates now — `is_a::[\[\[Meeting Note\]\]↑](../NODES.html#:~:text=Meeting%20Note)`, `attendee::[\[\[Person Name\]\]↑](../NODES.html#:~:text=Person%20Name)`, `derived_from::[\[\[Parent Note\]\]↑](../NODES.html#:~:text=Parent%20Note)`. The current lighter adoption is a tactical sequencing choice: learning the pattern in the garden first, then extending it vault-wide. Predicates are shared infrastructure, not a garden-only feature. The [\[\[Classification via Predicates Not Tags\]\]↑](../NODES.html#:~:text=Classification%20via%20Predicates%20Not%20Tags) decision applies across both precincts.
 
 ## Relationship to Garden Precinct
 
@@ -33,18 +36,18 @@ Both precincts share the deep context infrastructure and coexist as peers. The v
 
 ## Sources
 
-Term adopted from urban planning via [\[\[Precinct as Organizational Unit\]\]⊙](../UPSTREAM.html#:~:text=Precinct%20as%20Organizational%20Unit).
+Term adopted from urban planning via [\[\[Precinct as Organizational Unit\]\]↑](../NODES.html#:~:text=Precinct%20as%20Organizational%20Unit).
 
 ## Relations
 
-- defined_by::[\[\[Precinct as Organizational Unit\]\]⊙](../UPSTREAM.html#:~:text=Precinct%20as%20Organizational%20Unit)
+- defined_by::[\[\[Precinct as Organizational Unit\]\]↑](../NODES.html#:~:text=Precinct%20as%20Organizational%20Unit)
   - The decision that established this term.
 
 - relates_to::[\[\[Garden Precinct\]\]](Garden%20Precinct.html)
   - The sibling precinct for curated knowledge forms.
 
-- relates_to::[\[\[Vault Content Graduation\]\]⊙](../UPSTREAM.html#:~:text=Vault%20Content%20Graduation)
+- relates_to::[\[\[Vault Content Graduation\]\]↑](../NODES.html#:~:text=Vault%20Content%20Graduation)
   - The pattern by which vault content moves into garden nodes.
 
-- relates_to::[\[\[Meeting Note\]\]⊙](../UPSTREAM.html#:~:text=Meeting%20Note)
+- relates_to::[\[\[Meeting Note\]\]↑](../NODES.html#:~:text=Meeting%20Note)
   - The most developed vault form type, with compound document conventions.

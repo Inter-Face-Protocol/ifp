@@ -5,6 +5,9 @@ brief_summary: "Defines the Citation form type: a structured dossier on a single
 tagline: "What do I need to know about this source? — the structural contract for citation forms"
 ---
 
+← [Garden Patch Home](../) · [Form Definitions](index.html)
+
+
 - is_a::[\[\[Form Type\]\]](Form%20Type.html)
 - has_status::[\[\[Seed Stage\]\]](Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -20,8 +23,8 @@ A structured dossier on a single work: metadata, abstract, analysis, insights, c
 
 Citations follow the pattern `Author (Year) Abbreviated Title`, with an optional venue suffix `, in/from Publication` when venue adds important context:
 
-- `[\[\[Roy (2026) Words Without Consequence, from The Atlantic\]\]⊙](../UPSTREAM.html#:~:text=Roy%20%282026%29%20Words%20Without%20Consequence%2C%20from%20The%20Atlantic)`
-- `[\[\[Chatlatanagulchai (2025) Agent READMEs\]\]⊙](../UPSTREAM.html#:~:text=Chatlatanagulchai%20%282025%29%20Agent%20READMEs)`
+- `[\[\[Roy (2026) Words Without Consequence, from The Atlantic\]\]↑](../NODES.html#:~:text=Roy%20%282026%29%20Words%20Without%20Consequence%2C%20from%20The%20Atlantic)`
+- `[\[\[Chatlatanagulchai (2025) Agent READMEs\]\]↑](../NODES.html#:~:text=Chatlatanagulchai%20%282025%29%20Agent%20READMEs)`
 
 The `citation_slug:` frontmatter field provides a short cross-referencing key (e.g., `roy-2026-words-without-consequence`).
 
@@ -60,15 +63,15 @@ When both primary and secondary analysis exist, rename `analysis.md` to `analysi
 
 - `is_a::[\[\[Citation Form\]\]](Citation%20Form.html)`
 - `has_status::[\[\[Seed Stage\]\]](Seed%20Stage.html)`
-- `in_domain::[\[\[Domain Name\]\]⊙](../UPSTREAM.html#:~:text=Domain%20Name)`
-- `cites_work_by::[\[\[Person Name\]\]⊙](../UPSTREAM.html#:~:text=Person%20Name)` — who wrote the cited work (subject is the citation node: "this citation cites a work by...")
-- `cited_by::[\[\[Other Citation\]\]⊙](../UPSTREAM.html#:~:text=Other%20Citation)` — reverse citation links
-- `cites::[\[\[Other Citation\]\]⊙](../UPSTREAM.html#:~:text=Other%20Citation)` — forward citation links
+- `in_domain::[\[\[Domain Name\]\]↑](../NODES.html#:~:text=Domain%20Name)`
+- `cites_work_by::[\[\[Person Name\]\]↑](../NODES.html#:~:text=Person%20Name)` — who wrote the cited work (subject is the citation node: "this citation cites a work by...")
+- `cited_by::[\[\[Other Citation\]\]↑](../NODES.html#:~:text=Other%20Citation)` — reverse citation links
+- `cites::[\[\[Other Citation\]\]↑](../NODES.html#:~:text=Other%20Citation)` — forward citation links
 
 ## Exemplars
 
-- [\[\[Roy (2026) Words Without Consequence, from The Atlantic\]\]⊙](../UPSTREAM.html#:~:text=Roy%20%282026%29%20Words%20Without%20Consequence%2C%20from%20The%20Atlantic) — Seed stage, atomic. Philosophical argument grounding the [\[\[Human Authority Over Augmentation Systems\]\]](../principles/Human%20Authority%20Over%20Augmentation%20Systems.html) principle.
-- [\[\[Chatlatanagulchai (2025) Agent READMEs\]\]⊙](../UPSTREAM.html#:~:text=Chatlatanagulchai%20%282025%29%20Agent%20READMEs) — Seed stage, atomic. Empirical study validating the architecture's treatment of context files as living documents.
+- [\[\[Roy (2026) Words Without Consequence, from The Atlantic\]\]↑](../NODES.html#:~:text=Roy%20%282026%29%20Words%20Without%20Consequence%2C%20from%20The%20Atlantic) — Seed stage, atomic. Philosophical argument grounding the [\[\[Human Authority Over Augmentation Systems\]\]](../principles/Human%20Authority%20Over%20Augmentation%20Systems.html) principle.
+- [\[\[Chatlatanagulchai (2025) Agent READMEs\]\]↑](../NODES.html#:~:text=Chatlatanagulchai%20%282025%29%20Agent%20READMEs) — Seed stage, atomic. Empirical study validating the architecture's treatment of context files as living documents.
 
 ## Category
 
@@ -82,14 +85,14 @@ Definition from [\[\[Deep Context as an Architecture for Captured Reasoning\]\]]
 
 Citation Form and [\[\[Opus Form\]\]](Opus%20Form.html) share compound structure (analysis.md, insights.md, Renditions/, Archives/) but serve opposite relationships to the work:
 
-- **Citation Form**: a dossier ABOUT someone else's work. Key predicate: `cites_work_by::[\[\[Person\]\]⊙](../UPSTREAM.html#:~:text=Person)`. The lead file summarizes and analyzes. The source is fixed and external. Append-only (new analysis accumulates but doesn't rewrite).
-- **Opus Form**: the author's OWN work. Key predicates: `authored_by::[\[\[Person\]\]⊙](../UPSTREAM.html#:~:text=Person)`, `principal::[\[\[Person\]\]⊙](../UPSTREAM.html#:~:text=Person)`. The lead file IS the work. The source is living and local. Revisable (the work evolves, analysis updates).
+- **Citation Form**: a dossier ABOUT someone else's work. Key predicate: `cites_work_by::[\[\[Person\]\]↑](../NODES.html#:~:text=Person)`. The lead file summarizes and analyzes. The source is fixed and external. Append-only (new analysis accumulates but doesn't rewrite).
+- **Opus Form**: the author's OWN work. Key predicates: `authored_by::[\[\[Person\]\]↑](../NODES.html#:~:text=Person)`, `principal::[\[\[Person\]\]↑](../NODES.html#:~:text=Person)`. The lead file IS the work. The source is living and local. Revisable (the work evolves, analysis updates).
 
-Both forms share the principal-agent attribution framework (see [\[\[Role-Specific Attribution Predicates for Opus Form\]\]⊙](../UPSTREAM.html#:~:text=Role-Specific%20Attribution%20Predicates%20for%20Opus%20Form)) but apply it differently: Citation uses `cites_work_by::` (third-person attribution); Opus uses `authored_by::` and `principal::` (first-person attribution).
+Both forms share the principal-agent attribution framework (see [\[\[Role-Specific Attribution Predicates for Opus Form\]\]↑](../NODES.html#:~:text=Role-Specific%20Attribution%20Predicates%20for%20Opus%20Form)) but apply it differently: Citation uses `cites_work_by::` (third-person attribution); Opus uses `authored_by::` and `principal::` (first-person attribution).
 
 ## Relations
 
 - relates_to::[\[\[Gloss Form\]\]](Gloss%20Form.html) — citations contain glosses as interpretive annotations
-- relates_to::[\[\[Reference Form\]\]⊙](../UPSTREAM.html#:~:text=Reference%20Form) — references synthesize multiple citations
+- relates_to::[\[\[Reference Form\]\]↑](../NODES.html#:~:text=Reference%20Form) — references synthesize multiple citations
 - relates_to::[\[\[Pattern Form\]\]](Pattern%20Form.html) — citations may contain pattern instances
 - relates_to::[\[\[Opus Form\]\]](Opus%20Form.html) — opuses capture the author's own works; citations capture others' works

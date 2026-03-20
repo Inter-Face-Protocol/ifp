@@ -6,6 +6,9 @@ tagline: "Wiki split/merge/delete heuristics applied to garden tending and agent
 formatted: "2026-03-14"
 ---
 
+← [Garden Patch Home](../) · [Models](index.html)
+
+
 - is_a::[\[\[Model Form\]\]](../forms/Model%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -18,7 +21,7 @@ Wiki communities spent 25 years developing explicit governance for living docume
 
 Wikipedia codified five core lifecycle operations:
 
-**Splitting** — When readable prose exceeds 50-60kB, or when a subtopic has enough substance to stand alone. The notability test applies: if the subtopic isn't notable on its own, trim it rather than split. In the garden, the equivalent is the [\[\[Standalone Document Test for Form Candidacy\]\]⊙](../EXTERNAL.html#:~:text=Standalone%20Document%20Test%20for%20Form%20Candidacy) — a section that passes the test should become its own node.
+**Splitting** — When readable prose exceeds 50-60kB, or when a subtopic has enough substance to stand alone. The notability test applies: if the subtopic isn't notable on its own, trim it rather than split. In the garden, the equivalent is the [\[\[Standalone Document Test for Form Candidacy\]\]↑](../EXTERNAL.html#:~:text=Standalone%20Document%20Test%20for%20Form%20Candidacy) — a section that passes the test should become its own node.
 
 **Merging** — Five conditions: duplicate content forks, topical overlap, stubs unlikely to grow, insufficient notability (merge as alternative to deletion), and short articles requiring context from a broader page. In the garden, merge when two nodes are better understood as one — the distinction they claim doesn't hold in practice.
 
@@ -46,25 +49,25 @@ The wiki heuristics suggest operations the garden currently lacks explicit guida
 ## Sources
 
 - Wikipedia governance policies: WP:SIZESPLIT, WP:Merging, WP:Deletion policy — codified heuristics for page lifecycle
-- [\[\[The Gardening Problem Returns - Document Lifecycle in the Age of AI Agents\]\]⊙](../EXTERNAL.html#:~:text=The%20Gardening%20Problem%20Returns%20-%20Document%20Lifecycle%20in%20the%20Age%20of%20AI%20Agents), Sections 1.1 and 4.1 — wiki heuristics mapped to agent context
+- [\[\[The Gardening Problem Returns - Document Lifecycle in the Age of AI Agents\]\]↑](../EXTERNAL.html#:~:text=The%20Gardening%20Problem%20Returns%20-%20Document%20Lifecycle%20in%20the%20Age%20of%20AI%20Agents), Sections 1.1 and 4.1 — wiki heuristics mapped to agent context
 - Cunningham, Ward. WikiWikiWeb (1995) — "radical trust" as the original design: start with trust, add governance when needed
-- [\[\[Chatlatanagulchai (2025) Agent READMEs\]\]⊙](../EXTERNAL.html#:~:text=Chatlatanagulchai%20%282025%29%20Agent%20READMEs) — empirical evidence that context files "behave more like dynamic configurations than static text"
+- [\[\[Chatlatanagulchai (2025) Agent READMEs\]\]↑](../EXTERNAL.html#:~:text=Chatlatanagulchai%20%282025%29%20Agent%20READMEs) — empirical evidence that context files "behave more like dynamic configurations than static text"
 
 ## Relations
 
 - relates_to::[\[\[Living Documents Over Static Publications\]\]](../principles/Living%20Documents%20Over%20Static%20Publications.html)
   - Living documents require lifecycle governance; this model describes the operations.
 
-- relates_to::[\[\[Standalone Document Test for Form Candidacy\]\]⊙](../EXTERNAL.html#:~:text=Standalone%20Document%20Test%20for%20Form%20Candidacy)
+- relates_to::[\[\[Standalone Document Test for Form Candidacy\]\]↑](../EXTERNAL.html#:~:text=Standalone%20Document%20Test%20for%20Form%20Candidacy)
   - The standalone test is the garden equivalent of the wiki splitting heuristic.
 
 - relates_to::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
   - Draftification maps to seed stage as a provisional-content pattern.
 
-- relates_to::[\[\[Pruned Stage\]\]⊙](../EXTERNAL.html#:~:text=Pruned%20Stage)
+- relates_to::[\[\[Pruned Stage\]\]↑](../EXTERNAL.html#:~:text=Pruned%20Stage)
   - Pruning is the garden equivalent of graduated deletion.
 
-- relates_to::[\[\[Context Conservation Hierarchy\]\]⊙](../EXTERNAL.html#:~:text=Context%20Conservation%20Hierarchy)
+- relates_to::[\[\[Context Conservation Hierarchy\]\]↑](../EXTERNAL.html#:~:text=Context%20Conservation%20Hierarchy)
   - The append-only trap directly degrades context conservation by inflating node size.
 - relates_to::[\[\[When to Specify and When to Explore in Protocol Evolution\]\]](../inquiries/When%20to%20Specify%20and%20When%20to%20Explore%20in%20Protocol%20Evolution.html)
   - Wiki governance heuristics for document lifecycle (split, merge, draftify) apply to how IFP specifications could evolve as implementations emerge.

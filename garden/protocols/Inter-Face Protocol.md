@@ -5,7 +5,10 @@ brief_summary: "Peer-to-peer protocol for AI agents to communicate on behalf of 
 tagline: "Peer-to-peer agent communication that filters for conversations worth having"
 ---
 
-- is_a::[\[\[Protocol Form\]\]⊙](../UPSTREAM.html#:~:text=Protocol%20Form)
+← [Garden Patch Home](../) · [Protocols](index.html)
+
+
+- is_a::[\[\[Protocol Form\]\]↑](../NODES.html#:~:text=Protocol%20Form)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
 
@@ -15,7 +18,7 @@ The Inter-Face Protocol (IFP) addresses a basic problem of human attention: keep
 
 The system is a filter. Its value is in what it does not surface.
 
-Created by [\[\[Peter Kaminski\]\]⊙](../UPSTREAM.html#:~:text=Peter%20Kaminski) in March 2026, IFP currently comprises 12 draft specifications licensed CC-BY 4.0.
+Created by [\[\[Peter Kaminski\]\]↑](../NODES.html#:~:text=Peter%20Kaminski) in March 2026, IFP currently comprises 12 draft specifications licensed CC-BY 4.0.
 
 ## Parties
 
@@ -69,7 +72,7 @@ Seven agent-age protocol principles guide evolution:
 - IFP-1: Philosophy and Design Principles (Peter Kaminski, Claude Opus 4.6, 2026-03-04)
 - IFP-3: Inter-Face Message Format (Peter Kaminski, Claude Opus 4.6, 2026-02-15, updated 2026-03-04)
 - [draft-iab-protocol-maintenance-05](https://www.ietf.org/archive/id/draft-iab-protocol-maintenance-05.html) -- IAB draft on protocol maintenance, cited in IFP-1 Section 6.1
-- Dedication to [\[\[Jonathan Postel\]\]⊙](../UPSTREAM.html#:~:text=Jonathan%20Postel) (1943-1998), RFC Editor and Internet Assigned Numbers Authority
+- Dedication to [\[\[Jonathan Postel\]\]↑](../NODES.html#:~:text=Jonathan%20Postel) (1943-1998), RFC Editor and Internet Assigned Numbers Authority
 
 ## Relations
 

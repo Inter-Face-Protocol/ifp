@@ -5,6 +5,9 @@ brief_summary: "IFP-3 uses natural language for message bodies rather than struc
 tagline: "Should agent protocol messages use natural language bodies or structured schemas?"
 ---
 
+← [Garden Patch Home](../) · [Inquiries](index.html)
+
+
 - is_a::[\[\[Inquiry Form\]\]](../forms/Inquiry%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)

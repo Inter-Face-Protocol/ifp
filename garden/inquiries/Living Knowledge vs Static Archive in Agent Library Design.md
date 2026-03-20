@@ -5,6 +5,9 @@ brief_summary: "IFP-11's Library platform spans personal knowledge management, g
 tagline: "Does the Library platform collapse living knowledge and static archives into a single paradigm?"
 ---
 
+← [Garden Patch Home](../) · [Inquiries](index.html)
+
+
 - is_a::[\[\[Inquiry Form\]\]](../forms/Inquiry%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -50,7 +53,7 @@ These two paradigms require different protocol behaviors from an agent:
 ## Sources
 
 - [IFP-11: Application Platforms](../../ifp-11-application-platforms.md), Library platform
-- [[2026-03-05 Peter Kaminski - AI and Garden]] — conversation identifying the collision
+- 2026-03-05 Peter Kaminski - AI and Garden — conversation identifying the collision
 - [\[\[Living Documents Over Static Publications\]\]](../principles/Living%20Documents%20Over%20Static%20Publications.html) — the principle that grounds the living-knowledge paradigm
 - [\[\[Status Lifecycle Tracks\]\]](../models/Status%20Lifecycle%20Tracks.html) — three status tracks for three kinds of knowledge work
 

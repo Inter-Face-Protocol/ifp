@@ -5,6 +5,9 @@ brief_summary: "In Inter-Face Protocol, a capability is a function an agent adve
 tagline: "Capabilities are what an agent can do, conditional on the trust context of the exchange"
 ---
 
+← [Garden Patch Home](../) · [Glosses](index.html)
+
+
 - is_a::[\[\[Gloss Form\]\]](../forms/Gloss%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)

@@ -5,6 +5,9 @@ brief_summary: "The decision to capture personal reasoning as typed markdown for
 tagline: "Capture reasoning as typed forms with predicates — not fine-tuning, RAG, databases, or tags"
 ---
 
+← [Garden Patch Home](../) · [Decisions](index.html)
+
+
 - is_a::[\[\[Decision Form\]\]](../forms/Decision%20Form.html)
 - has_status::[\[\[Growing Stage\]\]](../forms/Growing%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -56,7 +59,7 @@ Sixteen form types organized in five categories (Orientation, Structural, Action
 **Positive — external validation:**
 
 - Multiple agent memory systems (ClawVault, QMD, MIE) have independently converged on plain markdown + YAML frontmatter + typed metadata as the storage format for agent knowledge — benchmarks show this outperforms purpose-built infrastructure
-- [\[\[Chatlatanagulchai (2025) Agent READMEs\]\]⊙](../UPSTREAM.html#:~:text=Chatlatanagulchai%20%282025%29%20Agent%20READMEs) finds that context files "behave more like dynamic configurations than static text," validating the architecture's treatment of living documents as first-class engineering artifacts
+- [\[\[Chatlatanagulchai (2025) Agent READMEs\]\]↑](../NODES.html#:~:text=Chatlatanagulchai%20%282025%29%20Agent%20READMEs) finds that context files "behave more like dynamic configurations than static text," validating the architecture's treatment of living documents as first-class engineering artifacts
 
 **Positive — architectural:**
 
@@ -89,19 +92,19 @@ Sixteen form types organized in five categories (Orientation, Structural, Action
 - grounded_in::[\[\[Values Precede Technical Decisions\]\]](../convictions/Values%20Precede%20Technical%20Decisions.html)
   - The architecture derives from values; the decision to use typed forms follows from what matters, not what's technically convenient.
 
-- implements::[\[\[Standalone Document Test for Form Candidacy\]\]⊙](../UPSTREAM.html#:~:text=Standalone%20Document%20Test%20for%20Form%20Candidacy)
+- implements::[\[\[Standalone Document Test for Form Candidacy\]\]↑](../NODES.html#:~:text=Standalone%20Document%20Test%20for%20Form%20Candidacy)
   - The test that determines what qualifies as a form type — the taxonomic foundation.
 
-- extends::[\[\[Typed Relations as Simple Graphs in Plain Markdown\]\]⊙](../UPSTREAM.html#:~:text=Typed%20Relations%20as%20Simple%20Graphs%20in%20Plain%20Markdown)
-  - The predicate grammar uses the `predicate::[\[\[target\]\]⊙](../UPSTREAM.html#:~:text=target)` convention as its graph substrate.
+- extends::[\[\[Typed Relations as Simple Graphs in Plain Markdown\]\]↑](../NODES.html#:~:text=Typed%20Relations%20as%20Simple%20Graphs%20in%20Plain%20Markdown)
+  - The predicate grammar uses the `predicate::[\[\[target\]\]↑](../NODES.html#:~:text=target)` convention as its graph substrate.
 
-- validated_by::[\[\[Hybrid Bootstrapping for Garden Migration\]\]⊙](../UPSTREAM.html#:~:text=Hybrid%20Bootstrapping%20for%20Garden%20Migration)
+- validated_by::[\[\[Hybrid Bootstrapping for Garden Migration\]\]↑](../NODES.html#:~:text=Hybrid%20Bootstrapping%20for%20Garden%20Migration)
   - The first garden bootstrap proved the architecture works at vault scale.
 
 - relates_to::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
   - This decision is the founding architectural choice for the domain.
 
-- relates_to::[\[\[Captured Reasoning Exchange Pipeline\]\]⊙](../UPSTREAM.html#:~:text=Captured%20Reasoning%20Exchange%20Pipeline)
+- relates_to::[\[\[Captured Reasoning Exchange Pipeline\]\]↑](../NODES.html#:~:text=Captured%20Reasoning%20Exchange%20Pipeline)
   - The three-layer model (authoring, semantic, trust) implements this decision.
 
 - relates_to::[\[\[Delegated Decision Authority Spectrum\]\]](../boundaries/Delegated%20Decision%20Authority%20Spectrum.html)

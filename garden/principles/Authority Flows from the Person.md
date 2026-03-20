@@ -6,6 +6,9 @@ tagline: "Identity is delegable, not alienable — authority originates with the
 formatted: "2026-03-14"
 ---
 
+← [Garden Patch Home](../) · [Principles](index.html)
+
+
 - is_a::[\[\[Principle Form\]\]](../forms/Principle%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Self-Sovereign Identity\]\]](../domains/Self-Sovereign%20Identity.html)

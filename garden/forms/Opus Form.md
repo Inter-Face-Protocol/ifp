@@ -5,6 +5,9 @@ brief_summary: "Defines the Opus form type: a compound garden node for the autho
 tagline: "What am I saying here, and how does it connect? -- the structural contract for authored works"
 ---
 
+← [Garden Patch Home](../) · [Form Definitions](index.html)
+
+
 is_a::[\[\[Form Type\]\]](Form%20Type.html)
 has_status::[\[\[Seed Stage\]\]](Seed%20Stage.html)
 in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -26,7 +29,7 @@ An Opus is reserved for substantial intellectual works that merit compound treat
 
 **Is not an Opus**: A quick social post. An email reply. A meeting note. A clipping of someone else's work (use Citation Form). A single pattern within a pattern language (use Pattern Form).
 
-**Graduating to Opus**: Authored content in Authored/ can graduate to Garden/opuses/ when it warrants compound treatment (analysis, insights, expression tracking). Lighter authored content stays in Authored/.
+**Graduating to Opus**: Authored content in Authored/ can graduate to [Garden/opuses/](../) when it warrants compound treatment (analysis, insights, expression tracking). Lighter authored content stays in Authored/.
 
 ## Recursive Nesting
 
@@ -78,21 +81,21 @@ Attribution uses role-specific predicates grounded in the principal-agent framew
 
 ### Required
 
-- `authored_by::[\[\[Person\]\]⊙](../UPSTREAM.html#:~:text=Person)` -- who wrote the content
-- `principal::[\[\[Person\]\]⊙](../UPSTREAM.html#:~:text=Person)` -- who directed the work and bears ultimate responsibility (from agency law; see [\[\[Principal Authority as Agency Law for Digital Identity\]\]](../glosses/Principal%20Authority%20as%20Agency%20Law%20for%20Digital%20Identity.html))
+- `authored_by::[\[\[Person\]\]↑](../NODES.html#:~:text=Person)` -- who wrote the content
+- `principal::[\[\[Person\]\]↑](../NODES.html#:~:text=Person)` -- who directed the work and bears ultimate responsibility (from agency law; see [\[\[Principal Authority as Agency Law for Digital Identity\]\]](../glosses/Principal%20Authority%20as%20Agency%20Law%20for%20Digital%20Identity.html))
 
 ### Recommended
 
-- `copyright_held_by::[\[\[Person\]\]⊙](../UPSTREAM.html#:~:text=Person)` -- legal ownership (distinct from authorship)
-- `produced_by::[\[\[Person\]\]⊙](../UPSTREAM.html#:~:text=Person)` -- who made the work happen as a creative project (from film/game industry usage; often the same as principal but carries different connotation)
+- `copyright_held_by::[\[\[Person\]\]↑](../NODES.html#:~:text=Person)` -- legal ownership (distinct from authorship)
+- `produced_by::[\[\[Person\]\]↑](../NODES.html#:~:text=Person)` -- who made the work happen as a creative project (from film/game industry usage; often the same as principal but carries different connotation)
 
 ### As Needed
 
-- `foreword_by::[\[\[Person\]\]⊙](../UPSTREAM.html#:~:text=Person)` -- foreword contributor
-- `illustrated_by::[\[\[Person\]\]⊙](../UPSTREAM.html#:~:text=Person)` -- illustrator
-- `contributed_by::[\[\[Person\]\]⊙](../UPSTREAM.html#:~:text=Person)` -- catch-all for other roles
-- `edited_by::[\[\[Person\]\]⊙](../UPSTREAM.html#:~:text=Person)` -- editor
-- `translated_by::[\[\[Person\]\]⊙](../UPSTREAM.html#:~:text=Person)` -- translator
+- `foreword_by::[\[\[Person\]\]↑](../NODES.html#:~:text=Person)` -- foreword contributor
+- `illustrated_by::[\[\[Person\]\]↑](../NODES.html#:~:text=Person)` -- illustrator
+- `contributed_by::[\[\[Person\]\]↑](../NODES.html#:~:text=Person)` -- catch-all for other roles
+- `edited_by::[\[\[Person\]\]↑](../NODES.html#:~:text=Person)` -- editor
+- `translated_by::[\[\[Person\]\]↑](../NODES.html#:~:text=Person)` -- translator
 
 The distinction between authorship and responsibility matters for AI-assisted works: a human may not author a single word yet bears full responsibility as principal. "The augmentation is the method, not the author."
 
@@ -100,12 +103,12 @@ The distinction between authorship and responsibility matters for AI-assisted wo
 
 - `is_a::[\[\[Opus Form\]\]](Opus%20Form.html)`
 - `has_status::[\[\[Seed Stage\]\]](Seed%20Stage.html)` (or Growing, Evergreen)
-- `in_domain::[\[\[Domain Name\]\]⊙](../UPSTREAM.html#:~:text=Domain%20Name)`
-- `in_series::[\[\[Series Title\]\]⊙](../UPSTREAM.html#:~:text=Series%20Title)` -- membership in a thematic collection
-- `inspired_by::[\[\[Source\]\]⊙](../UPSTREAM.html#:~:text=Source)` -- intellectual lineage
-- `extends::[\[\[Other Opus\]\]⊙](../UPSTREAM.html#:~:text=Other%20Opus)` -- when one work builds on another
-- `develops_from::[\[\[Other Opus\]\]⊙](../UPSTREAM.html#:~:text=Other%20Opus)` -- earlier work this one grew out of
-- `presents::[\[\[Garden Node\]\]⊙](../UPSTREAM.html#:~:text=Garden%20Node)` -- references garden Pattern, Model, or other nodes the work discusses
+- `in_domain::[\[\[Domain Name\]\]↑](../NODES.html#:~:text=Domain%20Name)`
+- `in_series::[\[\[Series Title\]\]↑](../NODES.html#:~:text=Series%20Title)` -- membership in a thematic collection
+- `inspired_by::[\[\[Source\]\]↑](../NODES.html#:~:text=Source)` -- intellectual lineage
+- `extends::[\[\[Other Opus\]\]↑](../NODES.html#:~:text=Other%20Opus)` -- when one work builds on another
+- `develops_from::[\[\[Other Opus\]\]↑](../NODES.html#:~:text=Other%20Opus)` -- earlier work this one grew out of
+- `presents::[\[\[Garden Node\]\]↑](../NODES.html#:~:text=Garden%20Node)` -- references garden Pattern, Model, or other nodes the work discusses
 - `same_work_as::URL` -- identity consolidation: "this work also exists here" (the IndieWeb rel-me concept applied to works)
 
 ## Frontmatter
@@ -146,9 +149,9 @@ The form definition remains mechanism-agnostic. The SSI layer sits alongside the
 
 ## Exemplars
 
-- [\[\[Sociosocratic Learning & Seminars\]\]⊙](../UPSTREAM.html#:~:text=Sociosocratic%20Learning%20%26%20Seminars) -- Seed stage, compound (analysis.md + insights.md). Solo-authored essay on collaborative learning, published as GitHub Gist. Develops from the Hybrid Flipped Learning presentation.
-- [\[\[My Hybrid Flipped Learning Environment\]\]⊙](../UPSTREAM.html#:~:text=My%20Hybrid%20Flipped%20Learning%20Environment) -- Seed stage, compound (lead article + Expressions/ with SlideShare sidecar). ~5,000-word article expanding a 2013 faculty presentation on game-design-informed pedagogy. Published on SlideShare (abbreviated).
-- [\[\[Field Notes on Handpan Sound Models & Instruments\]\]⊙](../UPSTREAM.html#:~:text=Field%20Notes%20on%20Handpan%20Sound%20Models%20%26%20Instruments) -- Seed stage, dual-format compound (interactive HTML + portable markdown per instrument). Web-publishable reference work with code assets, requirements docs, and a 2014 precursor article as Rendition. Demonstrates Opus Form handling of hybrid web/vault content.
+- [\[\[Sociosocratic Learning & Seminars\]\]↑](../NODES.html#:~:text=Sociosocratic%20Learning%20%26%20Seminars) -- Seed stage, compound (analysis.md + insights.md). Solo-authored essay on collaborative learning, published as GitHub Gist. Develops from the Hybrid Flipped Learning presentation.
+- [\[\[My Hybrid Flipped Learning Environment\]\]↑](../NODES.html#:~:text=My%20Hybrid%20Flipped%20Learning%20Environment) -- Seed stage, compound (lead article + Expressions/ with SlideShare sidecar). ~5,000-word article expanding a 2013 faculty presentation on game-design-informed pedagogy. Published on SlideShare (abbreviated).
+- [\[\[Field Notes on Handpan Sound Models & Instruments\]\]↑](../NODES.html#:~:text=Field%20Notes%20on%20Handpan%20Sound%20Models%20%26%20Instruments) -- Seed stage, dual-format compound (interactive HTML + portable markdown per instrument). Web-publishable reference work with code assets, requirements docs, and a 2014 precursor article as Rendition. Demonstrates Opus Form handling of hybrid web/vault content.
 
 ## Category
 
@@ -161,15 +164,15 @@ Structural form -- captures *what I am saying* and *how it connects*.
 - [\[\[Principal Authority as Agency Law for Digital Identity\]\]](../glosses/Principal%20Authority%20as%20Agency%20Law%20for%20Digital%20Identity.html) -- principal-agent framework
 - [\[\[Cooperation vs Collaboration as Distinct Concepts\]\]](../inquiries/Cooperation%20vs%20Collaboration%20as%20Distinct%20Concepts.html) -- etymological grounding (opus = work product)
 - "Wikis, Publishers, Communities, Community Stewards" email thread (Jan 2026) -- producer/principal distinction
-- [\[\[The Gardening Problem Returns\]\]⊙](../UPSTREAM.html#:~:text=The%20Gardening%20Problem%20Returns) -- "authorship is not performance but responsibility"
+- [\[\[The Gardening Problem Returns\]\]↑](../NODES.html#:~:text=The%20Gardening%20Problem%20Returns) -- "authorship is not performance but responsibility"
 
 ## Relations
 
 - relates_to::[\[\[Citation Form\]\]](Citation%20Form.html) -- citations capture others' works; opuses capture your own
 - relates_to::[\[\[Pattern Form\]\]](Pattern%20Form.html) -- opuses may present patterns as garden nodes
 - relates_to::[\[\[Model Form\]\]](Model%20Form.html) -- opuses may present models as garden nodes
-- relates_to::[\[\[Case Form\]\]⊙](../UPSTREAM.html#:~:text=Case%20Form) -- opuses may contain case studies
-- relates_to::[\[\[Reference Form\]\]⊙](../UPSTREAM.html#:~:text=Reference%20Form) -- references synthesize knowledge; opuses are original contributions
-- relates_to::[\[\[Research Form\]\]⊙](../UPSTREAM.html#:~:text=Research%20Form) -- research investigates; opuses articulate
+- relates_to::[\[\[Case Form\]\]↑](../NODES.html#:~:text=Case%20Form) -- opuses may contain case studies
+- relates_to::[\[\[Reference Form\]\]↑](../NODES.html#:~:text=Reference%20Form) -- references synthesize knowledge; opuses are original contributions
+- relates_to::[\[\[Research Form\]\]↑](../NODES.html#:~:text=Research%20Form) -- research investigates; opuses articulate
 - relates_to::[\[\[Principal Authority as Agency Law for Digital Identity\]\]](../glosses/Principal%20Authority%20as%20Agency%20Law%20for%20Digital%20Identity.html) -- attribution framework
 - relates_to::[\[\[Principal-Agent Relationship in Augmented Knowledge Work\]\]](../models/Principal-Agent%20Relationship%20in%20Augmented%20Knowledge%20Work.html) -- implementation model

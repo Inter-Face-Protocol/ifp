@@ -6,6 +6,9 @@ tagline: "How principal authority maps to vault owner, Claude sessions, rules, a
 formatted: "2026-03-14"
 ---
 
+← [Garden Patch Home](../) · [Models](index.html)
+
+
 - is_a::[\[\[Model Form\]\]](../forms/Model%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -16,7 +19,7 @@ The vault embodies a principal-agent relationship where the BCR-2026-xxx framewo
 
 | Self-Sovereign Identity Term | Vault Implementation |
 |----------|---------------------|
-| **Principal** | Vault owner ([\[\[Christopher Allen\]\]⊙](../UPSTREAM.html#:~:text=Christopher%20Allen)) — directs all work, reviews outputs, bears responsibility |
+| **Principal** | Vault owner ([\[\[Christopher Allen\]\]↑](../NODES.html#:~:text=Christopher%20Allen)) — directs all work, reviews outputs, bears responsibility |
 | **Agent** | Claude Code sessions — generate content, execute tasks, operate within conferral |
 | **Conferral** | Rules, skills, processes — what Claude may do, how, and within what boundaries |
 | **Authorship** | Claude generates content: notes, summaries, code, form extractions |
@@ -30,7 +33,7 @@ The vault satisfies all three conditions for meaningful authority:
 
 **Legibility** — The vault owner can observe what Claude does and comprehend why. Session logs record actions. Learning loops capture process insights. WORKSTATE.md tracks current task and progress. The `AskUserQuestion` tool surfaces decisions that require human judgment. Nothing happens invisibly.
 
-**Boundaries** — Claude operates within constraints the vault owner established. Rules define imperatives (what must and must not happen). Skills define capabilities (what Claude can do). Processes define workflows (how multi-step operations proceed). The `paths:` trigger system loads constraints contextually — Garden/ files get garden rules, meeting files get meeting rules.
+**Boundaries** — Claude operates within constraints the vault owner established. Rules define imperatives (what must and must not happen). Skills define capabilities (what Claude can do). Processes define workflows (how multi-step operations proceed). The `paths:` trigger system loads constraints contextually — [Garden/](../) files get garden rules, meeting files get meeting rules.
 
 **Override** — The vault owner can intervene at any time. The `AskUserQuestion` tool creates approval gates. The commit protocol requires human sign-off. The `directed_at::` predicate on inquiry forms flags questions requiring human judgment. Session exit checkpoints verify state before closing. The vault owner can revoke any conferral by editing rules.
 

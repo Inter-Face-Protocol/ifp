@@ -6,6 +6,9 @@ tagline: "Growing vocabularies degrade without tending — weed, seed, and ferti
 formatted: "2026-03-14"
 ---
 
+← [Garden Patch Home](../) · [Models](index.html)
+
+
 - is_a::[\[\[Model Form\]\]](../forms/Model%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -50,20 +53,20 @@ The mechanism is the same in each: accumulation without review degrades the syst
 
 ## Sources
 
-- [\[\[Peters (2008) Tag Gardening for Folksonomy Enrichment\]\]⊙](../EXTERNAL.html#:~:text=Peters%20%282008%29%20Tag%20Gardening%20for%20Folksonomy%20Enrichment) — formalized the seed/weed/fertilize model for folksonomies
-- [\[\[systematicls (2026) World-Class Agentic Engineering\]\]⊙](../EXTERNAL.html#:~:text=systematicls%20%282026%29%20World-Class%20Agentic%20Engineering) — observed the same lifecycle in agent rules and skills: "add preferences → performance improves → contradictions accumulate → consolidate → performance improves again"
-- [\[\[Informal Edges Poison the Graph\]\]⊙](../EXTERNAL.html#:~:text=Informal%20Edges%20Poison%20the%20Graph) — the failure mode this model explains
-- [\[\[Predicate Vocabulary Stabilization\]\]⊙](../EXTERNAL.html#:~:text=Predicate%20Vocabulary%20Stabilization) — the open question this model informs
+- [\[\[Peters (2008) Tag Gardening for Folksonomy Enrichment\]\]↑](../EXTERNAL.html#:~:text=Peters%20%282008%29%20Tag%20Gardening%20for%20Folksonomy%20Enrichment) — formalized the seed/weed/fertilize model for folksonomies
+- [\[\[systematicls (2026) World-Class Agentic Engineering\]\]↑](../EXTERNAL.html#:~:text=systematicls%20%282026%29%20World-Class%20Agentic%20Engineering) — observed the same lifecycle in agent rules and skills: "add preferences → performance improves → contradictions accumulate → consolidate → performance improves again"
+- [\[\[Informal Edges Poison the Graph\]\]↑](../EXTERNAL.html#:~:text=Informal%20Edges%20Poison%20the%20Graph) — the failure mode this model explains
+- [\[\[Predicate Vocabulary Stabilization\]\]↑](../EXTERNAL.html#:~:text=Predicate%20Vocabulary%20Stabilization) — the open question this model informs
 
 ## Relations
 
-- explains::[\[\[Informal Edges Poison the Graph\]\]⊙](../EXTERNAL.html#:~:text=Informal%20Edges%20Poison%20the%20Graph)
+- explains::[\[\[Informal Edges Poison the Graph\]\]↑](../EXTERNAL.html#:~:text=Informal%20Edges%20Poison%20the%20Graph)
   - The anti-pattern is the degradation phase of this lifecycle. The pattern's curation layers are the tending activities.
 
-- informs::[\[\[Predicate Vocabulary Stabilization\]\]⊙](../EXTERNAL.html#:~:text=Predicate%20Vocabulary%20Stabilization)
+- informs::[\[\[Predicate Vocabulary Stabilization\]\]↑](../EXTERNAL.html#:~:text=Predicate%20Vocabulary%20Stabilization)
   - The seed/weed/fertilize framework provides a concrete methodology for the open question of when and how to stabilize.
 
-- relates_to::[\[\[Digital Garden as Growth Ethos\]\]⊙](../EXTERNAL.html#:~:text=Digital%20Garden%20as%20Growth%20Ethos)
+- relates_to::[\[\[Digital Garden as Growth Ethos\]\]↑](../EXTERNAL.html#:~:text=Digital%20Garden%20as%20Growth%20Ethos)
   - The gardening metaphor for vocabulary maintenance independently parallels and enriches the digital garden ethos.
 
 - relates_to::[\[\[Document Lifecycle Governance Heuristics\]\]](Document%20Lifecycle%20Governance%20Heuristics.html)

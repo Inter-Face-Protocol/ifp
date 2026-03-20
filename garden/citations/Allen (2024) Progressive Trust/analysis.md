@@ -5,6 +5,9 @@ brief_summary: "Analysis of how Christopher Allen's progressive trust framework 
 tagline: "How faithfully does IFP operationalize the progressive trust framework?"
 ---
 
+← [Garden Patch Home](../../README.html) · [Citations](../index.html)
+
+
 - is_a::[\[\[Citation Form\]\]](../../forms/Citation%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../../forms/Seed%20Stage.html)
 

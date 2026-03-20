@@ -5,6 +5,9 @@ brief_summary: "Any intermediary that handles messages between agents must leave
 tagline: "Intermediaries must leave auditable traces rather than forwarding silently"
 ---
 
+← [Garden Patch Home](../) · [Principles](index.html)
+
+
 - is_a::[\[\[Principle Form\]\]](../forms/Principle%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)

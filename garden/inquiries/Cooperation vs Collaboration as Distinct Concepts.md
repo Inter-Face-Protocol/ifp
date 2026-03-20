@@ -5,6 +5,9 @@ brief_summary: "Cooperation and collaboration share a Latin prefix (com- = toget
 tagline: "Same prefix, different roots — opus (the product) vs labor (the sweat) — and the distinction persists everywhere"
 ---
 
+← [Garden Patch Home](../) · [Inquiries](index.html)
+
+
 - is_a::[\[\[Inquiry Form\]\]](../forms/Inquiry%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Synpraxis\]\]](../domains/Synpraxis.html)

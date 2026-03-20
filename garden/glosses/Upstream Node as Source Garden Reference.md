@@ -1,9 +1,12 @@
 ---
 created: 2026-03-19
 author: Christopher Allen
-brief_summary: "An upstream node is a knowledge node that exists in the source garden but was not grafted into a garden patch. It is referenced by grafted nodes through predicate links marked with ⊙, and its summary is documented on the Upstream References page. The source garden is 'upstream' — the origin from which knowledge flows into the patch."
+brief_summary: "An upstream node is a knowledge node that exists in the source garden but was not grafted into a garden patch. It is referenced by grafted nodes through predicate links marked with ↑, and its summary is documented on the Upstream References page. The source garden is 'upstream' — the origin from which knowledge flows into the patch."
 tagline: "A node that exists in the source garden but was not grafted into this patch"
 ---
+
+← [Garden Patch Home](../) · [Glosses](index.html)
+
 
 - is_a::[\[\[Gloss Form\]\]](../forms/Gloss%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
@@ -17,9 +20,9 @@ The term borrows from version control: the source garden is "upstream" — the o
 
 ## How Upstream Nodes Appear
 
-Links to upstream nodes are marked with **⊙** (circled dot) and are clickable — they navigate to the [Upstream References](../UPSTREAM.html) page, which documents each upstream node's name, form type, and brief summary from the source garden. This gives readers enough context to understand the reference without needing access to the source garden.
+Links to upstream nodes are marked with **↑** and are clickable — they navigate to the upstream section of the [Node Directory](../NODES.html), which documents each upstream node's name, form type, and brief summary from the source garden. This gives readers enough context to understand the reference without needing access to the source garden.
 
-The ⊙ marker distinguishes upstream nodes from ghost links (plain text, not clickable — the node does not exist yet) and from grafted nodes (clickable without a marker — the node is present in the patch).
+The ↑ marker distinguishes upstream nodes from ghost links (plain text, not clickable — the node does not exist yet) and from grafted nodes (clickable without a marker — the node is present in the patch).
 
 ## Why Not Include Everything
 

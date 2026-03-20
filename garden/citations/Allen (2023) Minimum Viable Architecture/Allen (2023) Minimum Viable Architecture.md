@@ -8,10 +8,13 @@ brief_summary: "Christopher Allen's minimum viable architecture principle: make 
 tagline: "Make the hard-to-reverse decisions early, defer everything else"
 ---
 
+← [Garden Patch Home](../../README.html) · [Citations](../index.html)
+
+
 - is_a::[\[\[Citation Form\]\]](../../forms/Citation%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../../domains/Deep%20Context%20Architecture.html)
-- cites_work_by::[\[\[Christopher Allen\]\]⊙](../../UPSTREAM.html#:~:text=Christopher%20Allen)
+- cites_work_by::[\[\[Christopher Allen\]\]↑](../../NODES.html#:~:text=Christopher%20Allen)
 
 # Allen (2023) Minimum Viable Architecture
 

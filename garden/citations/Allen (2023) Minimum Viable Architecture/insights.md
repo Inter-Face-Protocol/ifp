@@ -5,6 +5,9 @@ brief_summary: "Insights from applying the minimum viable architecture principle
 tagline: "What does the architectural/tactical distinction reveal about agent protocol design?"
 ---
 
+← [Garden Patch Home](../../README.html) · [Citations](../index.html)
+
+
 - is_a::[\[\[Citation Form\]\]](../../forms/Citation%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../../forms/Seed%20Stage.html)
 

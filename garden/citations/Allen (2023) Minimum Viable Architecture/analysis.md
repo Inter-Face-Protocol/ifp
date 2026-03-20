@@ -5,6 +5,9 @@ brief_summary: "Analysis of how the minimum viable architecture principle applie
 tagline: "Which IFP decisions are load-bearing architecture and which are deferrable tactical choices?"
 ---
 
+← [Garden Patch Home](../../README.html) · [Citations](../index.html)
+
+
 - is_a::[\[\[Citation Form\]\]](../../forms/Citation%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../../forms/Seed%20Stage.html)
 

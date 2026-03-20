@@ -3,6 +3,9 @@ created: 2026-03-18
 part_of: "[\[\[Ehmke (2023) Dimensions of Digital Coercion\]\]](Ehmke%20%282023%29%20Dimensions%20of%20Digital%20Coercion.html)"
 ---
 
+← [Garden Patch Home](../../README.html) · [Citations](../index.html)
+
+
 - is_a::[\[\[Citation Form\]\]](../../forms/Citation%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../../forms/Seed%20Stage.html)
 

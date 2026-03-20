@@ -6,6 +6,9 @@ tagline: "Mature, well-linked, trustworthy — the highest confidence stage for 
 formatted: "2026-03-14"
 ---
 
+← [Garden Patch Home](../) · [Form Definitions](index.html)
+
+
 - is_a::[\[\[Form Type\]\]](Form%20Type.html)
 - has_status::[\[\[Seed Stage\]\]](Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -34,10 +37,10 @@ The term borrows from Andy Matuschak's "evergreen notes" concept but applies it 
 
 ## Sources
 
-Growth stage definitions from [\[\[Deep Context as an Architecture for Captured Reasoning\]\]](../decisions/Deep%20Context%20as%20an%20Architecture%20for%20Captured%20Reasoning.html), "Growth Stages as Lifecycle Metadata" section. Originally `status/evergreen` tag; migrated to `has_status::[\[\[Evergreen Stage\]\]](Evergreen%20Stage.html)` predicate per [\[\[Classification via Predicates Not Tags\]\]⊙](../UPSTREAM.html#:~:text=Classification%20via%20Predicates%20Not%20Tags). Term inspired by Matuschak, Andy. "Evergreen notes." https://notes.andymatuschak.org/Evergreen_notes
+Growth stage definitions from [\[\[Deep Context as an Architecture for Captured Reasoning\]\]](../decisions/Deep%20Context%20as%20an%20Architecture%20for%20Captured%20Reasoning.html), "Growth Stages as Lifecycle Metadata" section. Originally `status/evergreen` tag; migrated to `has_status::[\[\[Evergreen Stage\]\]](Evergreen%20Stage.html)` predicate per [\[\[Classification via Predicates Not Tags\]\]↑](../NODES.html#:~:text=Classification%20via%20Predicates%20Not%20Tags). Term inspired by Matuschak, Andy. "Evergreen notes." https://notes.andymatuschak.org/Evergreen_notes
 
 ## Relations
 
 - relates_to::[\[\[Growing Stage\]\]](Growing%20Stage.html) — the previous stage in the growth progression
-- relates_to::[\[\[Pruned Stage\]\]⊙](../UPSTREAM.html#:~:text=Pruned%20Stage) — the end-of-life transition for superseded evergreen nodes
-- relates_to::[\[\[Structural Retrieval Hierarchy\]\]⊙](../UPSTREAM.html#:~:text=Structural%20Retrieval%20Hierarchy) — evergreen nodes rank highest in retrieval priority
+- relates_to::[\[\[Pruned Stage\]\]↑](../NODES.html#:~:text=Pruned%20Stage) — the end-of-life transition for superseded evergreen nodes
+- relates_to::[\[\[Structural Retrieval Hierarchy\]\]↑](../NODES.html#:~:text=Structural%20Retrieval%20Hierarchy) — evergreen nodes rank highest in retrieval priority

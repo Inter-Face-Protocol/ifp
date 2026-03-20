@@ -7,7 +7,7 @@ import json
 garden = sys.argv[1]
 vault = sys.argv[2]
 
-# 1. Collect all external targets (have ⊙ marker)
+# 1. Collect all external targets (have ↑ marker)
 external_targets = set()
 for root, dirs, files in os.walk(garden):
     for f in files:
@@ -15,10 +15,10 @@ for root, dirs, files in os.walk(garden):
             continue
         with open(os.path.join(root, f)) as fh:
             content = fh.read()
-        for m in re.finditer(r'\[\[([^\]]+)\]\]⊙', content):
+        for m in re.finditer(r'\[\[([^\]]+)\]\]↑', content):
             external_targets.add(m.group(1))
-        # Also check linkified ⊙ markers
-        for m in re.finditer(r'\\\[\\\[([^\]]+)\\\]\\\].*?⊙', content):
+        # Also check linkified ↑ markers
+        for m in re.finditer(r'\\\[\\\[([^\]]+)\\\]\\\].*?↑', content):
             external_targets.add(m.group(1))
 
 print(f"Found {len(external_targets)} unique external targets", file=sys.stderr)

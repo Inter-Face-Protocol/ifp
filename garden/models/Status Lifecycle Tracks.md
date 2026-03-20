@@ -5,6 +5,9 @@ brief_summary: "Three status tracks for three kinds of knowledge work. Maturity 
 tagline: "Three status tracks for three kinds of knowledge work — maturity, curation, and processing"
 ---
 
+← [Garden Patch Home](../) · [Models](index.html)
+
+
 - is_a::[\[\[Model Form\]\]](../forms/Model%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -49,16 +52,16 @@ The `has_status::` predicate is the same everywhere. What changes is the vocabul
 
 ## Sources
 
-Status lifecycle design from [\[\[Deep Context as an Architecture for Captured Reasoning\]\]](../decisions/Deep%20Context%20as%20an%20Architecture%20for%20Captured%20Reasoning.html), "Growth Stages as Lifecycle Metadata" section. Processing track from [\[\[Linear Processing Stages for Meetings\]\]⊙](../EXTERNAL.html#:~:text=Linear%20Processing%20Stages%20for%20Meetings). Curation track from vault enrichment workstream experience.
+Status lifecycle design from [\[\[Deep Context as an Architecture for Captured Reasoning\]\]](../decisions/Deep%20Context%20as%20an%20Architecture%20for%20Captured%20Reasoning.html), "Growth Stages as Lifecycle Metadata" section. Processing track from [\[\[Linear Processing Stages for Meetings\]\]↑](../EXTERNAL.html#:~:text=Linear%20Processing%20Stages%20for%20Meetings). Curation track from vault enrichment workstream experience.
 
 ## Relations
 
 - relates_to::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html) — entry point for the maturity track
 - relates_to::[\[\[Growing Stage\]\]](../forms/Growing%20Stage.html)
 - relates_to::[\[\[Evergreen Stage\]\]](../forms/Evergreen%20Stage.html)
-- relates_to::[\[\[Pruned Stage\]\]⊙](../EXTERNAL.html#:~:text=Pruned%20Stage) — exit point for the maturity track
-- relates_to::[\[\[Linear Processing Stages for Meetings\]\]⊙](../EXTERNAL.html#:~:text=Linear%20Processing%20Stages%20for%20Meetings) — the decision that defined the processing track
-- relates_to::[\[\[Classification via Predicates Not Tags\]\]⊙](../EXTERNAL.html#:~:text=Classification%20via%20Predicates%20Not%20Tags) — the decision that made has_status:: a typed relation
+- relates_to::[\[\[Pruned Stage\]\]↑](../EXTERNAL.html#:~:text=Pruned%20Stage) — exit point for the maturity track
+- relates_to::[\[\[Linear Processing Stages for Meetings\]\]↑](../EXTERNAL.html#:~:text=Linear%20Processing%20Stages%20for%20Meetings) — the decision that defined the processing track
+- relates_to::[\[\[Classification via Predicates Not Tags\]\]↑](../EXTERNAL.html#:~:text=Classification%20via%20Predicates%20Not%20Tags) — the decision that made has_status:: a typed relation
 - relates_to::[\[\[Garden Precinct\]\]](../glosses/Garden%20Precinct.html) — maturity track is primarily a garden precinct concept
 - relates_to::[\[\[Vault Precinct\]\]](../glosses/Vault%20Precinct.html) — curation and processing tracks serve the vault precinct
 - relates_to::[\[\[When to Specify and When to Explore in Protocol Evolution\]\]](../inquiries/When%20to%20Specify%20and%20When%20to%20Explore%20in%20Protocol%20Evolution.html)

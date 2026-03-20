@@ -6,6 +6,9 @@ tagline: "Plain markdown, git, and shell one-liners — specialized tools add va
 formatted: "2026-03-14"
 ---
 
+← [Garden Patch Home](../) · [Principles](index.html)
+
+
 - is_a::[\[\[Principle Form\]\]](../forms/Principle%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -14,7 +17,7 @@ formatted: "2026-03-14"
 
 ## Claim
 
-The authoring and semantic layers of the deep context architecture operate without specialized tooling. Forms are plain markdown with YAML frontmatter and `predicate::[\[\[target\]\]⊙](../UPSTREAM.html#:~:text=target)` typed relations. Version control is git. The query layer is shell one-liners (`rg 'predicate::\[\[Target\]\]' --type md`). A dedicated graph-traversal skill could add value but is not required.
+The authoring and semantic layers of the deep context architecture operate without specialized tooling. Forms are plain markdown with YAML frontmatter and `predicate::[\[\[target\]\]↑](../NODES.html#:~:text=target)` typed relations. Version control is git. The query layer is shell one-liners (`rg 'predicate::\[\[Target\]\]' --type md`). A dedicated graph-traversal skill could add value but is not required.
 
 ## Scope
 
@@ -47,11 +50,11 @@ The convergence suggests that plain markdown with typed metadata is not merely a
 ## Sources
 
 - [\[\[Deep Context as an Architecture for Captured Reasoning\]\]](../decisions/Deep%20Context%20as%20an%20Architecture%20for%20Captured%20Reasoning.html), "Authoring Layer" and "Semantic Layer" sections (lines 244-256)
-- [\[\[The Gardening Problem Returns - Document Lifecycle in the Age of AI Agents\]\]⊙](../UPSTREAM.html#:~:text=The%20Gardening%20Problem%20Returns%20-%20Document%20Lifecycle%20in%20the%20Age%20of%20AI%20Agents), Section 1.3 — ClawVault, QMD, and MIE as independent convergence on markdown+YAML for agent memory
+- [\[\[The Gardening Problem Returns - Document Lifecycle in the Age of AI Agents\]\]↑](../NODES.html#:~:text=The%20Gardening%20Problem%20Returns%20-%20Document%20Lifecycle%20in%20the%20Age%20of%20AI%20Agents), Section 1.3 — ClawVault, QMD, and MIE as independent convergence on markdown+YAML for agent memory
 
 ## Relations
 
-- relates_to::[\[\[Predicate Maintenance Recipes Over Tools\]\]⊙](../UPSTREAM.html#:~:text=Predicate%20Maintenance%20Recipes%20Over%20Tools)
+- relates_to::[\[\[Predicate Maintenance Recipes Over Tools\]\]↑](../NODES.html#:~:text=Predicate%20Maintenance%20Recipes%20Over%20Tools)
   - Maintenance recipes demonstrate the zero-tooling floor in practice.
 
 - relates_to::[\[\[Human Authority Over Augmentation Systems\]\]](Human%20Authority%20Over%20Augmentation%20Systems.html)

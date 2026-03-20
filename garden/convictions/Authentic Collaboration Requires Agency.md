@@ -5,6 +5,9 @@ brief_summary: "The conviction that authentic collaboration — shared intention
 tagline: "Without agency, collaboration is compliance — and the world's important problems demand real collaboration"
 ---
 
+← [Garden Patch Home](../) · [Convictions](index.html)
+
+
 - is_a::[\[\[Conviction Form\]\]](../forms/Conviction%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Synpraxis\]\]](../domains/Synpraxis.html)
@@ -58,10 +61,10 @@ Each of these domains independently confirmed the same dependency: remove agency
 
 ## Relations
 
-- grounds::[\[\[Agency Before Collaboration\]\]⊙](../UPSTREAM.html#:~:text=Agency%20Before%20Collaboration) — the principle derived from this conviction (future)
+- grounds::[\[\[Agency Before Collaboration\]\]↑](../NODES.html#:~:text=Agency%20Before%20Collaboration) — the principle derived from this conviction (future)
 - relates_to::[\[\[Authority Flows from the Person\]\]](../principles/Authority%20Flows%20from%20the%20Person.html) — Self-Sovereign Identity's expression of the same conviction in the identity domain
 - relates_to::[\[\[Human Authority Over Augmentation Systems\]\]](../principles/Human%20Authority%20Over%20Augmentation%20Systems.html) — Deep Context Architecture's expression in the vault-agent relationship
-- relates_to::[\[\[Precondition Stack for Joint Action\]\]⊙](../UPSTREAM.html#:~:text=Precondition%20Stack%20for%20Joint%20Action) — the model that operationalizes this conviction (future)
+- relates_to::[\[\[Precondition Stack for Joint Action\]\]↑](../NODES.html#:~:text=Precondition%20Stack%20for%20Joint%20Action) — the model that operationalizes this conviction (future)
 - relates_to::[\[\[Values Precede Technical Decisions\]\]](Values%20Precede%20Technical%20Decisions.html) — the Deep Context Architecture conviction that values ground technical architecture; this conviction is a specific instance of that general principle applied to synpraxis
 - relates_to::[\[\[Cooperation vs Collaboration as Distinct Concepts\]\]](../inquiries/Cooperation%20vs%20Collaboration%20as%20Distinct%20Concepts.html) — the inquiry that established why the cooperation/collaboration distinction matters here
 - relates_to::[\[\[Opus Form\]\]](../forms/Opus%20Form.html) — opus etymology (operari, from opus) connects to the cooperation-collaboration distinction

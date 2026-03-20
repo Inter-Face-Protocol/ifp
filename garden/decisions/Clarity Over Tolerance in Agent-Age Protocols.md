@@ -5,6 +5,9 @@ brief_summary: "Inter-Face Protocol explicitly replaces Postel's Law ('be libera
 tagline: "Why did IFP replace Postel's Law with strict error reporting and conversational resolution?"
 ---
 
+← [Garden Patch Home](../) · [Decisions](index.html)
+
+
 - is_a::[\[\[Decision Form\]\]](../forms/Decision%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)

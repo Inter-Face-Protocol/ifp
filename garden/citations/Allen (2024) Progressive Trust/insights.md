@@ -5,6 +5,9 @@ brief_summary: "Insights from mapping progressive trust to IFP — what the exer
 tagline: "What does mapping progressive trust to IFP reveal about trust in agent protocols?"
 ---
 
+← [Garden Patch Home](../../README.html) · [Citations](../index.html)
+
+
 - is_a::[\[\[Citation Form\]\]](../../forms/Citation%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../../forms/Seed%20Stage.html)
 

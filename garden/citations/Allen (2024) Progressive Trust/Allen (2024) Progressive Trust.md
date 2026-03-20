@@ -8,10 +8,13 @@ brief_summary: "Christopher Allen's progressive trust framework: trust deepens t
 tagline: "Trust deepens through verifiable stages, not binary trusted/untrusted switches"
 ---
 
+← [Garden Patch Home](../../README.html) · [Citations](../index.html)
+
+
 - is_a::[\[\[Citation Form\]\]](../../forms/Citation%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../../forms/Seed%20Stage.html)
 - in_domain::[\[\[Self-Sovereign Identity\]\]](../../domains/Self-Sovereign%20Identity.html)
-- cites_work_by::[\[\[Christopher Allen\]\]⊙](../../UPSTREAM.html#:~:text=Christopher%20Allen)
+- cites_work_by::[\[\[Christopher Allen\]\]↑](../../NODES.html#:~:text=Christopher%20Allen)
 
 # Allen (2024) Progressive Trust
 

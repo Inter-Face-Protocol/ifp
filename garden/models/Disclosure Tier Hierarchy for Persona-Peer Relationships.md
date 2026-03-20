@@ -5,6 +5,9 @@ brief_summary: "Inter-Face Protocol organizes information sharing through a six-
 tagline: "How do disclosure tiers, personas, and peer relationships intersect to govern information sharing?"
 ---
 
+← [Garden Patch Home](../) · [Models](index.html)
+
+
 - is_a::[\[\[Model Form\]\]](../forms/Model%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -68,3 +71,6 @@ The persona-peer-tier mapping is what makes IFP's disclosure model richer than b
   - The person can always narrow their disclosure or stop sharing — exit rights apply to information sharing.
 - relates_to::[\[\[Disclosure Spectrum as Discrete Tiers or Continuous Range\]\]](../inquiries/Disclosure%20Spectrum%20as%20Discrete%20Tiers%20or%20Continuous%20Range.html)
   - Should disclosure be discrete named tiers or a continuous spectrum?
+
+- relates_to::[\[\[Precinct Boundaries Govern Sharing Not Quality\]\]](../patterns/Precinct%20Boundaries%20Govern%20Sharing%20Not%20Quality.html)
+  - Disclosure tiers operate within conversations; precinct boundaries operate between knowledge artifacts. Both govern what gets shared with whom.

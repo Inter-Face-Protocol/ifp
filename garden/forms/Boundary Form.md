@@ -5,6 +5,9 @@ brief_summary: "Defines the Boundary form type: a declaration of what an agent m
 tagline: "Where does this system's authority end? — the structural contract for boundary forms"
 ---
 
+← [Garden Patch Home](../) · [Form Definitions](index.html)
+
+
 - is_a::[\[\[Form Type\]\]](Form%20Type.html)
 - has_status::[\[\[Seed Stage\]\]](Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -33,7 +36,7 @@ Naming heuristic: what's bounded + distinctive feature. "Delegated Decision Auth
 - `is_a::[\[\[Boundary Form\]\]](Boundary%20Form.html)`
 - `has_status::[\[\[Seed Stage\]\]](Seed%20Stage.html)` or `[\[\[Growing Stage\]\]](Growing%20Stage.html)`
 - `in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)`
-- `grounded_in::[\[\[Value\]\]⊙](../UPSTREAM.html#:~:text=Value)` — values that justify the boundary
+- `grounded_in::[\[\[Value\]\]↑](../NODES.html#:~:text=Value)` — values that justify the boundary
 - `embodies::[\[\[Pattern Form\]\]](Pattern%20Form.html)` — patterns that demonstrate the boundary
 - `relates_to::[\[\[Principle Form\]\]](Principle%20Form.html)`, `[\[\[Model Form\]\]](Model%20Form.html)`
 

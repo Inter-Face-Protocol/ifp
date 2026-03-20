@@ -6,6 +6,9 @@ tagline: "Is there a 'Dunbar number' for living documents — a point where main
 formatted: "2026-03-14"
 ---
 
+← [Garden Patch Home](../) · [Inquiries](index.html)
+
+
 - is_a::[\[\[Inquiry Form\]\]](../forms/Inquiry%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -42,7 +45,7 @@ The question arises from three observations:
 
 ## Sources
 
-- [\[\[The Gardening Problem Returns - Document Lifecycle in the Age of AI Agents\]\]⊙](../EXTERNAL.html#:~:text=The%20Gardening%20Problem%20Returns%20-%20Document%20Lifecycle%20in%20the%20Age%20of%20AI%20Agents), Open Question #4
+- [\[\[The Gardening Problem Returns - Document Lifecycle in the Age of AI Agents\]\]↑](../EXTERNAL.html#:~:text=The%20Gardening%20Problem%20Returns%20-%20Document%20Lifecycle%20in%20the%20Age%20of%20AI%20Agents), Open Question #4
 - Michalski, Jerry. "Jerry's Brain" — 620,000+ thoughts, continuously curated since 1997
 - "Reflection on two years of writing evergreen notes" (engineeringideas.substack.com) — structure ossification as a scale failure mode
 
@@ -54,10 +57,10 @@ The question arises from three observations:
 - relates_to::[\[\[Document Lifecycle Governance Heuristics\]\]](../models/Document%20Lifecycle%20Governance%20Heuristics.html)
   - Governance heuristics (split, merge, prune) are the gardening operations whose cost is in question.
 
-- relates_to::[\[\[Predicate Maintenance Recipes Over Tools\]\]⊙](../EXTERNAL.html#:~:text=Predicate%20Maintenance%20Recipes%20Over%20Tools)
+- relates_to::[\[\[Predicate Maintenance Recipes Over Tools\]\]↑](../EXTERNAL.html#:~:text=Predicate%20Maintenance%20Recipes%20Over%20Tools)
   - Shell-scriptable maintenance may shift the scale limit by automating what would otherwise be manual gardening.
 
-- relates_to::[\[\[Digital Garden as Growth Ethos\]\]⊙](../EXTERNAL.html#:~:text=Digital%20Garden%20as%20Growth%20Ethos)
+- relates_to::[\[\[Digital Garden as Growth Ethos\]\]↑](../EXTERNAL.html#:~:text=Digital%20Garden%20as%20Growth%20Ethos)
   - The garden ethos assumes growth; this inquiry asks whether growth has practical limits.
 - relates_to::[\[\[When to Specify and When to Explore in Protocol Evolution\]\]](When%20to%20Specify%20and%20When%20to%20Explore%20in%20Protocol%20Evolution.html)
   - Can IFP specifications remain living documents as the protocol matures, or will scale force premature freezing?

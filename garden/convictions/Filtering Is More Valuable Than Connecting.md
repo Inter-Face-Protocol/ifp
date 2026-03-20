@@ -5,6 +5,9 @@ brief_summary: "The core conviction behind Inter-Face Protocol: the scarce resou
 tagline: "The scarce resource is human attention, not human connection"
 ---
 
+← [Garden Patch Home](../) · [Convictions](index.html)
+
+
 - is_a::[\[\[Conviction Form\]\]](../forms/Conviction%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -48,3 +51,9 @@ This conviction has consequences for protocol design: most gossip exchanges shou
   - Filtering preserves human agency over attention — the person decides what to engage with, not the algorithm.
 - relates_to::[\[\[Convergence and Divergence Across Agent Application Platforms\]\]](../inquiries/Convergence%20and%20Divergence%20Across%20Agent%20Application%20Platforms.html)
   - If filtering is the core value, do all eleven platforms serve filtering equally?
+
+- relates_to::[\[\[Gossip Duality Between Human Silence and Agent Noise\]\]](../inquiries/Gossip%20Duality%20Between%20Human%20Silence%20and%20Agent%20Noise.html)
+  - The filtering conviction produces silence for humans — the high-value side of the gossip duality.
+
+- relates_to::[\[\[Precinct Boundaries Govern Sharing Not Quality\]\]](../patterns/Precinct%20Boundaries%20Govern%20Sharing%20Not%20Quality.html)
+  - Garden precinct is the shareable output of filtering — vault precinct retains the context-dependent material that was filtered through.

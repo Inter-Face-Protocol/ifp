@@ -5,6 +5,9 @@ brief_summary: "A ghost link is a wikilink reference to a node that does not exi
 tagline: "A reference to a node that does not exist yet — a stake marking where one could grow"
 ---
 
+← [Garden Patch Home](../) · [Glosses](index.html)
+
+
 - is_a::[\[\[Gloss Form\]\]](../forms/Gloss%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -19,7 +22,7 @@ In a Deep Context Architecture garden, ghost links serve as **planning tools**. 
 
 The gardening metaphor: a ghost link is a **stake in the ground** marking where something should be planted. The stake shows the gardener's intention — this is where a pattern, model, or inquiry should grow — without committing to the planting yet.
 
-Ghost links are visually distinct: they render as **plain, non-clickable text** with `[[brackets]]`. This distinguishes them from grafted nodes (clickable, no marker) and upstream nodes (clickable, with ⊙ marker).
+Ghost links are visually distinct: they render as **plain, non-clickable text** with `[[brackets]]`. This distinguishes them from grafted nodes (clickable, no marker) and upstream nodes (clickable, with ↑ marker).
 
 ## Ghost Links in Practice
 

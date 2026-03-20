@@ -6,6 +6,9 @@ tagline: "Identity owned by the individual — the first non-Deep Context Archit
 formatted: "2026-03-14"
 ---
 
+← [Garden Patch Home](../) · [Domains](index.html)
+
+
 - is_a::[\[\[Domain Form\]\]](../forms/Domain%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 
@@ -17,7 +20,7 @@ Self-sovereign identity is the principle that individuals should own and control
 
 **Covers**: The principal authority model (agency law applied to digital identity), authority delegation patterns, enforcement mechanisms, and the bridge between self-sovereign identity principles and the vault's augmented knowledge architecture.
 
-**Does not cover**: Technical standards implementation (DIDs, Verifiable Credentials, DIDComm) — those belong in a future technical self-sovereign identity domain or in [\[\[Digital Identity\]\]⊙](../UPSTREAM.html#:~:text=Digital%20Identity). Also excludes the broader digital identity landscape beyond self-sovereign identity.
+**Does not cover**: Technical standards implementation (DIDs, Verifiable Credentials, DIDComm) — those belong in a future technical self-sovereign identity domain or in [\[\[Digital Identity\]\]↑](../NODES.html#:~:text=Digital%20Identity). Also excludes the broader digital identity landscape beyond self-sovereign identity.
 
 ## Key Forms
 
@@ -64,9 +67,9 @@ Potential forms identified from [Blockchain Commons Values & Design Principles](
 
 - Allen, Christopher. "The Path to Self-Sovereign Identity." (2016)
 - BCR-2026-xxx spec drafts (Blockchain Commons)
-- [\[\[Digital Identity\]\]⊙](../UPSTREAM.html#:~:text=Digital%20Identity) — parent map of content in Categories/
+- [\[\[Digital Identity\]\]↑](../NODES.html#:~:text=Digital%20Identity) — parent map of content in Categories/
 
 ## Relations
 
 - relates_to::[\[\[Deep Context Architecture\]\]](Deep%20Context%20Architecture.html) — Self-sovereign identity agency law concepts inform the vault's principal authority model
-- relates_to::[\[\[Digital Identity\]\]⊙](../UPSTREAM.html#:~:text=Digital%20Identity) — Self-sovereign identity is a subset of the broader digital identity field
+- relates_to::[\[\[Digital Identity\]\]↑](../NODES.html#:~:text=Digital%20Identity) — Self-sovereign identity is a subset of the broader digital identity field

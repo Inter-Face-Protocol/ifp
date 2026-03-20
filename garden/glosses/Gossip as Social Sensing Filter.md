@@ -5,6 +5,9 @@ brief_summary: "In Inter-Face Protocol, 'gossip' is not chatter — it is a filt
 tagline: "Gossip filters attention rather than broadcasting information"
 ---
 
+← [Garden Patch Home](../) · [Glosses](index.html)
+
+
 - is_a::[\[\[Gloss Form\]\]](../forms/Gloss%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -37,3 +40,6 @@ The gossip-as-filter concept is load-bearing for Inter-Face Protocol. It shapes 
 
 - relates_to::[\[\[Recommendation as Surfaced Opportunity\]\]](Recommendation%20as%20Surfaced%20Opportunity.html)
   - Recommendations are the output of successful gossip — what survives the filter.
+
+- relates_to::[\[\[Gossip Duality Between Human Silence and Agent Noise\]\]](../inquiries/Gossip%20Duality%20Between%20Human%20Silence%20and%20Agent%20Noise.html)
+  - Peter Kaminski observed the duality: gossip produces silence for humans but noise for agents. Different stakeholders, different success metrics.

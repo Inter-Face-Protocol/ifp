@@ -5,6 +5,9 @@ brief_summary: "Defines the Protocol form type: a specification for multi-party 
 tagline: "How do independent parties coordinate reliably? — the structural contract for protocol forms"
 ---
 
+← [Garden Patch Home](../) · [Form Definitions](index.html)
+
+
 - is_a::[\[\[Form Type\]\]](Form%20Type.html)
 - has_status::[\[\[Seed Stage\]\]](Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -16,7 +19,7 @@ tagline: "How do independent parties coordinate reliably? — the structural con
 
 A specification for multi-party coordination across trust boundaries. Distinguished from a process by who must agree: a process works if one agent follows it; a protocol works only if all parties follow it. Versioned and negotiated.
 
-The scope includes human coordination methods (facilitation, deliberation, voting) alongside technical protocols. Whether "protocol" is the right name for this broader scope remains an open question — see [\[\[Practices as Protocol Form Naming Alternative\]\]⊙](../EXTERNAL.html#:~:text=Practices%20as%20Protocol%20Form%20Naming%20Alternative) for detailed analysis of candidate names.
+The scope includes human coordination methods (facilitation, deliberation, voting) alongside technical protocols. Whether "protocol" is the right name for this broader scope remains an open question — see [\[\[Practices as Protocol Form Naming Alternative\]\]↑](../EXTERNAL.html#:~:text=Practices%20as%20Protocol%20Form%20Naming%20Alternative) for detailed analysis of candidate names.
 
 ## Structural Contract
 
@@ -35,8 +38,8 @@ Naming heuristic: name the coordination mechanism or its proper name. "Inter-Fac
 
 - `is_a::[\[\[Protocol Form\]\]](Protocol%20Form.html)`
 - `has_status::[\[\[Seed Stage\]\]](Seed%20Stage.html)` or `[\[\[Evergreen Stage\]\]](Evergreen%20Stage.html)`
-- `in_domain::[\[\[Domain Name\]\]⊙](../EXTERNAL.html#:~:text=Domain%20Name)`
-- `coordinates::[\[\[Party\]\]⊙](../EXTERNAL.html#:~:text=Party)` — who participates
+- `in_domain::[\[\[Domain Name\]\]↑](../EXTERNAL.html#:~:text=Domain%20Name)`
+- `coordinates::[\[\[Party\]\]↑](../EXTERNAL.html#:~:text=Party)` — who participates
 - `implements::[\[\[Pattern Form\]\]](Pattern%20Form.html)` — patterns the protocol operationalizes
 - `relates_to::[\[\[Boundary Form\]\]](Boundary%20Form.html)` — authority boundaries the protocol respects
 

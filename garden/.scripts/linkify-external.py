@@ -34,16 +34,16 @@ for root, dirs, files in os.walk(garden):
             # Use the bold name format from EXTERNAL.md: **Target**:
             fragment = quote(target)
             url = f'{ext_path}#:~:text={fragment}'
-            return '[\\[\\[' + target + '\\]\\]⊙](' + url + ')'
+            return '[\\[\\[' + target + '\\]\\]↑](' + url + ')'
         
-        # Match plain [[Target]]⊙ (not already linkified)
-        content = re.sub(r'(?<!\\)\[\[([^\]]+)\]\]⊙', linkify_external, content)
+        # Match plain [[Target]]↑ (not already linkified)
+        content = re.sub(r'(?<!\\)\[\[([^\]]+)\]\]↑', linkify_external, content)
         
         if content != original:
             with open(filepath, 'w') as fh:
                 fh.write(content)
             changed += 1
-            count = content.count('⊙](') - original.count('⊙](')
+            count = content.count('↑](') - original.count('↑](')
             if count > 0:
                 print(f"  {os.path.relpath(filepath, garden)}: {count} external links")
 

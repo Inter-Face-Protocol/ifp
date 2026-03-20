@@ -1,9 +1,12 @@
 ---
 created: 2026-03-19
 author: Christopher Allen
-brief_summary: "A grafted node is a knowledge node present in a garden patch — whether copied from the source garden or grown new in the patch context. The grafting metaphor captures intentional selection: like a horticultural graft, the node is chosen from one context and attached to another where it can grow alongside new content."
-tagline: "A node transplanted into a garden patch, whether from the source garden or grown new"
+brief_summary: "A grafted node is a knowledge node copied from a source garden into a garden patch. Like a horticultural graft, the node is taken from one context and attached to another where it can grow alongside new content. Grafted nodes diverge from their upstream originals as the patch adds connections and context."
+tagline: "A node copied from the source garden into a garden patch, where it grows in new context"
 ---
+
+← [Garden Patch Home](../) · [Glosses](index.html)
+
 
 - is_a::[\[\[Gloss Form\]\]](../forms/Gloss%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
@@ -11,15 +14,14 @@ tagline: "A node transplanted into a garden patch, whether from the source garde
 
 # Grafted Node as Transplanted Knowledge in a Garden Patch
 
-In horticulture, grafting takes a cutting (scion) from one plant and attaches it to another (rootstock) so it grows in a new context. A **grafted node** applies the same principle to knowledge: it is a node that has been selected and placed in a garden patch, where it grows alongside other nodes in a context different from its source garden.
+In horticulture, grafting takes a cutting (scion) from one plant and attaches it to another (rootstock) so it grows in a new context. A **grafted node** applies the same principle to knowledge: it is a node copied from a source garden and placed in a garden patch, where it grows alongside other nodes in a context different from its origin.
 
-A grafted node may originate in two ways:
+Grafted nodes carry their original content and relations, adapted to be self-contained within the patch. As the patch grows — new connections to target content, refined explanations, additional context — grafted nodes diverge from their upstream originals. These changes can be merged back to the source garden, carrying insights discovered through the patch context.
 
-**Copied from the source garden.** Nodes on progressive trust, principal-agent relationships, or coercion resistance were grafted from the Deep Context Architecture garden into this patch because they connect to Inter-Face Protocol concepts. They carry their original content and relations, adapted to be self-contained within the patch.
-
-**Grown new in the patch.** Nodes like the IFP glosses, models, and inquiries were created specifically for this patch — seeded from the Inter-Face Protocol specifications. They are grafted in the sense that they are rooted in this context, not floating.
-
-In both cases, a grafted node is **present and navigable** — it has a file in the patch, and links to it are clickable. This distinguishes it from an [\[\[Upstream Node as Source Garden Reference\]\]](Upstream%20Node%20as%20Source%20Garden%20Reference.html) (exists in the source garden but not here) and a ghost link (does not exist yet anywhere).
+A grafted node is **present and navigable** — it has a file in the patch, and links to it are clickable. This distinguishes it from:
+- A [\[\[Patch-Native Node as Original Knowledge in a Garden Patch\]\]](Patch-Native%20Node%20as%20Original%20Knowledge%20in%20a%20Garden%20Patch.html) — born in the patch, not copied from upstream
+- An [\[\[Upstream Node as Source Garden Reference\]\]](Upstream%20Node%20as%20Source%20Garden%20Reference.html) — exists in the source garden but not grafted here
+- A [\[\[Ghost Link as Unplanted Garden Stake\]\]](Ghost%20Link%20as%20Unplanted%20Garden%20Stake.html) — does not exist yet anywhere
 
 ## Sources
 

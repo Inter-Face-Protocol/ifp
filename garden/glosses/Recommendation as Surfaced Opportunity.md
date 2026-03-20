@@ -5,6 +5,9 @@ brief_summary: "In Inter-Face Protocol, a recommendation is what survives the go
 tagline: "A recommendation is what survives the gossip filter and reaches the human"
 ---
 
+← [Garden Patch Home](../) · [Glosses](index.html)
+
+
 - is_a::[\[\[Gloss Form\]\]](../forms/Gloss%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)

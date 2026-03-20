@@ -5,6 +5,9 @@ brief_summary: "IFP-3 defines six conversation phases — greeting, context, pro
 tagline: "Do six social phases capture the right decomposition of trust-building agent conversation?"
 ---
 
+← [Garden Patch Home](../) · [Inquiries](index.html)
+
+
 - is_a::[\[\[Inquiry Form\]\]](../forms/Inquiry%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)

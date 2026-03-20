@@ -5,6 +5,9 @@ brief_summary: "Defines the Gloss form type: an interpretive annotation anchored
 tagline: "What does this specific source or concept mean? — the structural contract for gloss forms"
 ---
 
+← [Garden Patch Home](../) · [Form Definitions](index.html)
+
+
 - is_a::[\[\[Form Type\]\]](Form%20Type.html)
 - has_status::[\[\[Seed Stage\]\]](Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -34,15 +37,15 @@ Naming heuristic: source + thesis. Mix based on how strong the interpretation is
 - `is_a::[\[\[Gloss Form\]\]](Gloss%20Form.html)`
 - `has_status::[\[\[Seed Stage\]\]](Seed%20Stage.html)` or `[\[\[Growing Stage\]\]](Growing%20Stage.html)`
 - `in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)`
-- `extracted_from::[\[\[Source Document\]\]⊙](../UPSTREAM.html#:~:text=Source%20Document)` — provenance with optional line numbers
-- `relates_to::[\[\[Related Form\]\]⊙](../UPSTREAM.html#:~:text=Related%20Form)` — lateral connections
-- `defines_vocabulary_from::[\[\[Source\]\]⊙](../UPSTREAM.html#:~:text=Source)` — when defining terms from decisions or research
+- `extracted_from::[\[\[Source Document\]\]↑](../NODES.html#:~:text=Source%20Document)` — provenance with optional line numbers
+- `relates_to::[\[\[Related Form\]\]↑](../NODES.html#:~:text=Related%20Form)` — lateral connections
+- `defines_vocabulary_from::[\[\[Source\]\]↑](../NODES.html#:~:text=Source)` — when defining terms from decisions or research
 
 ## Exemplars
 
 - [\[\[Deep Context Graph Vocabulary\]\]](../glosses/Deep%20Context%20Graph%20Vocabulary.html) — consolidates 7 terms from compound document decisions
-- [\[\[PARA as Actionability-First Design\]\]⊙](../UPSTREAM.html#:~:text=PARA%20as%20Actionability-First%20Design) — interprets Forte's PARA through a specific lens
-- [\[\[Digital Garden as Growth Ethos\]\]⊙](../UPSTREAM.html#:~:text=Digital%20Garden%20as%20Growth%20Ethos) — glosses the digital garden concept against vault architecture
+- [\[\[PARA as Actionability-First Design\]\]↑](../NODES.html#:~:text=PARA%20as%20Actionability-First%20Design) — interprets Forte's PARA through a specific lens
+- [\[\[Digital Garden as Growth Ethos\]\]↑](../NODES.html#:~:text=Digital%20Garden%20as%20Growth%20Ethos) — glosses the digital garden concept against vault architecture
 
 ## Category
 

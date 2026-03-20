@@ -6,6 +6,9 @@ tagline: "When does a garden need signing, elision, and verified exchange — wh
 formatted: "2026-03-14"
 ---
 
+← [Garden Patch Home](../) · [Inquiries](index.html)
+
+
 - is_a::[\[\[Inquiry Form\]\]](../forms/Inquiry%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -14,7 +17,7 @@ formatted: "2026-03-14"
 
 ## Thesis
 
-The deep context architecture defines three layers: authoring (markdown), semantic (agent traversal), and trust ([\[\[Gordian Envelope as Agent Memory Layer|Gordian Envelope\]\]⊙](../UPSTREAM.html#:~:text=Gordian%20Envelope%20as%20Agent%20Memory%20Layer%7CGordian%20Envelope) for signing, elision, and verified exchange). The first two layers are operational. The trust layer is described as "a future phase, not a prerequisite" — a garden operates at full value without it.
+The deep context architecture defines three layers: authoring (markdown), semantic (agent traversal), and trust ([\[\[Gordian Envelope as Agent Memory Layer|Gordian Envelope\]\]↑](../NODES.html#:~:text=Gordian%20Envelope%20as%20Agent%20Memory%20Layer%7CGordian%20Envelope) for signing, elision, and verified exchange). The first two layers are operational. The trust layer is described as "a future phase, not a prerequisite" — a garden operates at full value without it.
 
 But "future phase" is not a criterion. The question is: what conditions make the trust layer worth activating? Signing, elision, and content addressing add complexity. The architecture needs criteria for when that complexity is justified.
 
@@ -42,15 +45,15 @@ No garden currently uses these capabilities. The first garden operates entirely 
 ## Sources
 
 - [\[\[Deep Context as an Architecture for Captured Reasoning\]\]](../decisions/Deep%20Context%20as%20an%20Architecture%20for%20Captured%20Reasoning.html) — Open Question 11 and the Trust Layer section
-- [\[\[Gordian Envelope as Agent Memory Layer\]\]⊙](../UPSTREAM.html#:~:text=Gordian%20Envelope%20as%20Agent%20Memory%20Layer) — full technical evaluation of Envelope capabilities
-- [\[\[Captured Reasoning Exchange Pipeline\]\]⊙](../UPSTREAM.html#:~:text=Captured%20Reasoning%20Exchange%20Pipeline) — the three-layer model where the trust layer sits
+- [\[\[Gordian Envelope as Agent Memory Layer\]\]↑](../NODES.html#:~:text=Gordian%20Envelope%20as%20Agent%20Memory%20Layer) — full technical evaluation of Envelope capabilities
+- [\[\[Captured Reasoning Exchange Pipeline\]\]↑](../NODES.html#:~:text=Captured%20Reasoning%20Exchange%20Pipeline) — the three-layer model where the trust layer sits
 
 ## Relations
 
-- relates_to::[\[\[Captured Reasoning Exchange Pipeline\]\]⊙](../UPSTREAM.html#:~:text=Captured%20Reasoning%20Exchange%20Pipeline)
+- relates_to::[\[\[Captured Reasoning Exchange Pipeline\]\]↑](../NODES.html#:~:text=Captured%20Reasoning%20Exchange%20Pipeline)
   - This inquiry addresses when the pipeline's third layer (trust) should activate.
 
-- relates_to::[\[\[Progressive Trust\]\]⊙](../UPSTREAM.html#:~:text=Progressive%20Trust)
+- relates_to::[\[\[Progressive Trust\]\]↑](../NODES.html#:~:text=Progressive%20Trust)
   - Progressive trust is both a pattern the trust layer enables and a potential activation criterion — trust builds through interaction, and the trust layer supports that building.
 
 - relates_to::[\[\[Delegated Decision Authority Spectrum\]\]](../boundaries/Delegated%20Decision%20Authority%20Spectrum.html)

@@ -5,10 +5,13 @@ brief_summary: "Model of how initially voluntary digital choices accumulate into
 tagline: "How voluntary digital choices accumulate into coercive dependencies with prohibitive exit costs"
 ---
 
+← [Garden Patch Home](../) · [Models](index.html)
+
+
 - is_a::[\[\[Model Form\]\]](../forms/Model%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Self-Sovereign Identity\]\]](../domains/Self-Sovereign%20Identity.html)
-- extracted_from::[\[\[Revisiting Self-Sovereign Identity Initiative\]\]⊙](../UPSTREAM.html#:~:text=Revisiting%20Self-Sovereign%20Identity%20Initiative)
+- extracted_from::[\[\[Revisiting Self-Sovereign Identity Initiative\]\]↑](../NODES.html#:~:text=Revisiting%20Self-Sovereign%20Identity%20Initiative)
 
 # Choice Architecture and Exit Rights
 
@@ -42,7 +45,7 @@ In Kolpondinos's taxonomy, this is **Infrastructural Paternalism** — the form 
 
 ## Boundaries
 
-This model covers structural lock-in and exit costs. Psychological effects of lock-in awareness (self-censorship) are in [\[\[Self-Coercion Through Surveillance Awareness\]\]⊙](../UPSTREAM.html#:~:text=Self-Coercion%20Through%20Surveillance%20Awareness). Interface manipulation that creates the initial adoption is in [\[\[Coercion Resistance as Meta-Lens\]\]](Coercion%20Resistance%20as%20Meta-Lens.html).
+This model covers structural lock-in and exit costs. Psychological effects of lock-in awareness (self-censorship) are in [\[\[Self-Coercion Through Surveillance Awareness\]\]↑](../NODES.html#:~:text=Self-Coercion%20Through%20Surveillance%20Awareness). Interface manipulation that creates the initial adoption is in [\[\[Coercion Resistance as Meta-Lens\]\]](Coercion%20Resistance%20as%20Meta-Lens.html).
 
 ## Sources
 

@@ -8,10 +8,13 @@ brief_summary: "Names Technology Paternalism as an anti-pattern with four forms:
 tagline: "Four forms of technology paternalism and four countermeasures to restore user agency"
 ---
 
+← [Garden Patch Home](../../README.html) · [Citations](../index.html)
+
+
 - is_a::[\[\[Citation Form\]\]](../../forms/Citation%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../../forms/Seed%20Stage.html)
 - in_domain::[\[\[Self-Sovereign Identity\]\]](../../domains/Self-Sovereign%20Identity.html)
-- cites_work_by::[\[\[Martina Kolpondinos\]\]⊙](../../UPSTREAM.html#:~:text=Martina%20Kolpondinos)
+- cites_work_by::[\[\[Martina Kolpondinos\]\]↑](../../NODES.html#:~:text=Martina%20Kolpondinos)
 
 # Kolpondinos (2026) Technology Paternalism
 
@@ -21,7 +24,7 @@ tagline: "Four forms of technology paternalism and four countermeasures to resto
 
 ## Summary
 
-Kolpondinos names "Technology Paternalism" as an anti-pattern where digital systems shape, restrict, or pre-decide user choices under justifications of safety, efficiency, or protection. She provides a four-part taxonomy (Design, Algorithmic, Infrastructural, Protective), extends the analysis to agentic AI and digital identity systems, and proposes four concrete countermeasures: the ability to override, contest, inspect, and exit. The article connects to the [\[\[Revisiting Self-Sovereign Identity Initiative\]\]⊙](../../UPSTREAM.html#:~:text=Revisiting%20Self-Sovereign%20Identity%20Initiative)'s four coercion-prevention lenses.
+Kolpondinos names "Technology Paternalism" as an anti-pattern where digital systems shape, restrict, or pre-decide user choices under justifications of safety, efficiency, or protection. She provides a four-part taxonomy (Design, Algorithmic, Infrastructural, Protective), extends the analysis to agentic AI and digital identity systems, and proposes four concrete countermeasures: the ability to override, contest, inspect, and exit. The article connects to the [\[\[Revisiting Self-Sovereign Identity Initiative\]\]↑](../../NODES.html#:~:text=Revisiting%20Self-Sovereign%20Identity%20Initiative)'s four coercion-prevention lenses.
 
 ## Key Points
 
@@ -91,7 +94,7 @@ This article performs a naming function for the Self-Sovereign Identity and broa
 
 relates_to::[\[\[Self-Sovereign Identity\]\]](../../domains/Self-Sovereign%20Identity.html)
 relates_to::[\[\[Authentic Collaboration Requires Agency\]\]](../../convictions/Authentic%20Collaboration%20Requires%20Agency.html)
-relates_to::[\[\[Dimensions of Digital Coercion\]\]⊙](../../UPSTREAM.html#:~:text=Dimensions%20of%20Digital%20Coercion)
-extends::[\[\[Coercion Resistance\]\]⊙](../../UPSTREAM.html#:~:text=Coercion%20Resistance)
-relates_to::[\[\[Choice Architecture\]\]⊙](../../UPSTREAM.html#:~:text=Choice%20Architecture)
-relates_to::[\[\[Martina Kolpondinos\]\]⊙](../../UPSTREAM.html#:~:text=Martina%20Kolpondinos)
+relates_to::[\[\[Dimensions of Digital Coercion\]\]↑](../../NODES.html#:~:text=Dimensions%20of%20Digital%20Coercion)
+extends::[\[\[Coercion Resistance\]\]↑](../../NODES.html#:~:text=Coercion%20Resistance)
+relates_to::[\[\[Choice Architecture\]\]↑](../../NODES.html#:~:text=Choice%20Architecture)
+relates_to::[\[\[Martina Kolpondinos\]\]↑](../../NODES.html#:~:text=Martina%20Kolpondinos)

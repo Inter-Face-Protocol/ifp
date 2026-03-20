@@ -5,6 +5,9 @@ brief_summary: "IFP-12 defines six named disclosure tiers (public through close)
 tagline: "Should information sharing boundaries be discrete named tiers or a continuous spectrum?"
 ---
 
+← [Garden Patch Home](../) · [Inquiries](index.html)
+
+
 - is_a::[\[\[Inquiry Form\]\]](../forms/Inquiry%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)

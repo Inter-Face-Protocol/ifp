@@ -6,6 +6,9 @@ tagline: "Garden nodes grow and evolve through tending — the current state mat
 formatted: "2026-03-14"
 ---
 
+← [Garden Patch Home](../) · [Principles](index.html)
+
+
 - is_a::[\[\[Principle Form\]\]](../forms/Principle%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -24,7 +27,7 @@ Not all garden nodes are equally mutable. The architecture recognizes a spectrum
 
 **Near-immutable** — Conviction ("a change represents a fundamental shift"), Value ("evolves over decades"). These change rarely, and when they do, it signals something significant about the author's worldview.
 
-**Immutable record, living interpretation** — Case ("history doesn't change, though interpretation may"), Citation. A case records what happened; that doesn't change. But the annotations, relations, and lessons drawn from a case are living. An [\[\[Annotated Citation\]\]⊙](../UPSTREAM.html#:~:text=Annotated%20Citation) differs from a basic citation precisely because the interpretation layer evolves even when the cited work is static.
+**Immutable record, living interpretation** — Case ("history doesn't change, though interpretation may"), Citation. A case records what happened; that doesn't change. But the annotations, relations, and lessons drawn from a case are living. An [\[\[Annotated Citation\]\]↑](../NODES.html#:~:text=Annotated%20Citation) differs from a basic citation precisely because the interpretation layer evolves even when the cited work is static.
 
 ## Consequences
 
@@ -44,16 +47,19 @@ If you can point to a "final version" of a garden node that subsequent edits wou
 
 ## Sources
 
-The digital garden movement established "continuous growth" as a core principle (Appleton's six patterns, Caufield's garden-vs-stream distinction). See [\[\[Digital Garden as Growth Ethos\]\]⊙](../UPSTREAM.html#:~:text=Digital%20Garden%20as%20Growth%20Ethos). The deep context architecture operationalizes this through typed growth stages and structural contracts that accommodate evolution.
+The digital garden movement established "continuous growth" as a core principle (Appleton's six patterns, Caufield's garden-vs-stream distinction). See [\[\[Digital Garden as Growth Ethos\]\]↑](../NODES.html#:~:text=Digital%20Garden%20as%20Growth%20Ethos). The deep context architecture operationalizes this through typed growth stages and structural contracts that accommodate evolution.
 
 ## Relations
 
 - relates_to::[\[\[Garden Precinct\]\]](../glosses/Garden%20Precinct.html) — living documents are a defining characteristic of the garden precinct
-- relates_to::[\[\[Digital Garden as Growth Ethos\]\]⊙](../UPSTREAM.html#:~:text=Digital%20Garden%20as%20Growth%20Ethos) — the growth ethos provides the philosophical foundation; this principle makes it architectural
+- relates_to::[\[\[Digital Garden as Growth Ethos\]\]↑](../NODES.html#:~:text=Digital%20Garden%20as%20Growth%20Ethos) — the growth ethos provides the philosophical foundation; this principle makes it architectural
 - relates_to::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html) — entry point for new living documents
 - relates_to::[\[\[Evergreen Stage\]\]](../forms/Evergreen%20Stage.html) — mature but still living; stability is not finality
-- relates_to::[\[\[Pruned Stage\]\]⊙](../UPSTREAM.html#:~:text=Pruned%20Stage) — end-of-life for living documents; superseded, not deleted
-- relates_to::[\[\[Vault Content Graduation\]\]⊙](../UPSTREAM.html#:~:text=Vault%20Content%20Graduation) — vault content becomes a living document when it graduates to a garden node
+- relates_to::[\[\[Pruned Stage\]\]↑](../NODES.html#:~:text=Pruned%20Stage) — end-of-life for living documents; superseded, not deleted
+- relates_to::[\[\[Vault Content Graduation\]\]↑](../NODES.html#:~:text=Vault%20Content%20Graduation) — vault content becomes a living document when it graduates to a garden node
 - relates_to::[\[\[Opus Form\]\]](../forms/Opus%20Form.html) — opus lead files are living documents by design; analysis can be revised when the work evolves
 - relates_to::[\[\[When to Specify and When to Explore in Protocol Evolution\]\]](../inquiries/When%20to%20Specify%20and%20When%20to%20Explore%20in%20Protocol%20Evolution.html)
   - Living document philosophy grounds the argument for keeping tactical protocol details open for revision through implementation experience.
+
+- relates_to::[\[\[Neobooks as Composable Knowledge Objects\]\]](../glosses/Neobooks%20as%20Composable%20Knowledge%20Objects.html)
+  - Neobooks are the composable successor to static publications — living, assemblable, disassemblable.

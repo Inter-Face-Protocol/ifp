@@ -5,6 +5,9 @@ brief_summary: "Defines the Decision form type: a recorded choice with reasoning
 tagline: "Why did we choose this over the alternatives? — the structural contract for decision forms"
 ---
 
+← [Garden Patch Home](../) · [Form Definitions](index.html)
+
+
 - is_a::[\[\[Form Type\]\]](Form%20Type.html)
 - has_status::[\[\[Seed Stage\]\]](Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -32,16 +35,16 @@ Decisions carry a `status` field in frontmatter (`proposed`, `accepted`, `deprec
 - `is_a::[\[\[Decision Form\]\]](Decision%20Form.html)`
 - `has_status::[\[\[Seed Stage\]\]](Seed%20Stage.html)` or `[\[\[Growing Stage\]\]](Growing%20Stage.html)`
 - `in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)`
-- `supersedes::[\[\[Previous Decision\]\]⊙](../UPSTREAM.html#:~:text=Previous%20Decision)` — chains revised decisions
-- `extended_by::[\[\[Follow-Up Decision\]\]⊙](../UPSTREAM.html#:~:text=Follow-Up%20Decision)` — marks refinements
-- `extracted_from::[\[\[Source Document\]\]⊙](../UPSTREAM.html#:~:text=Source%20Document)` — provenance
-- `informs::[\[\[Related Form\]\]⊙](../UPSTREAM.html#:~:text=Related%20Form)` — downstream effects
+- `supersedes::[\[\[Previous Decision\]\]↑](../NODES.html#:~:text=Previous%20Decision)` — chains revised decisions
+- `extended_by::[\[\[Follow-Up Decision\]\]↑](../NODES.html#:~:text=Follow-Up%20Decision)` — marks refinements
+- `extracted_from::[\[\[Source Document\]\]↑](../NODES.html#:~:text=Source%20Document)` — provenance
+- `informs::[\[\[Related Form\]\]↑](../NODES.html#:~:text=Related%20Form)` — downstream effects
 
 ## Exemplars
 
-- [\[\[Classification via Predicates Not Tags\]\]⊙](../UPSTREAM.html#:~:text=Classification%20via%20Predicates%20Not%20Tags) — canonical example with clear context/decision/consequences/alternatives
-- [\[\[Artifact Predicate for Binary Metadata\]\]⊙](../UPSTREAM.html#:~:text=Artifact%20Predicate%20for%20Binary%20Metadata) — introduces a new predicate with rationale
-- [\[\[Extraction Model for Garden Migration\]\]⊙](../UPSTREAM.html#:~:text=Extraction%20Model%20for%20Garden%20Migration) — reframes an entire approach (D6)
+- [\[\[Classification via Predicates Not Tags\]\]↑](../NODES.html#:~:text=Classification%20via%20Predicates%20Not%20Tags) — canonical example with clear context/decision/consequences/alternatives
+- [\[\[Artifact Predicate for Binary Metadata\]\]↑](../NODES.html#:~:text=Artifact%20Predicate%20for%20Binary%20Metadata) — introduces a new predicate with rationale
+- [\[\[Extraction Model for Garden Migration\]\]↑](../NODES.html#:~:text=Extraction%20Model%20for%20Garden%20Migration) — reframes an entire approach (D6)
 
 ## Category
 

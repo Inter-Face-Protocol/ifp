@@ -6,6 +6,9 @@ tagline: "Start with the question, follow edges on demand, stop when context suf
 formatted: "2026-03-14"
 ---
 
+← [Garden Patch Home](../) · [Principles](index.html)
+
+
 - is_a::[\[\[Principle Form\]\]](../forms/Principle%20Form.html)
 - has_status::[\[\[Seed Stage\]\]](../forms/Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -44,17 +47,17 @@ The forcing function has a constructive effect: it demands that knowledge system
 
 ## Relations
 
-- extends::[\[\[Context Conservation Hierarchy\]\]⊙](../UPSTREAM.html#:~:text=Context%20Conservation%20Hierarchy)
+- extends::[\[\[Context Conservation Hierarchy\]\]↑](../NODES.html#:~:text=Context%20Conservation%20Hierarchy)
   - Progressive disclosure is the graph-level application of context conservation.
 
-- relates_to::[\[\[Summary Fields as Load-Bearing Infrastructure\]\]⊙](../UPSTREAM.html#:~:text=Summary%20Fields%20as%20Load-Bearing%20Infrastructure)
+- relates_to::[\[\[Summary Fields as Load-Bearing Infrastructure\]\]↑](../NODES.html#:~:text=Summary%20Fields%20as%20Load-Bearing%20Infrastructure)
   - Summary fields are the mechanism that enables progressive disclosure.
 
-- relates_to::[\[\[Structural Retrieval Hierarchy\]\]⊙](../UPSTREAM.html#:~:text=Structural%20Retrieval%20Hierarchy)
+- relates_to::[\[\[Structural Retrieval Hierarchy\]\]↑](../NODES.html#:~:text=Structural%20Retrieval%20Hierarchy)
   - The retrieval hierarchy implements progressive disclosure for agent search.
 
-- relates_to::[\[\[Cross-Domain Document Lifecycle Parallels\]\]⊙](../UPSTREAM.html#:~:text=Cross-Domain%20Document%20Lifecycle%20Parallels)
+- relates_to::[\[\[Cross-Domain Document Lifecycle Parallels\]\]↑](../NODES.html#:~:text=Cross-Domain%20Document%20Lifecycle%20Parallels)
   - Token economics is the constraint that makes progressive disclosure structural rather than optional.
 
-- relates_to::[\[\[One Context One Concern\]\]⊙](../UPSTREAM.html#:~:text=One%20Context%20One%20Concern)
+- relates_to::[\[\[One Context One Concern\]\]↑](../NODES.html#:~:text=One%20Context%20One%20Concern)
   - Progressive disclosure defines how to load incrementally; One Context One Concern defines the boundary of what constitutes a complete concern.

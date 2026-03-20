@@ -6,6 +6,9 @@ tagline: "What should we think about X, and how would we find out? — the struc
 formatted: "2026-03-14"
 ---
 
+← [Garden Patch Home](../) · [Form Definitions](index.html)
+
+
 - is_a::[\[\[Form Type\]\]](Form%20Type.html)
 - has_status::[\[\[Seed Stage\]\]](Seed%20Stage.html)
 - in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)
@@ -38,16 +41,16 @@ Naming heuristic: scope of investigation + what's being determined.
 - `is_a::[\[\[Inquiry Form\]\]](Inquiry%20Form.html)`
 - `has_status::[\[\[Seed Stage\]\]](Seed%20Stage.html)` or `[\[\[Growing Stage\]\]](Growing%20Stage.html)`
 - `in_domain::[\[\[Deep Context Architecture\]\]](../domains/Deep%20Context%20Architecture.html)`
-- `directed_at::[\[\[Person Name\]\]⊙](../UPSTREAM.html#:~:text=Person%20Name)` — flags questions for specific people
-- `extracted_from::[\[\[Research Note\]\]⊙](../UPSTREAM.html#:~:text=Research%20Note)` — provenance
-- `extends::[\[\[Related Form\]\]⊙](../UPSTREAM.html#:~:text=Related%20Form)` — applies a concept to new domain
+- `directed_at::[\[\[Person Name\]\]↑](../NODES.html#:~:text=Person%20Name)` — flags questions for specific people
+- `extracted_from::[\[\[Research Note\]\]↑](../NODES.html#:~:text=Research%20Note)` — provenance
+- `extends::[\[\[Related Form\]\]↑](../NODES.html#:~:text=Related%20Form)` — applies a concept to new domain
 - `relates_to::[\[\[Gloss Form\]\]](Gloss%20Form.html)`, `[\[\[Pattern Form\]\]](Pattern%20Form.html)`
 
 ## Exemplars
 
-- [\[\[Compound Node Meeting Structure\]\]⊙](../UPSTREAM.html#:~:text=Compound%20Node%20Meeting%20Structure) — directed questions about meeting compound node design
-- [\[\[Personal Knowledge Management Method Adoption for Vault Architecture\]\]⊙](../UPSTREAM.html#:~:text=Personal%20Knowledge%20Management%20Method%20Adoption%20for%20Vault%20Architecture) — comparative inquiry across personal knowledge management methods
-- [\[\[Vault-Wide Compound Node Adoption\]\]⊙](../UPSTREAM.html#:~:text=Vault-Wide%20Compound%20Node%20Adoption) — investigation with resolved structure and remaining questions
+- [\[\[Compound Node Meeting Structure\]\]↑](../NODES.html#:~:text=Compound%20Node%20Meeting%20Structure) — directed questions about meeting compound node design
+- [\[\[Personal Knowledge Management Method Adoption for Vault Architecture\]\]↑](../NODES.html#:~:text=Personal%20Knowledge%20Management%20Method%20Adoption%20for%20Vault%20Architecture) — comparative inquiry across personal knowledge management methods
+- [\[\[Vault-Wide Compound Node Adoption\]\]↑](../NODES.html#:~:text=Vault-Wide%20Compound%20Node%20Adoption) — investigation with resolved structure and remaining questions
 
 ## Category
 

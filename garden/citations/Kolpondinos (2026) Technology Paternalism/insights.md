@@ -3,6 +3,9 @@ created: 2026-03-17
 part_of: "[\[\[Kolpondinos (2026) Technology Paternalism\]\]](Kolpondinos%20%282026%29%20Technology%20Paternalism.html)"
 ---
 
+← [Garden Patch Home](../../README.html) · [Citations](../index.html)
+
+
 # Insights: Technology Paternalism
 
 ## Insight 1: Technology Paternalism as a Named Anti-Pattern

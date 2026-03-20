@@ -64,9 +64,9 @@ for root, dirs, files in os.walk(garden):
             # Return clickable link with brackets shown
             return '[\\[\\[' + target + '\\]\\]](' + rel_path + ')' + after
         
-        # Match [[Target]] optionally followed by ⊙ (but only for non-⊙ ones since those are external)
-        # Only convert wikilinks that are NOT followed by ⊙
-        content = re.sub(r'\[\[([^\]]+)\]\]([⊙↗]?)', 
+        # Match [[Target]] optionally followed by ↑ (but only for non-↑ ones since those are external)
+        # Only convert wikilinks that are NOT followed by ↑
+        content = re.sub(r'\[\[([^\]]+)\]\]([↑↗]?)', 
                         lambda m: m.group(0) if m.group(2) else linkify(m), 
                         content)
         
