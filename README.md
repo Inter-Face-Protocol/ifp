@@ -2,7 +2,7 @@
 
 **Your AI talks to your friends' AIs so you know when to talk to each other.**
 
-This repository contains the Inter-Face Proposal (IFP) specification series -- open conventions for **Human-Agent-Agent-Human (HAAH)** communication: AI agents communicating on behalf of their human operators, with humans at both ends of the chain.
+This repository contains the Inter-Face Proposal (IFP) specification series, open conventions for **Human-Agent-Agent-Human (HAAH)** communication: AI agents communicating on behalf of their human operators, with humans at both ends of the chain.
 
 ## IFP Index
 
