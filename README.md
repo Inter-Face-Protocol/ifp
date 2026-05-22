@@ -6,20 +6,25 @@ This repository contains the Inter-Face Proposal (IFP) specification series, ope
 
 ## IFP Index
 
-| IFP                                       | Title                                  | Class         | Status |
-| ----------------------------------------- | -------------------------------------- | ------------- | ------ |
-| [IFP-1](ifp-1-philosophy.md)              | Philosophy and Design Principles       | Informational | Draft  |
-| [IFP-2](ifp-2-style-guide.md)             | Specification Style Guide              | Informational | Draft  |
-| [IFP-3](ifp-3-message-format.md)          | Inter-Face Message Format              | Core          | Draft  |
-| [IFP-4](ifp-4-structured-message.md)      | Structured Message Representation      | Core          | Draft  |
-| [IFP-5](ifp-5-identity-signing.md)        | Identity and Message Signing           | Core          | Draft  |
-| [IFP-6](ifp-6-https-transport.md)         | HTTPS Transport Profile                | Profile       | Draft  |
-| [IFP-7](ifp-7-capability-discovery.md)    | Agent Capability Discovery             | Core          | Draft  |
-| [IFP-8](ifp-8-relay-transport.md)         | Relay and Pub/Sub Transport            | Profile       | Draft  |
-| [IFP-9](ifp-9-ecosystem-status.md)        | Ecosystem Status and Future Directions | Informational | Draft  |
-| [IFP-10](ifp-10-agent-naming.md)          | Agent Naming Convention                | Core          | Draft  |
-| [IFP-11](ifp-11-application-platforms.md) | Application Platforms                  | Informational | Draft  |
-| [IFP-12](ifp-12-personas.md)              | Personas and Disclosure Tiers          | Core          | Draft  |
+| IFP                                                 | Title                                  | Class         | Status |
+| --------------------------------------------------- | -------------------------------------- | ------------- | ------ |
+| [IFP-1](ifp-1-philosophy.md)                        | Philosophy and Design Principles       | Informational | Draft  |
+| [IFP-2](ifp-2-style-guide.md)                       | Specification Style Guide              | Informational | Draft  |
+| [IFP-3](ifp-3-message-format.md)                    | Inter-Face Message Format              | Core          | Draft  |
+| [IFP-4](ifp-4-structured-message.md)                | Structured Message Representation      | Core          | Draft  |
+| [IFP-5](ifp-5-identity-signing.md)                  | Identity and Message Signing           | Core          | Draft  |
+| [IFP-6](ifp-6-https-transport.md)                   | HTTPS Transport Profile                | Profile       | Draft  |
+| [IFP-7](ifp-7-capability-discovery.md)              | Agent Capability Discovery             | Core          | Draft  |
+| [IFP-8](ifp-8-relay-transport.md)                   | Relay and Pub/Sub Transport            | Profile       | Draft  |
+| [IFP-9](ifp-9-ecosystem-status.md)                  | Ecosystem Status and Future Directions | Informational | Draft  |
+| [IFP-10](ifp-10-agent-naming.md)                    | Agent Naming Convention                | Core          | Draft  |
+| [IFP-11](ifp-11-application-platforms.md)           | Application Platforms                  | Informational | Draft  |
+| [IFP-12](ifp-12-personas.md)                        | Personas and Disclosure Tiers          | Core          | Draft  |
+| [IFP-13](ifp-13-conformance-assertion.md)           | Conformance Assertion                  | Core          | Draft  |
+| [IFP-14](ifp-14-handling-hostile-content.md)        | Handling Hostile Message Content       | Core          | Draft  |
+| [IFP-15](ifp-15-cross-family-negotiation.md)        | Cross-Family Protocol Negotiation      | Informational | Draft  |
+| [IFP-16](ifp-16-git-transport.md)                   | Git Repository Transport Profile       | Profile       | Draft  |
+| [IFP-17](ifp-17-shared-folder-transport.md)         | Shared Folder Transport Profile        | Profile       | Draft  |
 
 ## Where to Start
 

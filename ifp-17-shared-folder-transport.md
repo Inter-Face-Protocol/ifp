@@ -1,12 +1,14 @@
-# IFP-TBD: Shared Folder Transport Profile
+# IFP-17: Shared Folder Transport Profile
 
-**IFP:** TBD
+**IFP:** 17
 **Title:** Shared Folder Transport Profile
 **Class:** Profile
-**Status:** Draft (pre-IFP)
+**Status:** Draft
 **Authors:** Peter Kaminski, Freya (Pete's agent)
 **Created:** 2026-05-21
+**Updated:** 2026-05-22
 **Dependencies:** IFP-1, IFP-2, IFP-3, IFP-5
+**License:** CC-BY 4.0 (Creative Commons Attribution 4.0 International)
 
 ---
 
@@ -71,18 +73,18 @@ Within the shared folder, this profile follows the same layout convention as the
     [attachments alongside]
 ```
 
-If the shared folder hosts multiple IFP channels (the two humans share a folder for several agent pairs), each pair SHOULD use its own subdirectory:
+If the shared folder hosts multiple IFP channels (the two humans share a folder for several agent pairs), each pair SHOULD use its own subdirectory under `ifp-agents/`. The `ifp-agents/` name is deliberately specific to avoid collision with other uses of `agents/` in repositories or shared folders:
 
 ```
 <shared-folder>/
-  agents/
+  ifp-agents/
     <pair-shortname>/
       README.md
       <YYYY-MM-DD>-<topic>/
         ...
 ```
 
-A shared folder dedicated to a single channel MAY omit the `agents/<pair-shortname>/` layer and use the layout directly.
+A shared folder dedicated to a single channel MAY omit the `ifp-agents/<pair-shortname>/` layer and use the layout directly.
 
 ### 3.1 README
 
@@ -161,7 +163,7 @@ For pairs comfortable with their provider's confidentiality posture, the standar
 
 ## 9. Hostile Content
 
-Reader discipline for hostile or injection-shaped message bodies is specified in [IFP-Handling Hostile Content]. That document applies regardless of transport.
+Reader discipline for hostile or injection-shaped message bodies is specified in IFP-14 (Handling Hostile Content). That document applies regardless of transport.
 
 ## 10. Folder Scoping and Blast Radius
 
@@ -203,7 +205,7 @@ Suitable substrates:
 - A cron job on a machine outside the agents' execution environment, periodically rsync-mirroring the synced mirror to local storage.
 - A periodic push-mirror to a second storage location on infrastructure disjoint from the primary, configured outside the agents' visibility.
 
-The principle and the visibility argument are the same as in the git-transport profile § 11.3 and § 11 generally: a backup that runs where the agent cannot reach it is structurally protected in a way that "trust the agent" is not. The intent is to ensure that "the agent went rogue and deleted everything" or "the agent quietly rewrote a year of files" is recoverable.
+The principle and the visibility argument are the same as in IFP-16 § 11.3 and § 11 generally: a backup that runs where the agent cannot reach it is structurally protected in a way that "trust the agent" is not. The intent is to ensure that "the agent went rogue and deleted everything" or "the agent quietly rewrote a year of files" is recoverable.
 
 The provider's own version history is useful but is neither under the principal's control (the provider may purge it on a schedule or after account closure) nor reliably recoverable on a short timeline. Treat it as a convenience, not as the audit log.
 
@@ -227,14 +229,14 @@ This profile covers pairwise channels. Three or more agents sharing one folder i
 
 ## Interoperability Considerations
 
-A message produced for this transport is a valid IFP-3 message and can be ported unchanged to any other IFP transport — including git-transport. The folder layout convention here is intentionally identical to git-transport's so that a pair can migrate between the two without restructuring.
+A message produced for this transport is a valid IFP-3 message and can be ported unchanged to any other IFP transport — including IFP-16 (git-transport). The folder layout convention here is intentionally identical to IFP-16's so that a pair can migrate between the two without restructuring.
 
 An agent that supports IFP-3 but not this specific transport profile can still read messages from a local copy of the shared folder, as long as it can locate the message files. The profile is primarily about discovery, conflict-handling, and recovery convention, not message format.
 
 ## Acknowledgments
 
-This profile was drafted on 2026-05-21 as a peer to the git-transport profile, motivated by the observation that non-technical users will not adopt a git-based transport regardless of how convenient it is for the agents. A shared folder is the next-easiest substrate after email.
+This profile was drafted on 2026-05-21 as a peer to IFP-16, motivated by the observation that non-technical users will not adopt a git-based transport regardless of how convenient it is for the agents. A shared folder is the next-easiest substrate after email.
 
 ---
 
-*Draft, pre-IFP-number assignment. Will be revised before submission to the IFP editorial process.*
+*This is IFP-17, Draft status. It will be revised as the first implementations teach us what works and what doesn't.*

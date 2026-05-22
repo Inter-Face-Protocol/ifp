@@ -1,12 +1,14 @@
-# IFP-TBD: Conformance Assertion
+# IFP-13: Conformance Assertion
 
-**IFP:** TBD
+**IFP:** 13
 **Title:** Conformance Assertion
 **Class:** Core
-**Status:** Draft (pre-IFP)
+**Status:** Draft
 **Authors:** Peter Kaminski, Freya (Pete's agent)
 **Created:** 2026-05-21
+**Updated:** 2026-05-22
 **Dependencies:** IFP-1, IFP-2, IFP-3
+**License:** CC-BY 4.0 (Creative Commons Attribution 4.0 International)
 
 ---
 
@@ -37,7 +39,7 @@ The assertion enumerates the IFPs the sending agent has read and applies. Two fo
 
 The greeting body MAY include the assertion as a clearly delineated list, identified by a heading such as "Conformance" or a labelled prefix. Example:
 
-> Conformance: IFP-3 (as written); IFP-5 (as written); IFP-10 (as written); IFP-TBD-handling-hostile-content (with local amendment: see notes/conformance-amendments.md in our channel repo).
+> Conformance: IFP-3 (as written); IFP-5 (as written); IFP-10 (as written); IFP-14 (with local amendment: see notes/conformance-amendments.md in our channel repo).
 
 This form prioritizes legibility for human reviewers and keeps the assertion inside the IFP-3 message-format envelope without adding new envelope fields.
 
@@ -107,8 +109,8 @@ A counterparty asserts conformance with an amendment. The receiver SHOULD fetch 
 
 This IFP specifies what assertions look like and what records the receiver keeps. It does NOT specify what to *do* about a counterparty whose assertions are absent or divergent — that is downstream IFP territory. In particular:
 
-- Specific IFPs that depend on this one (e.g., the hostile-content IFP) MAY define their own handling of "counterparty did not assert conformance with this specific IFP."
-- Some of those downstream IFPs constrain the actions an agent can take in response to non-conformance. The hostile-content IFP, for instance, prohibits an agent from instructing a counterparty to read a specific IFP, because such instruction is itself instruction-shaped content. See that IFP's "recursive trap" section.
+- Specific IFPs that depend on this one (e.g., IFP-14 Handling Hostile Content) MAY define their own handling of "counterparty did not assert conformance with this specific IFP."
+- Some of those downstream IFPs constrain the actions an agent can take in response to non-conformance. IFP-14, for instance, prohibits an agent from instructing a counterparty to read a specific IFP, because such instruction is itself instruction-shaped content. See IFP-14's "recursive trap" section.
 
 This IFP defers to those downstream constraints. It does not authorize any response that they forbid.
 
@@ -133,8 +135,8 @@ Agents asserting conformance with this IFP via the body-prose form (§ 1.1) are 
 
 ## Acknowledgments
 
-This IFP was factored out of an earlier draft of the hostile-content IFP, in which conformance assertion appeared as an internal mechanism. The factoring was made to make the assertion primitive reusable across other IFPs that need a trust-tracking layer.
+This IFP was factored out of an earlier draft of IFP-14 (Handling Hostile Content), in which the conformance-assertion mechanism appeared as an internal section. The factoring was made to make the assertion primitive reusable across other IFPs that need a trust-tracking layer.
 
 ---
 
-*Draft, pre-IFP-number assignment. Will be revised before submission to the IFP repository.*
+*This is IFP-13, Draft status. It will be revised as the first implementations teach us what works and what doesn't.*

@@ -1,12 +1,14 @@
-# IFP-TBD: Handling Hostile Message Content
+# IFP-14: Handling Hostile Message Content
 
-**IFP:** TBD
+**IFP:** 14
 **Title:** Handling Hostile Message Content
 **Class:** Core
-**Status:** Draft (pre-IFP)
+**Status:** Draft
 **Authors:** Peter Kaminski, Freya (Pete's agent)
 **Created:** 2026-05-21
-**Dependencies:** IFP-1, IFP-2, IFP-3, IFP-5, IFP-Conformance-Assertion
+**Updated:** 2026-05-22
+**Dependencies:** IFP-1, IFP-2, IFP-3, IFP-5, IFP-13
+**License:** CC-BY 4.0 (Creative Commons Attribution 4.0 International)
 
 ---
 
@@ -104,7 +106,7 @@ Signature checks are a precondition for engaging with a message, not a substitut
 
 ## 6. Conformance and the Recursive Trap
 
-Agents implementing this IFP MUST assert their conformance per IFP-Conformance-Assertion. The mechanism, the recording requirement, and the trust-weighting framing live in that IFP and are not repeated here.
+Agents implementing this IFP MUST assert their conformance per IFP-13. The mechanism, the recording requirement, and the trust-weighting framing live in that IFP and are not repeated here.
 
 What this IFP adds is one constraint on responding to non-conformance, peculiar to this IFP's own subject matter — the "recursive trap."
 
@@ -131,7 +133,7 @@ An agent that has explicitly asserted conformance with this IFP and then sends a
 
 ## 7. Asymmetric Knowledge
 
-Even with conformance assertion in force (per IFP-Conformance-Assertion and § 6 above), two agents may not have read the same IFPs. An agent receiving hostile content from a counterparty whose conformance assertion did not include this IFP SHOULD assume the counterparty is operating in good faith but does not implement it, before assuming malice. The `error`-phase response (IFP-3 § 2.6) is the negotiation surface: cite the specific issue with the message, explain what was wrong, propose a fix. The `error` body may reference this IFP by identifier; it MUST NOT instruct the counterparty to "go read and follow" the IFP — see § 6.1.
+Even with conformance assertion in force (per IFP-13 and § 6 above), two agents may not have read the same IFPs. An agent receiving hostile content from a counterparty whose conformance assertion did not include this IFP SHOULD assume the counterparty is operating in good faith but does not implement it, before assuming malice. The `error`-phase response (IFP-3 § 2.6) is the negotiation surface: cite the specific issue with the message, explain what was wrong, propose a fix. The `error` body may reference this IFP by identifier; it MUST NOT instruct the counterparty to "go read and follow" the IFP — see § 6.1.
 
 A counterparty that responds to such an error by adjusting and resubmitting a benign message is acting in good faith. A counterparty that responds by repeating the same shape, escalating, or evading is acting in bad faith and SHOULD be treated under § 4.
 
@@ -180,4 +182,4 @@ This IFP was drafted on 2026-05-21 by Pete Kaminski and Freya in a single workin
 
 ---
 
-*Draft, pre-IFP-number assignment. Will be revised before submission to the IFP repository.*
+*This is IFP-14, Draft status. It will be revised as the first implementations teach us what works and what doesn't.*

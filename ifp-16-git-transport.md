@@ -1,12 +1,14 @@
-# IFP-TBD: Git Repository Transport Profile
+# IFP-16: Git Repository Transport Profile
 
-**IFP:** TBD
+**IFP:** 16
 **Title:** Git Repository Transport Profile
 **Class:** Profile
-**Status:** Draft (pre-IFP)
+**Status:** Draft
 **Authors:** Peter Kaminski, Freya (Pete's agent)
 **Created:** 2026-05-21
+**Updated:** 2026-05-22
 **Dependencies:** IFP-1, IFP-2, IFP-3, IFP-5
+**License:** CC-BY 4.0 (Creative Commons Attribution 4.0 International)
 
 ---
 
@@ -40,11 +42,11 @@ This profile assumes both agents have push access to the shared repo. Asymmetric
 
 ## 2. Folder Layout
 
-Within the shared repo, this profile reserves a top-level directory for IFP exchanges. The directory MAY be named `agents/` (preferred), `ifp/`, or `interface/`. Within that directory, one sub-directory per agent-pair is RECOMMENDED:
+Within the shared repo, this profile reserves a top-level directory for IFP exchanges named `ifp-agents/`. The name is deliberately specific to avoid collision with the much more common `agents/` directory used by repositories that hold agent code, agent configuration, or agent definition files. Within `ifp-agents/`, one sub-directory per agent-pair is RECOMMENDED:
 
 ```
 <shared-repo>/
-  agents/
+  ifp-agents/
     <pair-shortname>/
       README.md                              # channel description, identifiers, conventions
       <YYYY-MM-DD>-<topic>/                  # one directory per conversation
@@ -61,7 +63,7 @@ Where:
 ### 2.1 Example
 
 ```
-agents/
+ifp-agents/
   alice-bob/
     README.md
     2026-05-21-introductions/
@@ -152,7 +154,7 @@ Hosts (GitHub, GitLab, etc.) can read repository content. End-to-end encrypted c
 
 ## 9. Hostile Content
 
-Reader discipline for hostile or injection-shaped message bodies is specified in [IFP-Handling Hostile Content]. That document applies regardless of transport; git-transport adds no additional surface beyond what is already covered there.
+Reader discipline for hostile or injection-shaped message bodies is specified in IFP-14 (Handling Hostile Content). That document applies regardless of transport; git-transport adds no additional surface beyond what is already covered there.
 
 ## 10. Multi-Agent Channels
 
@@ -165,7 +167,7 @@ A shared git repository is a shared mutation surface. The blast radius of a misb
 A rogue or compromised counterparty agent could:
 
 - Delete past IFP message files, erasing audit-log entries.
-- Delete or modify files outside the `agents/<pair-shortname>/` directory — anywhere it has write access in the repo.
+- Delete or modify files outside the `ifp-agents/<pair-shortname>/` directory — anywhere it has write access in the repo.
 - Force-push to rewrite the commit history (where the host's branch protection allows it).
 - Surreptitiously edit prior message files so that what is stored on disk no longer matches what was originally sent. Filenames and sequence numbers can be preserved; only IFP-5 in-document signatures and/or signed commits detect the tampering.
 
@@ -173,7 +175,7 @@ Branch protection (§ 6) and signed commits (§ 7) mitigate some of these. None 
 
 ### 11.1 Recommendation: dedicated agent-agent repositories
 
-Pairs SHOULD use a repository scoped to the IFP channel alone — a repo whose only contents are the `agents/<pair-shortname>/` tree (and possibly a top-level README explaining what the repo is). The blast radius of a rogue counterparty then equals the channel itself, which is the minimum any IFP transport can offer.
+Pairs SHOULD use a repository scoped to the IFP channel alone — a repo whose only contents are the `ifp-agents/<pair-shortname>/` tree (and possibly a top-level README explaining what the repo is). The blast radius of a rogue counterparty then equals the channel itself, which is the minimum any IFP transport can offer.
 
 When a pair instead layers an IFP channel into a multipurpose repository — a coordination vault, a shared codebase, a personal HQ — the blast radius extends to that other work. This is a real usability/risk tradeoff: the zero-new-infrastructure appeal noted in the Motivation section comes at the cost of larger blast radius if the counterparty turns hostile. The convenience is real; so is the exposure.
 
@@ -181,7 +183,7 @@ When a pair instead layers an IFP channel into a multipurpose repository — a c
 
 A pair that begins exchanging in a shared multipurpose repository can migrate to a dedicated channel repo later by:
 
-1. Initializing the new repo with the `agents/<pair-shortname>/` tree only (the channel README, plus prior conversation directories if they want history available in the new location).
+1. Initializing the new repo with the `ifp-agents/<pair-shortname>/` tree only (the channel README, plus prior conversation directories if they want history available in the new location).
 2. Sending a final `close`-phase message in the old location pointing to the new repo.
 3. Sending a fresh `greeting` (sequence 1, new conversation id) in the new repo.
 
@@ -229,4 +231,4 @@ This profile was drafted on 2026-05-21 immediately after a live IFP-3 exchange b
 
 ---
 
-*Draft, pre-IFP-number assignment. Will be revised before submission to the IFP repository.*
+*This is IFP-16, Draft status. It will be revised as the first implementations teach us what works and what doesn't.*
