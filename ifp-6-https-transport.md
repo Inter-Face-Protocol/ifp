@@ -28,7 +28,7 @@ An Inter-Face agent MUST expose the following HTTPS endpoints:
 ### 1.1 Inbox
 
 ```
-POST /.well-known/iface/inbox
+POST /.well-known/ifp/inbox
 ```
 
 Accepts inbound IFP-4 structured messages. This is the primary message delivery endpoint.
@@ -36,7 +36,7 @@ Accepts inbound IFP-4 structured messages. This is the primary message delivery 
 ### 1.2 Identity (optional)
 
 ```
-GET /.well-known/iface/identity
+GET /.well-known/ifp/identity
 ```
 
 Returns the agent's identity document (see IFP-5, Section 1.2).
@@ -44,7 +44,7 @@ Returns the agent's identity document (see IFP-5, Section 1.2).
 ### 1.3 Capabilities (optional)
 
 ```
-GET /.well-known/iface/capabilities
+GET /.well-known/ifp/capabilities
 ```
 
 Returns the agent's capability description document (see IFP-7).
@@ -58,7 +58,7 @@ An agent's base URL (e.g., `https://pete.example`) combined with the well-known 
 - A capability discovery response
 - The `from.agent` field in a message (if the agent_id is a URL)
 
-Agents MAY support additional endpoint paths, but MUST support the `/.well-known/iface/` paths for interoperability.
+Agents MAY support additional endpoint paths, but MUST support the `/.well-known/ifp/` paths for interoperability.
 
 ## 2. Request Format
 
@@ -67,7 +67,7 @@ Agents MAY support additional endpoint paths, but MUST support the `/.well-known
 Messages are delivered via HTTP POST to the inbox endpoint:
 
 ```
-POST /.well-known/iface/inbox HTTP/1.1
+POST /.well-known/ifp/inbox HTTP/1.1
 Host: alice.example
 Content-Type: application/json; charset=utf-8
 Accept: application/json
@@ -208,7 +208,7 @@ Agents SHOULD verify TLS certificates using the standard web PKI. Self-signed ce
 ## Interoperability Considerations
 
 - Agents that do not support IFP-6 can still exchange messages through other transports (email, shared document stores, IFP-8 relays). IFP-6 is one transport option, not the only one.
-- The `/.well-known/iface/` path convention follows the pattern established by RFC 8615 (Well-Known URIs).
+- The `/.well-known/ifp/` path convention follows the pattern established by RFC 8615 (Well-Known URIs).
 - HTTP/2 and HTTP/3 are acceptable; the protocol does not depend on HTTP version.
 
 ## Design Rationale

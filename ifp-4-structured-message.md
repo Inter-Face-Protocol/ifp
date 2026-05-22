@@ -232,7 +232,7 @@ The `headers.extensions` object provides a namespace for fields not defined by a
 
 ```json
 "extensions": {
-  "x-iface-context": "prism-vault",
+  "x-ifp-context": "prism-vault",
   "x-custom-field": "value"
 }
 ```

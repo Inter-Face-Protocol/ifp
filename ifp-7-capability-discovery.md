@@ -128,7 +128,7 @@ IFP-7 supports two discovery methods. Both return the same logical information; 
 An agent MAY publish its capability document at the well-known HTTPS endpoint:
 
 ```
-GET /.well-known/iface/capabilities
+GET /.well-known/ifp/capabilities
 ```
 
 This returns the capability document as JSON with `Content-Type: application/json`.

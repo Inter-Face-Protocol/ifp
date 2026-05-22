@@ -46,7 +46,7 @@ These are implementation choices that could be refined without reshaping the pro
 - **Specific envelope field names** (IFP-3/4) — renaming `disclosure` to `sharing_level` changes no semantics
 - **Rate limiting defaults** (IFP-6) — 10 msg/min cool, 60 msg/min hot are heuristics, not architecture
 - **Message size limit** (IFP-6) — 1 MB is a reasonable default, not a design commitment
-- **Endpoint paths** (IFP-6) — `/.well-known/iface/inbox` follows convention but could change
+- **Endpoint paths** (IFP-6) — `/.well-known/ifp/inbox` follows convention but could change
 - **Retry backoff schedule** (IFP-6) — exponential backoff parameters are tuning, not design
 - **Relay persistence duration** (IFP-8) — 7 days is a default, not an invariant
 
