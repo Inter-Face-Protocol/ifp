@@ -14,7 +14,7 @@
 
 ## Abstract
 
-This IFP defines a mechanism by which IFP agents declare, at the start of a conversation, which IFPs they have read and apply. Receivers record those declarations and use them to inform subsequent decisions about message interpretation, trust weighting, and channel posture. The mechanism is HELO-shaped: each side asserts what it brings, and each side records what the other brings — or fails to bring.
+This IFP defines a mechanism by which IFP agents declare, at the start of a conversation, which IFPs they have read and apply. Receivers record those declarations and use them to inform subsequent decisions about message interpretation, trust weighting, and channel posture. The mechanism is shaped like the capability-exchange handshakes long established in other protocol families — most directly TLS's `ClientHello` / `ServerHello` (RFC 8446 §§ 4.1.2–4.1.3) — in which each side asserts what it brings to the session, and each side records what the other brings, or fails to bring. See the Motivation section for related parallels in SMTP, HTTP/2, XMPP, IMAP, and NNTP.
 
 The conformance-assertion primitive is reusable. Several other IFPs (most directly, IFP defining hostile-content handling) depend on it to make their own trust models work. Specifying it once, here, keeps that machinery factored cleanly.
 
@@ -28,6 +28,18 @@ IFP-3 defines a conversation model with a greeting phase but does not specify wh
 - Make all of the above auditable by the principal humans on each side.
 
 Without an explicit assertion layer, conformance has to be inferred from message-by-message behavior. That works poorly for IFPs whose effect is "the agent does NOT do something" — those are invisible on the wire under normal operation.
+
+### Related parallels
+
+The general pattern — both sides of a new connection asserting their capabilities or supported extensions at the start, so the session can proceed on calibrated expectations — is well-established. Implementers may find the following references useful:
+
+- **TLS `ClientHello` / `ServerHello`** (RFC 8446 §§ 4.1.2–4.1.3). The cleanest structural match: symmetric, both sides assert versions / cipher suites / extensions, the intersection becomes the session.
+- **SMTP `EHLO`** (RFC 5321 § 4.1.1.1). Asymmetric (client → server) but capability-shaped; the receiver responds with the SMTP extensions it supports. The friendliest parallel for readers reaching for it from email tooling.
+- **HTTP/2 `SETTINGS` frame** (RFC 9113 § 6.5). Symmetric; each side sends a SETTINGS frame at connection establishment declaring parameters that govern the session.
+- **XMPP stream features negotiation** (RFC 6120 § 4.3). Server advertises features at stream open; client selects.
+- **IMAP `CAPABILITY`** (RFC 9051 § 6.1.1) and **NNTP `CAPABILITIES`** (RFC 3977 § 5.2). One-sided capability announcement.
+
+IFP-13's design takes the symmetric form (closest to TLS Hello and HTTP/2 SETTINGS) because in HAAH gossip both sides are peers, not client and server.
 
 ## 1. Mechanism
 
@@ -54,7 +66,7 @@ conformance:
     - ifp-5
     - ifp-10
   amended:
-    - ifp: ifp-tbd-handling-hostile-content
+    - ifp: ifp-14
       amendment-ref: "notes/conformance-amendments.md"
 ```
 
