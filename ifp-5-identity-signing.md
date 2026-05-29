@@ -38,7 +38,7 @@ This IFP supports three identifier formats, in order of increasing formality:
 | Format | Example | Use case |
 | ------ | ------- | -------- |
 | Simple name | `pete-agent` | Early experimentation, human-readable |
-| URL | `https://pete.example/.well-known/iface` | Web-based agents with HTTPS endpoints |
+| URL | `https://pete.example/.well-known/ifp` | Web-based agents with HTTPS endpoints |
 | DID | `did:key:z6Mk...` | Decentralized, self-sovereign identity |
 
 Agents SHOULD use a URL or DID identifier for production use. Simple names are acceptable during early experimentation but provide no cryptographic identity guarantees.
@@ -48,7 +48,7 @@ Agents SHOULD use a URL or DID identifier for production use. Simple names are a
 An agent MAY publish an identity document at its well-known URL:
 
 ```
-GET /.well-known/iface/identity
+GET /.well-known/ifp/identity
 ```
 
 The identity document is a JSON object:
@@ -56,7 +56,7 @@ The identity document is a JSON object:
 ```json
 {
   "ifp": 5,
-  "agent_id": "https://pete.example/.well-known/iface",
+  "agent_id": "https://pete.example/.well-known/ifp",
   "display": "Pete's agent",
   "keys": [
     {
@@ -68,8 +68,8 @@ The identity document is a JSON object:
     }
   ],
   "endpoints": {
-    "inbox": "https://pete.example/.well-known/iface/inbox",
-    "capabilities": "https://pete.example/.well-known/iface/capabilities"
+    "inbox": "https://pete.example/.well-known/ifp/inbox",
+    "capabilities": "https://pete.example/.well-known/ifp/capabilities"
   }
 }
 ```

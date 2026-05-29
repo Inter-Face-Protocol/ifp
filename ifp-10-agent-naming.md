@@ -17,7 +17,7 @@ This IFP defines a structured naming convention for Inter-Face agents. It provid
 
 ## Motivation
 
-IFP-5 defines three identifier formats: simple names (`pete-agent`), URLs (`https://pete.example/.well-known/iface`), and DIDs (`did:key:z6Mk...`). These serve their purposes -- human readability, endpoint resolution, and cryptographic identity respectively -- but none of them answers a basic question: **whose agent is this, and which one?**
+IFP-5 defines three identifier formats: simple names (`pete-agent`), URLs (`https://pete.example/.well-known/ifp`), and DIDs (`did:key:z6Mk...`). These serve their purposes -- human readability, endpoint resolution, and cryptographic identity respectively -- but none of them answers a basic question: **whose agent is this, and which one?**
 
 A person may operate multiple agents for different purposes (a general assistant, a calendar scheduler, a research agent). Each of those agents may have sub-agents. And the person themselves may be known across multiple identity platforms. We need a naming structure that:
 
@@ -153,7 +153,7 @@ The IFP-5 identity document is extended with naming fields:
 ```json
 {
   "ifp": 5,
-  "agent_id": "https://pete.example/.well-known/iface",
+  "agent_id": "https://pete.example/.well-known/ifp",
   "name": {
     "canonical": "github:peterkaminski.freya",
     "aliases": [
@@ -203,7 +203,7 @@ The agent name is not a replacement for the IFP-5 identifiers. It is a complemen
 | Identifier type | Purpose | Example |
 | --------------- | ------- | ------- |
 | Agent name (this IFP) | Human-readable, social layer | `github:peterkaminski.freya` |
-| URL (IFP-5) | Endpoint resolution | `https://pete.example/.well-known/iface` |
+| URL (IFP-5) | Endpoint resolution | `https://pete.example/.well-known/ifp` |
 | DID (IFP-5) | Cryptographic identity | `did:key:z6Mk...` |
 
 An agent name tells you *whose* agent it is and *what* it's called. A URL tells you *where* it is. A DID tells you *cryptographically who* it is. A complete identity includes all three.
@@ -263,18 +263,18 @@ Examples: `github:~peterkaminski/freya`, `bsky:~pete.kaminski/freya/nightlight`
 ### 5.5 URI-Style Syntax
 
 ```
-iface://namespace/human/agent
+ifp://namespace/human/agent
 ```
 
-Examples: `iface://github/peterkaminski/freya`, `iface://bsky/pete.kaminski/freya/nightlight`
+Examples: `ifp://github/peterkaminski/freya`, `ifp://bsky/pete.kaminski/freya/nightlight`
 
 **Pros**: Formally structured as a URI. Clear hierarchy. Could be registered as an IANA URI scheme. Machine-parseable with standard URI libraries.
 
-**Cons**: Verbose. Looks overly formal for a social identifier. The `iface://` prefix adds length without information. May imply the name is resolvable as a URL.
+**Cons**: Verbose. Looks overly formal for a social identifier. The `ifp://` prefix adds length without information. May imply the name is resolvable as a URL.
 
 ### 5.6 Comparison
 
-| Criterion | `ns:human.agent` | `ns:human/agent` | `agent@human.ns` | `ns::human::agent` | `ns:~human/agent` | `iface://ns/human/agent` |
+| Criterion | `ns:human.agent` | `ns:human/agent` | `agent@human.ns` | `ns::human::agent` | `ns:~human/agent` | `ifp://ns/human/agent` |
 | --------- | :---: | :---: | :---: | :---: | :---: | :---: |
 | Readable | Good | Good | Good | Fair | Fair | Fair |
 | Pronounceable | Good | Good | Best | Poor | Fair | Poor |

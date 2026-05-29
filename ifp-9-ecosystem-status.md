@@ -150,8 +150,8 @@ The simplest compliant Inter-Face agent implements the following:
 
 ### 4.1 Required Endpoints
 
-- `POST /.well-known/iface/inbox` -- accept inbound IFP-4 messages
-- `GET /.well-known/iface/capabilities` -- return capability document
+- `POST /.well-known/ifp/inbox` -- accept inbound IFP-4 messages
+- `GET /.well-known/ifp/capabilities` -- return capability document
 
 ### 4.2 Required Message Support
 
@@ -179,8 +179,8 @@ The simplest compliant Inter-Face agent implements the following:
 
 ### 4.6 Implementation Checklist
 
-- [ ] `/.well-known/iface/inbox` (POST)
-- [ ] `/.well-known/iface/capabilities` (GET)
+- [ ] `/.well-known/ifp/inbox` (POST)
+- [ ] `/.well-known/ifp/capabilities` (GET)
 - [ ] Parse IFP-4 structured messages
 - [ ] Generate IFP-4 structured messages
 - [ ] Verify signatures (IFP-5)
