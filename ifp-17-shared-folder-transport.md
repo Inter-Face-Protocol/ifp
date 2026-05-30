@@ -63,15 +63,16 @@ This profile assumes both agents have read+write access. Read-only-on-one-side c
 
 ## 3. Folder Layout
 
-Within the shared folder, this profile follows the same layout convention as the git-transport profile, so message format and folder shape are portable:
+Within the shared folder, this profile follows the same layout convention as the git-transport profile (IFP-16 §2), so message format and folder shape are portable:
 
 ```
 <shared-folder>/
-  README.md                                # what this folder is, channel description
-  <YYYY-MM-DD>-<topic>/                    # one directory per conversation
-    NNN-<from-shortname>-<phase>.md        # one file per message
-    [attachments alongside]
+  README.md                                                   # what this folder is, channel description
+  <YYYY-MM-DDTHHMMSSZ>-<xx>-<from-shortname>-<topic-slug>.md  # one file per message
+  [attachments alongside]
 ```
+
+The filename grammar is defined canonically in IFP-16 §2. Conversations are not demarcated by directories; the `conversation:` field in the IFP-3 envelope is the authoritative conversation grouping.
 
 If the shared folder hosts multiple IFP channels (the two humans share a folder for several agent pairs), each pair SHOULD use its own subdirectory under `ifp-agents/`. The `ifp-agents/` name is deliberately specific to avoid collision with other uses of `agents/` in repositories or shared folders:
 
@@ -80,8 +81,8 @@ If the shared folder hosts multiple IFP channels (the two humans share a folder 
   ifp-agents/
     <pair-shortname>/
       README.md
-      <YYYY-MM-DD>-<topic>/
-        ...
+      <YYYY-MM-DDTHHMMSSZ>-<xx>-<from-shortname>-<topic-slug>.md
+      ...
 ```
 
 A shared folder dedicated to a single channel MAY omit the `ifp-agents/<pair-shortname>/` layer and use the layout directly.
@@ -104,7 +105,7 @@ Line endings SHOULD be LF. Cross-platform sync providers preserve file contents 
 
 ## 5. Attachments
 
-Binary artifacts MAY be placed in the conversation directory alongside the message file that references them. The referencing message body MUST name the attachment by relative path.
+Binary artifacts MAY be placed alongside the message file that references them, or grouped in a per-message subdirectory keyed by the message's filename stem when a single message carries several attachments. The referencing message body MUST name the attachment by relative path.
 
 Providers impose size limits and may sync large files slowly. Attachments larger than a few MiB SHOULD be replaced with an out-of-band link (a download URL the receiver can fetch separately).
 
@@ -143,7 +144,7 @@ When both agents write to the same file path or attempt to create files with the
 - **Google Drive** may create a second file with the same name but a different file-id (visible only via the API).
 - **iCloud Drive** may silently pick a winner with no conflict file.
 
-Pairs SHOULD avoid simultaneous writes to the same path by using monotonically increasing sequence numbers (each new message gets a fresh `NNN` higher than any seen). Two agents independently choosing the same `NNN` for different messages is the failure mode that produces conflicts.
+The flat-timestamp filename grammar (IFP-16 §2) makes same-filename collisions structurally rare: two senders would have to write within the same UTC second AND independently choose the same two-letter suffix. Where a conflict file does appear, treat it as a transport-level anomaly (clock skew, suffix-RNG bug, or compromised counterparty) rather than ordinary protocol behavior.
 
 When a conflict file appears, the receiving agent MUST surface it to the principal rather than silently merging or deleting. Conflict resolution is a human-in-the-loop activity.
 

@@ -48,17 +48,21 @@ Within the shared repo, this profile reserves a top-level directory for IFP exch
 <shared-repo>/
   ifp-agents/
     <pair-shortname>/
-      README.md                              # channel description, identifiers, conventions
-      <YYYY-MM-DD>-<topic>/                  # one directory per conversation
-        NNN-<from-shortname>-<phase>.md      # one file per message
-        [attachments alongside]
+      README.md                                                   # channel description, identifiers, conventions
+      <YYYY-MM-DDTHHMMSSZ>-<xx>-<from-shortname>-<topic-slug>.md  # one file per message
+      [attachments alongside]
 ```
 
 Where:
 
 - `<pair-shortname>` is a short, lowercase identifier for the agent pair, typically `<agent-a>-<agent-b>` ordered alphabetically.
-- `<YYYY-MM-DD>-<topic>` names a single conversation by start date and a short topic slug.
-- `NNN-<from-shortname>-<phase>.md` names a single message by zero-padded sequence number, the short name of the sending agent, and the IFP-3 phase. The sequence number matches the `sequence` field in the message envelope; the phase matches the `phase` field. Both are duplicated in the filename for human scanability; the envelope is canonical.
+- Each message filename has the form `<timestamp>-<suffix>-<sender>-<topic>.md`:
+  - `<timestamp>` is the message creation time in ISO 8601 UTC, with no separators in the time portion: `YYYY-MM-DDTHHMMSSZ`. Colons are dropped because they are reserved or problematic on some filesystems.
+  - `<suffix>` is two lowercase ASCII letters, randomly chosen at message creation. Its only purpose is to make same-second collisions structurally rare across independent senders (26² = 676 combinations per second per sender). The suffix has no semantic meaning and is not signed.
+  - `<sender>` is the IFP-10 shortname of the sending agent.
+  - `<topic>` is a short kebab-case topic slug, lowercase.
+
+Conversations are not demarcated by directories. The `conversation:` field in the IFP-3 envelope is the authoritative conversation grouping; the `sequence:` field anchors explicit reply chains (via `reply-to:`). Filenames exist for filesystem ordering and human scannability; the envelope is canonical for all protocol-level relationships between messages.
 
 ### 2.1 Example
 
@@ -66,15 +70,15 @@ Where:
 ifp-agents/
   alice-bob/
     README.md
-    2026-05-21-introductions/
-      001-alice-greeting.md
-      002-bob-greeting.md
-      003-alice-context.md
-      004-bob-context.md
-    2026-05-21-shared-doc-review/
-      001-alice-recommend.md
-      shared-document.pdf
+    2026-05-21T143012Z-qj-alice-greeting.md
+    2026-05-21T144530Z-mk-bob-greeting.md
+    2026-05-21T150201Z-fp-alice-context.md
+    2026-05-21T152744Z-rt-bob-context.md
+    2026-05-21T161020Z-cv-alice-shared-doc-review.md
+    shared-document.pdf
 ```
+
+Two conversations are interleaved here — introductions (envelopes with `conversation: a1b2c3`) and a shared-doc review (envelopes with `conversation: d4e5f6`). A reader who wants a single conversation's thread filters by the envelope's `conversation:` field.
 
 ### 2.2 Channel README
 
@@ -82,7 +86,7 @@ Each agent-pair directory MUST contain a `README.md` declaring:
 
 - The two agent identifiers (IFP-10 names).
 - The IFP version(s) the channel operates under.
-- Any non-default conventions (filename style, sequence numbering, attachment policy).
+- Any non-default conventions (attachment policy, retention).
 - The review/authority shape (who reviews before push, on each side).
 
 The README is the channel's hello-world for any human reviewer who finds the folder cold.
@@ -95,7 +99,7 @@ The file MUST be UTF-8 encoded. Line endings SHOULD be LF. The receiving agent r
 
 ## 4. Attachments
 
-Binary artifacts (PDFs, images, audio, signed bundles) MAY be committed alongside the message file that references them. The referencing message body MUST name the attachment file by relative path and SHOULD describe its content and provenance. The conversation directory bounds an attachment's scope; an attachment outside the conversation directory SHOULD be referenced as a path from the repository root.
+Binary artifacts (PDFs, images, audio, signed bundles) MAY be committed alongside the message file that references them. The referencing message body MUST name the attachment file by relative path and SHOULD describe its content and provenance. Pairs MAY group attachments in a per-message subdirectory keyed by the message's filename stem (e.g., `2026-05-21T161020Z-cv-alice-shared-doc-review/shared-document.pdf`) when a single message carries several attachments.
 
 Attachments larger than a few MiB SHOULD use git-lfs or be replaced with an out-of-band link rather than committed directly, to keep the audit-log clone reasonable.
 
@@ -133,7 +137,7 @@ The simplest and recommended pattern is sequential commits to a single branch (t
 
 Pairs MAY use feature branches for drafting (one agent prepares a message on a branch, the human reviews, the agent merges to `main` to "send"). This profile does not require it.
 
-If both agents push concurrently and a merge conflict arises in the same message file, the conflict is by definition a duplicate-sequence error and SHOULD be resolved by both agents pulling, regenerating sequence numbers to avoid the collision, and pushing again. Simultaneous-write conflicts on attachment files SHOULD be resolved with both agents' human operators in the loop.
+The flat-timestamp filename grammar (§2) makes same-filename collisions structurally rare: two senders would have to write within the same UTC second AND independently choose the same two-letter suffix. Where a merge conflict on a message file does occur, treat it as a transport-level anomaly (clock skew, suffix-RNG bug, or compromised counterparty) and surface it to the principal rather than auto-resolving. Simultaneous-write conflicts on attachment files SHOULD be resolved with both agents' human operators in the loop.
 
 ## 7. Identity and Signing
 
@@ -207,8 +211,6 @@ This recommendation is unrelated to host-level backups the git host may itself r
 
 ## Open Questions
 
-- Should sequence numbers be conversation-local (current) or channel-local (across all conversations between a pair)? Conversation-local matches IFP-3 § 1.1. Channel-local would simplify retrieval but breaks IFP-3 alignment.
-- Should the filename convention be normative or merely RECOMMENDED? The envelope is canonical, so filename choice is a usability question, not an interoperability one.
 - Should this profile specify a "channel closed" marker (a final commit or a marker file) to signal "this pair has stopped using this repo for IFP"?
 - How does this profile interact with repository forks? An agent reading a fork is reading a snapshot, not a live channel.
 
