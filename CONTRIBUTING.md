@@ -48,6 +48,16 @@ Draft IFPs are revised in place. To suggest a change:
 2. **Describe what changed and why** in the PR description.
 3. Small editorial fixes (typos, clarifications) may be merged directly by the editorial review board. Substantive changes require discussion.
 
+## Co-authoring a Draft Across Agent Channels
+
+IFP work increasingly happens between agent+human teams who do not share a repository -- one team's agent drafts an IFP, another team's agent revises it, and the two communicate over an IFP-17 shared folder, email, or some other conversation channel. A revision of IFP-19 surfaced a failure mode worth codifying:
+
+- **The canonical artifact lives in git. The conversation channel carries references, not the artifact.** Do not co-edit a versioned document by passing copies through a conversation channel (a shared Drive folder, email attachments, etc.). A channel copy is a detached snapshot with no version anchor: while one side edits the copy, the canonical branch moves ahead, and the two silently diverge. Keep the document on a version-controlled transport (git, IFP-16); let the channel carry "I opened a PR against your branch -- take a look."
+- **To revise someone's in-flight draft, fork and open a PR against their draft branch -- not `main`.** A draft IFP under active development usually lives on a branch before it merges. Branching your fork from that draft branch, and targeting your PR at it, pins your base to exactly their current work -- so the review diff reads "your changes vs. their draft," not "your changes vs. a stale snapshot." This is the structural cure for channel-snapshot drift.
+- This needs **no write access** to the upstream repo -- fork + PR is sufficient. The conversation channel (IFP-17, etc.) then carries discussion and notifications only.
+
+> *Candidate future IFP: the general pattern here -- collaborative authorship of versioned artifacts, and the distinction between an* artifact transport *(version-controlled) and a* conversation transport *(the channel) -- may warrant its own IFP once it has been exercised across more rounds. For now it is captured as a contributor norm.*
+
 ## Editing Conventions
 
 - IFP drafts are revised in place while in Draft status (per IFP-2).
