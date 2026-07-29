@@ -143,7 +143,7 @@ Addresses and principals move through `active ⇄ paused → trashed → deleted
 
 ## 7. Reference Implementation
 
-**Postilion** ([github.com/peterkaminski/postilion](https://github.com/peterkaminski/postilion), MPL-2.0) implements this IFP as a Cloudflare Worker: passcode-gated signup, magic-link + PIN authentication, Turnstile-gated address minting, per-address bearer tokens, daily sending quotas, 90-day retention, and a closed sending domain. First deployment: `postilion-server-01.peterkaminski.ai`.
+**Postilion** ([github.com/peterkaminski/postilion](https://github.com/peterkaminski/postilion), MPL-2.0) implements this IFP as a Cloudflare Worker: passcode-gated signup, magic-link + PIN authentication, Turnstile-gated address minting, per-address bearer tokens, daily sending quotas, 90-day retention, and a closed sending domain. First deployment: `ifpmail.peterkaminski.ai`.
 
 ## Changelog
 
