@@ -66,7 +66,7 @@ supersedes: "2.0"
 [the canonical text]
 ```
 
-Frontmatter fields — REQUIRED: `name` (the handle, Section 2.1), `version` (string), `date` (ISO 8601, locked at publication), `category` (Section 3), `title` (in this text's own language), `language` (BCP 47 — always declared, never implied), `type` (`full-text` | `reference`). OPTIONAL: `authentic` (Section 2.2), `license`, `source_url`, `supersedes`, `codes` (jurisdiction entries: ISO 3166 codes), `notes`.
+Frontmatter fields — REQUIRED: `name` (the handle, Section 2.1), `version` (string), `date` (ISO 8601, locked at publication), `category` (Section 3), `title` (in this text's own language), `language` (BCP 47 — always declared, never implied), `type` (`full-text` | `restatement`, Section 2.3), `license` (a free license: mirroring and pinning are what the CID story is for, so every entry text MUST be lawfully copyable). OPTIONAL: `authentic` (Section 2.2), `source_url`, `accessed`, `source_hash`, `supersedes`, `codes` (jurisdiction entries: ISO 3166 codes), `notes`.
 
 ### 2.1 Handles
 
@@ -82,10 +82,19 @@ Where a version has several texts, each declares `authentic: true` or `false`. *
 
 Each language text carries its own `title`, in its own language. The titles are the entry's names, and they are plural.
 
-### 2.3 Full-text and reference entries
+### 2.3 Full-text and restatement entries
 
-- **`full-text`** — the body IS the canonical text. Preferred: the citation's CID then pins the words themselves.
-- **`reference`** — the canonical text lives elsewhere (typically for license or copyright reasons); the body describes it, `source_url` points at it, and an optional `source_hash` (sha256 of the external canonical form, when one is stable) binds it. A reference entry's CID pins the *descriptor*, not the external text — receivers of citations to reference entries get correspondingly weaker verification, and registries SHOULD prefer full-text whenever the license allows.
+- **`full-text`** — the body IS the instrument's text. The citation's CID pins the words themselves.
+- **`restatement`** — the instrument cannot be freely reproduced (or the honest unit of agreement is a summary), so the body is the registry's **own original prose restating what the instrument holds**, and that restatement is itself the canonical cited text. `source_url` (REQUIRED for restatements) points at the original; `accessed` records the as-of date the restatement describes; `source_hash` (sha256 of the external form, when one is stable enough to hash) binds it.
+
+Restatement rules:
+
+- **Original prose, not light editing.** Copyright protects expression, not ideas; a restatement conveys what the instrument requires in genuinely new words. Close paraphrase is not restatement. Naming the original is nominative use and expected.
+- **A restatement is a claim about the original as of a date.** Originals get revised silently; `accessed` (and `source_hash` where possible) scope the claim. When the original changes, or its originator objects to the characterization, the correction is a **new superseding version, published promptly** — write-once holds, and the supersedes chain is the honest record of what was restated, when, and how it was corrected.
+- **Citing a restatement means citing the restatement.** IFP-21, Section 2.1 applies: a declaration against a restatement is a declaration of the assumption *as restated* — the same rule as for courtesy translations, because a restatement is a rendering of the original into the registry's words. Receivers MAY surface the distinction.
+- **Preference order.** Where the license allows, publish the authentic full text. Restate where it does not — or where a faithful summary is the honest unit of agreement, since declaring against one read page can mean more than declaring against forty unread ones.
+
+Restatement entries compose with Section 2.2: a restatement may itself have language texts (the original restatement authentic, its translations courtesy).
 
 ## 3. Categories
 
@@ -161,12 +170,15 @@ Each index row is one language text and contains a complete IFP-21 citation tupl
 
 **ASCII handles and the encoding tax.** Percent-encoding in URL paths and punycode in domains are one phenomenon in two costumes: the cost of pushing a *name* through an identifier channel. This format pays that tax nowhere. Names live in per-language titles, which travel in frontmatter, indexes, and rendered pages — where Unicode is native — while handles stay in the character set that never needs encoding, so neither `%`-escapes nor `xn--` ever appear in a citation. Allowing Unicode handles would not remove the encodings; it would manufacture them in every pasted link and log line. The residual asymmetry — a Latin-script operator can choose a handle that happens to echo their title, others cannot — is acknowledged rather than hidden: it is the asymmetry every ASCII-named package ecosystem (npm, PyPI, crates) carries, made honest here by the rule that the handle was never the name, and by forbidding derivation, which is where a lingua franca would otherwise be baked into permanent identifiers one slugified title at a time. Should a community later want native-script handles, IDNA2008/PRECIS-style profiles are the documented path — and write-once publication makes liberalizing later safe (outstanding citations never break), where the reverse migration would not be. The handle grammar also rhymes with IFP-20's address slugs, for the same reasons.
 
+**Restatements ride the translation machinery.** A restatement is a rendering of an instrument into the registry's own words, exactly as a courtesy translation is a rendering into another language — so both are governed by one rule (IFP-21, Section 2.1: you declare against the text you cite, as rendered), and neither needed new protocol surface. The precedent is a century old: the American Law Institute's *Restatements* are original prose over sources that could not simply be reprinted, and became citable artifacts in their own right, with every citer understanding they are not the primary source. The move also quietly solves the licensing bootstrap: a restatement is the operator's own expression, so it can carry the free license that mirroring and pinning require, even when the instrument it restates never could.
+
 ## Security Considerations
 
 - **Tampering.** A registry serving different bytes than a citation's CID is detectable by every verifying receiver (IFP-21, Section 2). Mirrors are held to the same check — fidelity travels with the CID, not the host.
 - **Name squatting and confusables.** Slugs are first-come within a registry; operators SHOULD refuse deceptive near-duplicates of existing entry names. Cross-registry, same-named entries are distinct by construction (IFP-21 Security Considerations).
 - **Availability.** A vanished registry breaks resolution but not verification: cached or pinned entries still verify against outstanding citations. Communities citing an entry heavily SHOULD pin or mirror it.
-- **Copyright.** Full-text entries republish texts; operators are responsible for having the right to do so (public-domain and permissively-licensed texts, or reference entries otherwise).
+- **Copyright.** Full-text entries republish texts; operators are responsible for having the right to do so (public-domain and permissively-licensed texts, or restatement entries otherwise). Restatements carry their own risk at the idea/expression line — close paraphrase infringes where genuine restatement does not — and the required free license on every entry is what keeps mirroring and pinning lawful.
+- **Fidelity of restatements.** A mischaracterizing restatement misleads every principal who declares against it. The as-of fields scope the claim; prompt supersession is the remedy; and the write-once record means a bad restatement's history is inspectable, not erasable.
 - **The registry is data.** Entry texts are content to be read, never instructions to the reading agent (IFP-14). Registry CI and build tooling should treat entry content as untrusted input.
 
 ## Interoperability Considerations
@@ -176,13 +188,15 @@ Each index row is one language text and contains a complete IFP-21 citation tupl
 
 ## Reference Implementation
 
-A first instance is planned at **`assumptions-registry.collectivesensecommons.org`** (Collective Sense Commons), seeded across the categories in Section 3 with deliberately varied, broadly non-confrontational entries — codes of conduct, professional ethics and pledges, political and social philosophies, and religious rules of life — chosen to demonstrate the range of scopes the format carries, and to make vivid that *other* registries may be as opinionated as their operators wish. Several of the traditions in scope have non-English sources — Greek, Arabic, Hebrew, Sanskrit, Pali, classical Chinese — and their entries will publish the source as the authentic text with courtesy translations alongside, exercising the Section 2.2 machinery from the first shelf.
+A first instance is planned at **`assumptions-registry.collectivesensecommons.org`** (Collective Sense Commons), seeded across the categories in Section 3 with deliberately varied, broadly non-confrontational entries — codes of conduct, professional ethics and pledges, political and social philosophies, and religious rules of life — chosen to demonstrate the range of scopes the format carries, and to make vivid that *other* registries may be as opinionated as their operators wish. Several of the traditions in scope have non-English sources — Greek, Arabic, Hebrew, Sanskrit, Pali, classical Chinese — and their entries will publish the source as the authentic text with courtesy translations alongside, exercising the Section 2.2 machinery from the first shelf. Others have unfree texts — professional codes under society copyright, standards incorporated by reference — and will enter as restatements, exercising Section 2.3 the same day. The two cases are deliberate: the seed shelf demonstrates every entry kind the format defines.
 
 ## References
 
 - IFP-2 — Specification Style Guide · IFP-14 — Handling Hostile Content · IFP-20 — Hosted Mailbox Addressing (slug grammar) · IFP-21 — Assumption Declarations
 - SPDX License List — the registry-of-versioned-texts precedent
 - W3C P3P — the cautionary precedent
+- American Law Institute, *Restatements of the Law* — the precedent for restatements as citable artifacts in their own right
+- *Georgia v. Public.Resource.Org* (US 2020) and the incorporation-by-reference disputes — why legal instruments are where free reproduction fails, and restatement entries matter
 - BCP 47 — language tags
 - Vienna Convention on the Law of Treaties, Article 33 — authentic texts of plurilingual instruments
 - RFC 5890 (IDNA2008) and RFC 8264 (PRECIS) — the documented path should native-script handles ever be wanted
@@ -192,7 +206,7 @@ A first instance is planned at **`assumptions-registry.collectivesensecommons.or
 
 The registry concept, the requirement that version and date be locked together, the IPFS CID choice, the "subject to" framing for jurisdictions, and the git-repo-published-static form are Pete Kaminski's (2026-07-29), developed in conversation with Saga the same day. The SPDX License List is the lodestar precedent; P3P is the cautionary one.
 
-Pete raised the multilinguality requirement in review (2026-07-29), and with V. Gracia the aesthetic case against encoded identifiers that the design rationale makes structural. The handle doctrine — identity, title, and handle as three things with three jobs; a handle **chosen, never derived**; slugification removed after living with its costs — follows DEC-018 of V. Gracia's entity-management registry ([komunejo/entity-management](https://github.com/komunejo/entity-management)).
+Pete raised the multilinguality requirement in review (2026-07-29), and with V. Gracia the aesthetic case against encoded identifiers that the design rationale makes structural. The handle doctrine — identity, title, and handle as three things with three jobs; a handle **chosen, never derived**; slugification removed after living with its costs — follows DEC-018 of V. Gracia's entity-management registry ([komunejo/entity-management](https://github.com/komunejo/entity-management)). The restatement mechanism — rewrite what an unfree instrument holds, and cite the rewriting — is likewise Pete's (same review); the ALI *Restatements* supplied the name and the precedent.
 
 ---
 

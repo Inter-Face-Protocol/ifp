@@ -56,9 +56,11 @@ A citation is a JSON object with five REQUIRED fields:
 
 A receiver that fetches the cited entry MUST verify the fetched bytes against `cid` before treating the text as the cited assumption.
 
-### 2.1 Language equivalence
+### 2.1 Renderings: translations and restatements
 
 An entry may publish several language texts of one version, each with its own CID, each marked authentic or courtesy (IFP-22, Section 2.2). Declarations citing any **authentic** text of the same (registry, name, version) are declarations of the same assumption. A declaration citing a non-authentic translation is a declaration of the assumption *as rendered in that translation*; receivers MAY surface that distinction to their principals rather than assuming equivalence. This is the authentic-texts doctrine of plurilingual legal instruments (Vienna Convention, Article 33; see References) carried over with content addressing doing the work designation clauses do in treaties.
+
+The same rule covers **restatement entries** (IFP-22, Section 2.3), where an instrument that cannot be freely reproduced is restated in the registry's own words: a declaration citing a restatement is a declaration of the assumption *as restated* — you declare against the text you can read and pin, and receivers MAY surface that it stands one rendering away from the original. Translations and restatements are one phenomenon at the protocol layer: cited renderings.
 
 ## 3. Declarations
 
