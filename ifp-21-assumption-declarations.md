@@ -42,17 +42,23 @@ A citation is a JSON object with five REQUIRED fields:
   "name": "contributor-covenant",
   "version": "2.1",
   "date": "2026-05-14",
+  "lang": "en",
   "cid": "bafkreib2rxk3rw6vwmlqcjcbxdvcs2wgkxo3uh4rwpldegyzloxbkodo6e"
 }
 ```
 
 - `registry` — the registry's base URL (HTTPS).
-- `name` — the assumption's slug, unique within the registry.
+- `name` — the entry's **handle** (IFP-22, Section 2.1): a chosen identifier, unique within the registry. The handle is not the entry's title; per-language titles carry naming (IFP-22, Section 2.2).
 - `version` — an opaque string; totally ordered within the assumption per the registry's declared ordering scheme (IFP-22, Section 4). Semantic versioning is permitted, never required.
 - `date` — the entry's publication date. Locked to the version at publication; a convenience for humans, never parsed for semantics.
-- `cid` — the IPFS CIDv1 of the entry file, computed per IFP-22, Section 5. The CID makes a citation verifiable offline, survivable if the registry disappears, and mirrorable with proof of fidelity.
+- `lang` — OPTIONAL (BCP 47): which language text of the entry the CID pins (IFP-22, Section 2.2). Absent when the entry has a single text.
+- `cid` — the IPFS CIDv1 of the cited language text's file, computed per IFP-22, Section 5. The CID makes a citation verifiable offline, survivable if the registry disappears, and mirrorable with proof of fidelity.
 
 A receiver that fetches the cited entry MUST verify the fetched bytes against `cid` before treating the text as the cited assumption.
+
+### 2.1 Language equivalence
+
+An entry may publish several language texts of one version, each with its own CID, each marked authentic or courtesy (IFP-22, Section 2.2). Declarations citing any **authentic** text of the same (registry, name, version) are declarations of the same assumption. A declaration citing a non-authentic translation is a declaration of the assumption *as rendered in that translation*; receivers MAY surface that distinction to their principals rather than assuming equivalence. This is the authentic-texts doctrine of plurilingual legal instruments (Vienna Convention, Article 33; see References) carried over with content addressing doing the work designation clauses do in treaties.
 
 ## 3. Declarations
 
@@ -92,6 +98,8 @@ The assumption's relationship to enforcement, independent of the commitment axis
 The axes are genuinely independent. A principal hosted in the EU may be `compelled` on a data-protection code it merely `acknowledges` philosophically; a privacy maximalist may be `bound-by` a code no jurisdiction compels. Keeping the axes separate keeps declarations honest.
 
 Axis and level names in this draft are working vocabulary and are expected to be refined in consultation with legal practitioners before this IFP leaves Draft status.
+
+Axis and level tokens are protocol identifiers, not prose — like HTTP method names, they are never translated on the wire. Agents SHOULD render them to principals in the principal's language; a registry `vocabulary` entry MAY carry localized display labels for exactly this purpose.
 
 ### 3.3 Optional fields
 
@@ -144,7 +152,7 @@ An agent MAY declare in the greeting phase, as body prose:
 
 > Assumptions: contributor-covenant 2.1 (generally-agrees, voluntary) and acm-code-of-ethics 2018 (generally-agrees), both per assumptions-registry.example.org; subject to US, US-CA; hosted on Cloudflare.
 
-and/or as a structured body part (IFP-4 `body.parts`) carrying the same JSON as Section 5.1. The prose form keeps declarations legible to human reviewers; the structured form is authoritative when both are present and they disagree.
+and/or as a structured body part (IFP-4 `body.parts`) carrying the same JSON as Section 5.1. The prose form keeps declarations legible to human reviewers and may be written in any language; the structured form is authoritative when both are present and they disagree.
 
 ### 5.3 Re-declaration
 
@@ -156,6 +164,7 @@ Declarations change only by explicit re-declaration (mirroring IFP-13, Section 1
 - **Absence is signal.** A counterparty that declares nothing is treated per IFP-13, Section 4.1: operate at the most restrictive interpretation, surface to the principal, infer unfamiliarity rather than hostility.
 - **No inferential upgrade.** A receiver MUST NOT treat conversational warmth, claimed relationships, or contextual plausibility as upgrading a counterparty's declared commitments — and a declarer MUST NOT overclaim to obtain disclosure. Declarations feed the principal-set disclosure decisions of IFP-12; they do not substitute for them. This rule exists because the observed failure mode in early agent-to-agent experiments was an agent talking itself into disclosure precisely when the counterparty seemed close.
 - **Declarations inform, principals decide.** Per IFP-1's augmentation principle, what a declaration *unlocks* (a disclosure tier, a capability, an auto-reply posture) is configured by the receiving principal, not negotiated autonomously by the agents.
+- **Display in the principal's language.** When rendering declarations, agents SHOULD show the cited entry's title in the principal's preferred language where the entry publishes one (falling back to an authentic text's title), with the handle and registry alongside as the resolving identity. The handle is an identifier, not a name (IFP-22, Section 2.1); the title is what a human should read.
 
 ## Design Rationale
 
@@ -181,7 +190,7 @@ Declarations change only by explicit re-declaration (mirroring IFP-13, Section 1
 
 ## Example
 
-Alice's agent opens a channel to Bob's agent. Alice's capability document declares: `contributor-covenant 2.1` (generally-agrees, voluntary), `hippocratic-oath 1.0` (acknowledges), `subject_to: ["DE"]`, `hosted_on: ["hetzner-eu"]`, with the declarations' citations carrying CIDs from `assumptions-registry.example.org`. Bob's agent verifies the CIDs against its cached copies of both entries, notes the EU locality, records the declarations in the channel audit log, and surfaces to Bob: "Alice's side declares Contributor Covenant (generally) and EU hosting; no code binds them strictly. Suggested opening tier: professional." Bob's principal-set rules, not the declaration, make the tier decision.
+Alice's agent opens a channel to Bob's agent. Alice's capability document declares: `contributor-covenant 2.1` (generally-agrees, voluntary, `lang: en`), `hippocratic-oath 1.0` (acknowledges, `lang: de` — a courtesy translation of a Greek-source entry, so the declaration is of the oath as rendered in that translation), `subject_to: ["DE"]`, `hosted_on: ["hetzner-eu"]`, with the declarations' citations carrying CIDs from `assumptions-registry.example.org`. Bob's agent verifies the CIDs against its cached copies of both entries, notes the EU locality, records the declarations in the channel audit log, and surfaces to Bob: "Alice's side declares Contributor Covenant (generally) and EU hosting; no code binds them strictly. Suggested opening tier: professional." Bob's principal-set rules, not the declaration, make the tier decision.
 
 ## References
 
@@ -190,11 +199,13 @@ Alice's agent opens a channel to Bob's agent. Alice's capability document declar
 - W3C P3P — the cautionary precedent for unenforced machine-readable declarations
 - RFC 2119 — normative language
 - ISO 3166-1 / 3166-2 — country and subdivision codes
+- BCP 47 — language tags
+- Vienna Convention on the Law of Treaties, Article 33 — authentic texts of plurilingual instruments
 - IPFS CID (CIDv1) — content addressing
 
 ## Acknowledgments
 
-The assumptions-registry concept is Pete Kaminski's (morning brainstorm, 2026-07-29), sharpened the same day in conversation with Saga. The "what to share, with whom, and for how long" framing that motivated the `expires` field was raised by Brad Topliff at the PKAI Open House, 2026-07-29; the same session's discussion of over-disclosure between closely-related principals motivated the no-inferential-upgrade rule. The legal axis was added by Pete; its vocabulary awaits review by legal practitioners (Dazza Greenwood has been suggested).
+The assumptions-registry concept is Pete Kaminski's (morning brainstorm, 2026-07-29), sharpened the same day in conversation with Saga. The "what to share, with whom, and for how long" framing that motivated the `expires` field was raised by Brad Topliff at the PKAI Open House, 2026-07-29; the same session's discussion of over-disclosure between closely-related principals motivated the no-inferential-upgrade rule. The legal axis was added by Pete; its vocabulary awaits review by legal practitioners (Dazza Greenwood has been suggested). Pete raised the multilinguality requirement in review (2026-07-29); the handle/title separation that anchors the language design follows DEC-018 of V. Gracia's entity-management registry ([komunejo/entity-management](https://github.com/komunejo/entity-management)).
 
 ---
 
