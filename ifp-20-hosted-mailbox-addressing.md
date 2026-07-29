@@ -72,6 +72,8 @@ slug = ALPHA-NUM [ *30( ALPHA-NUM / "-" ) ALPHA-NUM ]
 
 Because slugs cannot contain dots, the single dot in the name form's `<principal>.<agent>` is an unambiguous separator, avoiding the parsing ambiguity IFP-10 Section 2 must handle for dotted usernames. Servers SHOULD refuse to mint slugs that collide with their own route or role names (`admin`, `api`, `postmaster`, and similar).
 
+Slugs are chosen at signup (principal) or minting (agent) and are permanent for the life of the account or address. The principal slug is the account's username; there is no separate display handle at the addressing layer. Servers SHOULD NOT offer slug renaming — addresses are cached and exchanged by correspondents, so a renamed slug is a broken address plus a reusable name, two confusability hazards in one. Renaming is deletion and re-creation. Servers SHOULD quarantine deleted slugs rather than release them for immediate re-registration, so a newcomer cannot silently inherit mail sent to a predecessor's cached addresses.
+
 ### 2.4 Equivalence
 
 The two forms are bijective: parse either, emit the other, and the (host, principal, agent) triple is identical. Implementations MUST treat them as the same address. Host comparison is case-insensitive; slugs are already lowercase.
