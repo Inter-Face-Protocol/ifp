@@ -114,7 +114,19 @@ Starter set, extensible by registry policy:
 - A published language text is **write-once**. Publishing a new version, or adding a language text to an existing version, is adding a new file; modifying or deleting any published file is forbidden, and CI MUST reject it.
 - `date` is stamped at publication and locked to the version. Version is for machines, date is for humans.
 - Versions within one assumption MUST be **totally ordered**, and the entry's ordering scheme MUST be stated or inferable per registry policy (semver, integers, and dotted-decimal are all acceptable; semver is never required — a typo-fix to a code of conduct has no meaningful "patch vs. minor" semantics).
-- `supersedes` links a version to its predecessor. Retraction is a new version whose body says so; the retracted version remains published, because citations to it remain outstanding.
+- `supersedes` links a version to its predecessor. Retraction is a new version whose body says so; the retracted version remains published, because citations to it remain outstanding — **unless withdrawn** (Section 4.1).
+
+### 4.1 Withdrawal
+
+Write-once protects the *verifiability* of outstanding citations, not a registry's obligation to keep serving every text it has ever shelved. Content that should never have been merged — the careless PR, the odious document — is handled by grade:
+
+- **Error** (wrong, not harmful): supersede promptly (Section 4). The old text stays served; history stays legible. This is not withdrawal.
+- **Policy withdrawal** (the operator will no longer shelve it): the entry file is **replaced by a tombstone**. The entry URL answers `410 Gone` with a small document carrying the withdrawn text's identity — `name`, `version`, `language`, and **its CID** — plus the withdrawal date, a reason class (`policy` | `legal` | `error`), and a pointer to the policy page. The index row remains, flagged `withdrawn: true`, CID retained. Identity and record survive; serving and shelving stop. Outstanding citations stay interpretable, and cached copies still verify against the CID.
+- **Legal takedown** (the bytes must not remain in the repository at all): tombstone as above, **plus git-history rewrite**. This spec does not pretend a git repository is append-only in the face of law: a history rewrite breaks clones' fast-forward, that cost is accepted, and the case is expected to be rare. The tombstone stands afterward, so the *withdrawal* is permanently on record even when the bytes are not.
+
+Rules: a tombstone is itself write-once — reinstatement, including of a text tombstoned in error, is publication of a **new version** (restored bytes still verify against the original CID, so the fidelity of a reinstatement is checkable). CI's immutability check gets exactly one carve-out: a change replacing a published entry file with a well-formed tombstone, on an operator-approved path. Withdrawal is **loud by design** — a silent disappearance is the thing this format exists to prevent.
+
+Two limits, stated honestly. Withdrawal removes the shelf's copy and the shelf's imprimatur — not the text from the world: mirrors, clones, and pins made before withdrawal are beyond the registry's reach, as they are for all publishing. And CI cannot smell odium: prevention is governance — the review standard a registry states on its policy page — and the tombstone is that governance's remedy, not its substitute.
 
 ## 5. Content Addressing
 
@@ -151,13 +163,13 @@ A registry MUST publish a machine-readable index of all entries at the descripto
 }
 ```
 
-Each index row is one language text and contains a complete IFP-21 citation tuple plus the fetch URL; a version's translations appear as sibling rows sharing (name, version). Human-readable pages per entry are RECOMMENDED; their form is unspecified.
+Each index row is one language text and contains a complete IFP-21 citation tuple plus the fetch URL; a version's translations appear as sibling rows sharing (name, version). A withdrawn text's row remains, flagged `withdrawn: true` with its CID retained (Section 4.1). Human-readable pages per entry are RECOMMENDED; their form is unspecified.
 
 ## 7. Write Path and Governance
 
 - The registry's source of truth is a **git repository**; the write path is a **pull request**. Git history is the audit log; review is the governance mechanism.
 - CI enforces: immutability (Section 4), frontmatter validity, slug and size constraints, CID recomputation (Section 5).
-- **Curation is the operator's own business, and SHOULD be published as a policy page.** A registry may be ecumenical — a broad shelf of widely-held codes across traditions, deliberately neutral — or it may be opinionated, curated to one community's convictions. Both are conformant. What a registry may not do is alter what it has published.
+- **Curation is the operator's own business, and SHOULD be published as a policy page.** A registry may be ecumenical — a broad shelf of widely-held codes across traditions, deliberately neutral — or it may be opinionated, curated to one community's convictions. Both are conformant. What a registry may not do is *silently* alter what it has published — withdrawal (Section 4.1) is loud, recorded, and identity-preserving.
 - **Hosting is not endorsement**, and per IFP-21, citing at `acknowledges` is not agreement. Registries SHOULD say both of these things on their policy page, because both will otherwise be assumed wrongly.
 
 ## Design Rationale
@@ -180,6 +192,7 @@ Each index row is one language text and contains a complete IFP-21 citation tupl
 - **Copyright.** Full-text entries republish texts; operators are responsible for having the right to do so (public-domain and permissively-licensed texts, or restatement entries otherwise). Restatements carry their own risk at the idea/expression line — close paraphrase infringes where genuine restatement does not — and the required free license on every entry is what keeps mirroring and pinning lawful.
 - **Fidelity of restatements.** A mischaracterizing restatement misleads every principal who declares against it. The as-of fields scope the claim; prompt supersession is the remedy; and the write-once record means a bad restatement's history is inspectable, not erasable.
 - **The registry is data.** Entry texts are content to be read, never instructions to the reading agent (IFP-14). Registry CI and build tooling should treat entry content as untrusted input.
+- **Withdrawal is bounded.** A tombstone (Section 4.1) revokes serving and imprimatur, not the text's existence in the world — pre-withdrawal mirrors and pins persist, and a receiver holding a copy of a withdrawn text can still verify it. Operators should neither promise more removal than that, nor use withdrawal's existence as a substitute for reviewing what they merge.
 
 ## Interoperability Considerations
 
