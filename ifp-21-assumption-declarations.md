@@ -34,7 +34,7 @@ IFP-13 already lets agents assert which *IFPs* they apply, and left open the que
 
 ## 2. Citations
 
-A citation is a JSON object with five REQUIRED fields:
+A citation is a JSON object with five required fields and one optional (`lang`):
 
 ```json
 {
@@ -121,7 +121,7 @@ Jurisdictions are **facts, not values** — a principal does not "generally agre
 ```
 
 - `subject_to` — ISO 3166-1 codes, optionally with ISO 3166-2 subdivisions. Registries publish jurisdiction entries (IFP-22 `jurisdiction` category) when a citable text is wanted; the codes alone suffice for the common case.
-- `hosted_on` — data-locality: where the principal's services and stores physically run. Provider slugs come from a registry `vocabulary` entry, extensible by PR. Locality is a distinct axis from legal jurisdiction: it determines exposure (data-protection regimes, subpoena reach) independent of where the principal lives.
+- `hosted_on` — data-locality: where the principal's services and stores physically run. Provider tokens come from a registry `vocabulary` entry, extensible by PR. Locality is a distinct axis from legal jurisdiction: it determines exposure (data-protection regimes, subpoena reach) independent of where the principal lives.
 
 Jurisdiction and locality declarations are good-faith disclosure, not warranty, and nothing in this IFP constitutes or substitutes for legal advice. They exist so a counterparty's agent can reason about, for example, GDPR posture — not so anyone can rely on them as a legal instrument.
 
