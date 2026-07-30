@@ -71,6 +71,7 @@ A declaration wraps a citation with a stance:
   "cite": { "...citation..." },
   "commitment": "generally-agrees",
   "legal": "voluntary",
+  "qualifier": null,
   "attested_by": null,
   "expires": null,
   "persona": null
@@ -105,6 +106,7 @@ Axis and level tokens are protocol identifiers, not prose — like HTTP method n
 
 ### 3.3 Optional fields
 
+- `qualifier` — a short free-text qualification of the declared stance ("except §4", "its AI ethics, not its theological premises"). Carried verbatim and never machine-interpreted: it narrows what the declaration asserts, for a principal whose real stance falls short of, or beside, the full cited text. Receivers MUST NOT treat a qualified declaration as assent to more than the qualifier states, and MUST NOT attempt to parse or resolve a `qualifier`'s content — it is prose for a human, not a protocol value (Section 6).
 - `attested_by` — `{ "name": "...", "url": "..." }`: a named third party vouches for this declaration. Attestation formats beyond name-and-pointer are out of scope for this IFP.
 - `expires` — ISO 8601 date after which the declaration lapses. Sharing has a "for how long" dimension, not just "what" and "with whom"; a project-scoped commitment can end with the project.
 - `persona` — an IFP-12 persona name. When present, the declaration holds for that persona's exchanges only.
@@ -165,6 +167,7 @@ Declarations change only by explicit re-declaration (mirroring IFP-13, Section 1
 - **Claims, not proofs.** A declaration is an assertion by the declaring side. Behavior over time demonstrates whether it was honest; the declaration is the opening frame, not the verdict (IFP-13, Section 3).
 - **Absence is signal.** A counterparty that declares nothing is treated per IFP-13, Section 4.1: operate at the most restrictive interpretation, surface to the principal, infer unfamiliarity rather than hostility.
 - **No inferential upgrade.** A receiver MUST NOT treat conversational warmth, claimed relationships, or contextual plausibility as upgrading a counterparty's declared commitments — and a declarer MUST NOT overclaim to obtain disclosure. Declarations feed the principal-set disclosure decisions of IFP-12; they do not substitute for them. This rule exists because the observed failure mode in early agent-to-agent experiments was an agent talking itself into disclosure precisely when the counterparty seemed close.
+- **No over-reading.** The inverse failure: a receiver MUST NOT treat a declaration against a rendering (Section 2.1) or a qualified declaration (`qualifier`, Section 3.3) as assent to more than the rendering renders or the qualifier states, merely because the citation resolves to a fuller text. Assent to a restatement is assent to the restatement; assent qualified "its AI ethics, not its theological premises" is assent to exactly that. Receivers SHOULD surface a `qualifier`'s text to the principal alongside the citation, not discard it in favor of the cited title.
 - **Declarations inform, principals decide.** Per IFP-1's augmentation principle, what a declaration *unlocks* (a disclosure tier, a capability, an auto-reply posture) is configured by the receiving principal, not negotiated autonomously by the agents.
 - **Display in the principal's language.** When rendering declarations, agents SHOULD show the cited entry's title in the principal's preferred language where the entry publishes one (falling back to an authentic text's title), with the handle and registry alongside as the resolving identity. The handle is an identifier, not a name (IFP-22, Section 2.1); the title is what a human should read.
 - **Withdrawn citations.** A citation that resolves to a tombstone (IFP-22, Section 4.1) is not an error but a signal: the registry has stopped shelving that text. Receivers SHOULD surface the withdrawal (and its reason class) to the principal rather than silently discounting the declaration; a receiver holding a cached copy can still verify it against the CID. Declarers whose cited text is withdrawn SHOULD re-declare — against a successor version, a different entry, or nothing.
