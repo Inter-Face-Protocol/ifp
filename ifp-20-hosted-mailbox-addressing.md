@@ -112,6 +112,8 @@ Accepts an IFP-4 structured message, per the request/response conventions of IFP
 
 Servers MUST deduplicate on `headers.message_id` per mailbox: redelivery of an already-stored message is acknowledged (`202`) without storing a duplicate.
 
+A server operating the trust-group profile (Section 4.2) additionally authenticates this request and checks it against the message's `from`; see that section for the requirement.
+
 ### 3.3 Pickup
 
 Held messages are collected by the owning agent through the server's authenticated agent API. The pickup API is server-local and out of scope for this IFP; interoperability lives at the address and inbox surface above. (The reference implementation uses per-address bearer tokens over HTTPS.)
@@ -122,7 +124,30 @@ A hosted mailbox is **poste restante**: the server stores inbound messages until
 
 Servers MAY bound retention (the reference implementation expires messages after 90 days), bound mailbox size, and refuse messages over a size cap (`413`). Inbox-full is `429`.
 
-A mailbox server MAY operate as a **closed sending domain**: accepting inbound from any IFP peer while delivering its own agents' outbound messages only to addresses on the same server. A closed server never originates traffic to other hosts and accepts nothing addressed to third parties — there is no path through it for anyone else's mail, which removes the open-relay class of abuse by construction. Cross-server delivery, where offered, is ordinary IFP-6 client behavior: a direct POST to the recipient's inbox, not relaying.
+### 4.1 Closed sending domain
+
+A mailbox server MAY operate as a **closed sending domain**: delivering its own agents' outbound messages only to addresses on the same server, and never originating traffic to other hosts. This constrains outbound only. A closed sending domain accepts nothing addressed to third parties — there is no path through it for anyone else's mail, which removes the open-relay class of abuse by construction. Cross-server delivery, where offered, is ordinary IFP-6 client behavior: a direct POST to the recipient's inbox, not relaying.
+
+A closed sending domain's *inbound* behavior is a separate question, governed independently by whether the server also runs the trust-group profile below (Section 4.2) or instead accepts open inbound per Section 3.2.
+
+### 4.2 Trust groups
+
+A mailbox server MAY instead — or in addition — operate as a **trust group**: a set of principals and agents anchored on the server's operator, admitted to it one at a time. A server operating this profile accepts a message for delivery only when the sender is a principal+agent **on that same server** — i.e. someone the recipient's server can already address a reply to:
+
+- MUST require the sender to authenticate the inbox request (Section 3.2) with a server-issued credential naming a principal+agent on this server (the reference implementation reuses the Section 3.3 per-address bearer token for this).
+- MUST verify that the message's IFP-4 `from` matches the authenticated sender exactly, and MUST reject (`403`) a request whose `from` names any other address.
+- MUST NOT accept inbound from a sender it cannot authenticate as its own. There is no open-inbound path under this profile: an unauthenticated caller, or one authenticated as an address on a *different* server, is refused, not queued.
+
+Joining the trust group is joining the server: a would-be correspondent who is not yet a principal cannot be written to, and cannot write in, until they sign up. Servers gate signup with an admin-minted passcode (Section 6, "Abuse surface"); the operator's decision to issue one is the trust group's actual boundary.
+
+Two consequences follow directly from the same construction:
+
+- **Replies are always possible.** Because inbound is accepted only from an address the recipient's own server already knows how to write back to, "can I reply to whoever just wrote to me" is never in question — it is guaranteed the moment a message is accepted at all.
+- **The spam and impersonation surface of open inbound is removed.** There is no path for an unauthenticated or unaffiliated sender to reach a mailbox; every accepted message names a real, credentialed, same-server sender.
+
+This profile is strictly narrower than plain IFP-6 inbound (Section 3.2), which places no authentication requirement on senders; a server SHOULD document which profile it runs, since the two produce materially different correspondent experiences.
+
+Inter-server federation — a trust-group server accepting authenticated inbound from a *different* server's principals — is out of scope for this profile. A future IFP may define a federation extension; until one exists, correspondence across two trust-group servers requires each side's principals to also hold an address on the other's server, as with any two separate mailbox providers today.
 
 ## 5. Lifecycle
 
@@ -143,8 +168,9 @@ Addresses and principals move through `active ⇄ paused → trashed → deleted
 
 ## 7. Reference Implementation
 
-**Postilion** ([github.com/peterkaminski/postilion](https://github.com/peterkaminski/postilion), MPL-2.0) implements this IFP as a Cloudflare Worker: passcode-gated signup, magic-link + PIN authentication, Turnstile-gated address minting, per-address bearer tokens, daily sending quotas, 90-day retention, and a closed sending domain. First deployment: `ifpmail.peterkaminski.ai`.
+**Postilion** ([github.com/peterkaminski/postilion](https://github.com/peterkaminski/postilion), MPL-2.0) implements this IFP as a Cloudflare Worker: passcode-gated signup, magic-link + PIN authentication, Turnstile-gated address minting, per-address bearer tokens, daily sending quotas, 90-day retention, a closed sending domain, and the trust-group inbound profile (Section 4.2) — inbox delivery requires the same bearer authentication as the agent API, with the authenticated sender checked against the message's `from`. First deployment: `ifpmail.peterkaminski.ai`.
 
 ## Changelog
 
 - 2026-07-29 — Initial draft.
+- 2026-07-29 — Added Section 4.2 (Trust groups), the closed-inbound delivery model matching the reference implementation; rescoped Section 4.1 (renamed from the unnumbered closed-sending-domain paragraph) to outbound only, reconciling its earlier "accepting inbound from any IFP peer" language.
