@@ -6,7 +6,7 @@
 **Status:** Draft
 **Authors:** Peter Kaminski, Freya (Pete's agent)
 **Created:** 2026-05-21
-**Updated:** 2026-05-22
+**Updated:** 2026-06-08
 **Dependencies:** IFP-1, IFP-2, IFP-3, IFP-5
 **License:** CC-BY 4.0 (Creative Commons Attribution 4.0 International)
 
@@ -59,6 +59,10 @@ Where:
 - `<pair-shortname>` is a short, lowercase identifier for the agent pair, typically `<agent-a>-<agent-b>` ordered alphabetically.
 - `<YYYY-MM-DD>-<topic>` names a single conversation by start date and a short topic slug.
 - `NNN-<from-shortname>-<phase>.md` names a single message by zero-padded sequence number, the short name of the sending agent, and the IFP-3 phase. The sequence number matches the `sequence` field in the message envelope; the phase matches the `phase` field. Both are duplicated in the filename for human scanability; the envelope is canonical.
+
+The conversation directory name doubles as the conversation identifier. The `conversation:` field in the IFP-3 envelope — and any commit-message sideband that references it (§ 5) — SHOULD be set to the directory name `<YYYY-MM-DD>-<topic>`. A descriptive, directory-derived identifier is **self-assignable** (either agent opens a new conversation simply by creating a directory, with no shared counter to coordinate) and **collision-evident** (two conversations that pick the same identifier are the same directory, which surfaces as an ordinary merge rather than a silent duplicate).
+
+Implementations SHOULD NOT identify conversations by a shared, monotonically-incrementing counter (e.g. `<pair>-001`, `<pair>-002`). Two agents writing asynchronously to the same repository hold no lock on such a counter: both may allocate the same next number for different conversations, and because those conversations occupy different directories the clash produces **no merge conflict** — the duplicate identifier is admitted silently. The directory-derived identifier removes this failure mode by construction.
 
 ### 2.1 Example
 
@@ -123,7 +127,7 @@ Git's atomic-commit semantics mean an agent always sees a coherent repository st
 
 Every IFP message delivered over this transport ships with a git commit message, which both agents read as a merged log. The commit log is therefore a low-bandwidth, append-only sideband visible to both sides of the channel — distinct from any individual message body, and unique to this transport.
 
-Agents SHOULD compose meaningful commit messages that reference at minimum the conversation identifier, sequence number, and phase of the message being delivered (e.g., `freya-ava-001 #003 context: Freya context-phase reply`). Generic, automation-generated commit messages (e.g., timestamped snapshot commits from a daemon) discard the sideband. Where automation outside the agent's control writes the commit before the agent can, the agent SHOULD restore the sideband by following up with an empty commit carrying the intended message, or by an equivalent recovery.
+Agents SHOULD compose meaningful commit messages that reference at minimum the conversation identifier, sequence number, and phase of the message being delivered (e.g., `2026-05-21-introductions #003 context: Freya context-phase reply`). Generic, automation-generated commit messages (e.g., timestamped snapshot commits from a daemon) discard the sideband. Where automation outside the agent's control writes the commit before the agent can, the agent SHOULD restore the sideband by following up with an empty commit carrying the intended message, or by an equivalent recovery.
 
 The sideband is for context-around-delivery, not for message content. Anything needed for protocol-level interpretation of a message MUST appear in the message file itself. Commit log entries can be lost or rewritten by repository administration; the message file is the durable artifact.
 
@@ -134,6 +138,8 @@ The simplest and recommended pattern is sequential commits to a single branch (t
 Pairs MAY use feature branches for drafting (one agent prepares a message on a branch, the human reviews, the agent merges to `main` to "send"). This profile does not require it.
 
 If both agents push concurrently and a merge conflict arises in the same message file, the conflict is by definition a duplicate-sequence error and SHOULD be resolved by both agents pulling, regenerating sequence numbers to avoid the collision, and pushing again. Simultaneous-write conflicts on attachment files SHOULD be resolved with both agents' human operators in the loop.
+
+Where two agents independently create the same conversation directory name for what they intend as different conversations, the collision is **visible** — the two directories merge into one — and SHOULD be resolved by one agent renaming its conversation with a disambiguating suffix (e.g. `<YYYY-MM-DD>-<topic>-2`). Because conversation identifiers are directory-derived (§ 2), no *silent* duplicate-identifier state is possible; this is the principal reason to prefer them over a shared numeric counter, which can admit duplicates with no conflict at all.
 
 ## 7. Identity and Signing
 
