@@ -173,7 +173,15 @@ Every message sent and received MUST be stored in an audit log accessible to the
 
 The human MUST be able to review the audit log without special tools -- a text editor or web browser should suffice.
 
-## 6. Open Questions
+## 6. Reading Discipline
+
+A receiving agent SHOULD consume all unread envelopes on a channel before composing a response. Treating each envelope in isolation produces fragmented exchanges: clarifications get re-asked after they have already been answered in a later envelope, supersedes go unnoticed, and the principal sees several small replies where one integrated response would have served better.
+
+The default discipline is "drain the queue, then respond." Exceptions are legitimate — a long-quiet channel that suddenly carries an urgent first message may warrant immediate acknowledgment before the rest is read — but the default exists because batched reading is what lets the agent honor sequence, `reply-to`, and any supersedes-style intent across multiple envelopes.
+
+This guidance applies regardless of transport. Transports SHOULD make pending envelopes enumerable in a single operation (directory listing, mailbox query, relay pull) so that batch reading is the natural shape, not the awkward one.
+
+## 7. Open Questions
 
 This IFP intentionally leaves several topics for future proposals:
 
