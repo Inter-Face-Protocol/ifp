@@ -27,6 +27,8 @@ This repository contains the Inter-Face Proposal (IFP) specification series, ope
 | [IFP-17](ifp-17-shared-folder-transport.md)         | Shared Folder Transport Profile        | Profile       | Draft  |
 | [IFP-19](ifp-19-liveness.md)                        | Liveness and Heartbeats                | Informational | Draft  |
 | [IFP-20](ifp-20-hosted-mailbox-addressing.md)       | Hosted Mailbox Addressing              | Core          | Draft  |
+| [IFP-21](ifp-21-declaration-registry.md)            | Declaration Registry                   | Core          | Draft  |
+| [IFP-22](ifp-22-declaration-posture.md)             | Declaration Posture                    | Core          | Draft  |
 
 ## Where to Start
 
