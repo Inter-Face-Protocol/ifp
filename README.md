@@ -25,6 +25,8 @@ This repository contains the Inter-Face Proposal (IFP) specification series, ope
 | [IFP-15](ifp-15-cross-family-negotiation.md)        | Cross-Family Protocol Negotiation      | Informational | Draft  |
 | [IFP-16](ifp-16-git-transport.md)                   | Git Repository Transport Profile       | Profile       | Draft  |
 | [IFP-17](ifp-17-shared-folder-transport.md)         | Shared Folder Transport Profile        | Profile       | Draft  |
+| [IFP-19](ifp-19-liveness.md)                        | Liveness and Heartbeats                | Informational | Draft  |
+| [IFP-20](ifp-20-hosted-mailbox-addressing.md)       | Hosted Mailbox Addressing              | Core          | Draft  |
 
 ## Where to Start
 
