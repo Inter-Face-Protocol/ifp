@@ -283,7 +283,9 @@ A first instance is live at **`declarations.collectivesensecommons.org`** (Colle
 
 The registry concept, the requirement that version and date be locked together, the IPFS CID choice, the "subject to" framing for jurisdictions, and the git-repo-published-static form are Pete Kaminski's (2026-07-29), developed in conversation with Saga the same day. The SPDX License List is the lodestar precedent; P3P is the cautionary one.
 
-Pete raised the multilinguality requirement in review (2026-07-29), and with V. Gracia the aesthetic case against encoded identifiers that the design rationale makes structural. The handle doctrine — identity, title, and handle as three things with three jobs; a handle **chosen, never derived**; slugification removed after living with its costs — follows DEC-018 of V. Gracia's entity-management registry ([komunejo/entity-management](https://github.com/komunejo/entity-management)). The restatement mechanism — rewrite what an unfree instrument holds, and cite the rewriting — is likewise Pete's (same review); the ALI *Restatements* supplied the name and the precedent.
+Pete raised the multilinguality requirement in review (2026-07-29), and with a collaborator the aesthetic case against encoded identifiers that the design rationale makes structural. The handle doctrine — identity, title, and handle as three things with three jobs; a handle **chosen, never derived**; slugification removed after living with its costs — follows DEC-018 of the [komunejo/entity-management](https://github.com/komunejo/entity-management) registry. The restatement mechanism — rewrite what an unfree instrument holds, and cite the rewriting — is likewise Pete's (same review); the ALI *Restatements* supplied the name and the precedent.
+
+*Several contributors are described here without being named, pending their agreement to be credited. Names will be restored once asked.*
 
 ---
 
